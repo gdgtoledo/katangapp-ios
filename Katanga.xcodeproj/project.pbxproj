@@ -10,7 +10,7 @@
 		0F9BC1E375EC215CD2DA2AED /* Pods_Katanga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1236CE9D21AADE32FF9DDCA /* Pods_Katanga.framework */; };
 		3A755B9089AA4BD921F59BE8 /* Pods_KatangaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E69EAB19DF1FFBE9C26BC85 /* Pods_KatangaTests.framework */; };
 		57266AE61DAA2D01002C7C12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266AE51DAA2D01002C7C12 /* AppDelegate.swift */; };
-		57266AE81DAA2D01002C7C12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266AE71DAA2D01002C7C12 /* ViewController.swift */; };
+		57266AE81DAA2D01002C7C12 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266AE71DAA2D01002C7C12 /* InitialViewController.swift */; };
 		57266AEB1DAA2D01002C7C12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57266AE91DAA2D01002C7C12 /* Main.storyboard */; };
 		57266AED1DAA2D01002C7C12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57266AEC1DAA2D01002C7C12 /* Assets.xcassets */; };
 		57266AF01DAA2D01002C7C12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57266AEE1DAA2D01002C7C12 /* LaunchScreen.storyboard */; };
@@ -44,7 +44,7 @@
 		4E69EAB19DF1FFBE9C26BC85 /* Pods_KatangaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KatangaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57266AE21DAA2D01002C7C12 /* Katanga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Katanga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57266AE51DAA2D01002C7C12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		57266AE71DAA2D01002C7C12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		57266AE71DAA2D01002C7C12 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		57266AEA1DAA2D01002C7C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		57266AEC1DAA2D01002C7C12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57266AEF1DAA2D01002C7C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -119,9 +119,10 @@
 		57266AE41DAA2D01002C7C12 /* Katanga */ = {
 			isa = PBXGroup;
 			children = (
+				57266B1B1DAA6FD1002C7C12 /* Resources */,
 				57266B161DAA3845002C7C12 /* Extensions */,
 				57266AE51DAA2D01002C7C12 /* AppDelegate.swift */,
-				57266AE71DAA2D01002C7C12 /* ViewController.swift */,
+				57266AE71DAA2D01002C7C12 /* InitialViewController.swift */,
 				57266AE91DAA2D01002C7C12 /* Main.storyboard */,
 				57266AEC1DAA2D01002C7C12 /* Assets.xcassets */,
 				57266AEE1DAA2D01002C7C12 /* LaunchScreen.storyboard */,
@@ -432,7 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57266B181DAA3845002C7C12 /* CLLocationManager+Rx.swift in Sources */,
-				57266AE81DAA2D01002C7C12 /* ViewController.swift in Sources */,
+				57266AE81DAA2D01002C7C12 /* InitialViewController.swift in Sources */,
 				57266AE61DAA2D01002C7C12 /* AppDelegate.swift in Sources */,
 				57266B1A1DAA38EC002C7C12 /* RxCLLocationManagerDelegateProxy.swift in Sources */,
 			);
