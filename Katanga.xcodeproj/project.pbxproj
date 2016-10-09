@@ -16,11 +16,10 @@
 		57266AF01DAA2D01002C7C12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57266AEE1DAA2D01002C7C12 /* LaunchScreen.storyboard */; };
 		57266AFB1DAA2D01002C7C12 /* KatangaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266AFA1DAA2D01002C7C12 /* KatangaTests.swift */; };
 		57266B061DAA2D01002C7C12 /* KatangaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266B051DAA2D01002C7C12 /* KatangaUITests.swift */; };
-		57266B181DAA3845002C7C12 /* CLLocationManager+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266B171DAA3845002C7C12 /* CLLocationManager+Rx.swift */; };
-		57266B1A1DAA38EC002C7C12 /* RxCLLocationManagerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266B191DAA38EC002C7C12 /* RxCLLocationManagerDelegateProxy.swift */; };
 		57266B201DAA6FD1002C7C12 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57266B1D1DAA6FD1002C7C12 /* Quicksand-Bold.ttf */; };
 		57266B211DAA6FD1002C7C12 /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57266B1E1DAA6FD1002C7C12 /* Quicksand-Light.ttf */; };
 		57266B221DAA6FD1002C7C12 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57266B1F1DAA6FD1002C7C12 /* Quicksand-Regular.ttf */; };
+		57503F7D1DAAAB9000B39E24 /* UIColor+Katanga.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57503F7C1DAAAB9000B39E24 /* UIColor+Katanga.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,11 +54,10 @@
 		57266B011DAA2D01002C7C12 /* KatangaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KatangaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57266B051DAA2D01002C7C12 /* KatangaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KatangaUITests.swift; sourceTree = "<group>"; };
 		57266B071DAA2D01002C7C12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		57266B171DAA3845002C7C12 /* CLLocationManager+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocationManager+Rx.swift"; sourceTree = "<group>"; };
-		57266B191DAA38EC002C7C12 /* RxCLLocationManagerDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxCLLocationManagerDelegateProxy.swift; sourceTree = "<group>"; };
 		57266B1D1DAA6FD1002C7C12 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
 		57266B1E1DAA6FD1002C7C12 /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.ttf"; sourceTree = "<group>"; };
 		57266B1F1DAA6FD1002C7C12 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
+		57503F7C1DAAAB9000B39E24 /* UIColor+Katanga.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Katanga.swift"; sourceTree = "<group>"; };
 		6A1C44C393215D347C0A9466 /* Pods-Katanga.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Katanga.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Katanga/Pods-Katanga.debug.xcconfig"; sourceTree = "<group>"; };
 		796EE8059D0465BDCFF8805A /* Pods-KatangaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KatangaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KatangaTests/Pods-KatangaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF70966AAA352DEE79F72487 /* Pods-Katanga.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Katanga.release.xcconfig"; path = "Pods/Target Support Files/Pods-Katanga/Pods-Katanga.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,8 +150,7 @@
 		57266B161DAA3845002C7C12 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				57266B191DAA38EC002C7C12 /* RxCLLocationManagerDelegateProxy.swift */,
-				57266B171DAA3845002C7C12 /* CLLocationManager+Rx.swift */,
+				57503F7C1DAAAB9000B39E24 /* UIColor+Katanga.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -432,10 +429,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57266B181DAA3845002C7C12 /* CLLocationManager+Rx.swift in Sources */,
 				57266AE81DAA2D01002C7C12 /* InitialViewController.swift in Sources */,
 				57266AE61DAA2D01002C7C12 /* AppDelegate.swift in Sources */,
-				57266B1A1DAA38EC002C7C12 /* RxCLLocationManagerDelegateProxy.swift in Sources */,
+				57503F7D1DAAAB9000B39E24 /* UIColor+Katanga.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
