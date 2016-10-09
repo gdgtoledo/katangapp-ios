@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-Light.ttf">
+            <string>Quicksand-Light</string>
+        </array>
+        <array key="Quicksand-Regular.ttf">
+            <string>Quicksand-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Initial View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="InitialViewController" customModule="Katanga" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +26,62 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="katanga" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJu-dp-50Z">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="SQ6-sf-JW4"/>
+                                    <constraint firstAttribute="height" constant="62" id="cYO-mg-CDs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="500" minValue="0.0" maxValue="1000" translatesAutoresizingMaskIntoConstraints="NO" id="Hyt-US-P2R">
+                                <color key="minimumTrackTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="thumbTintColor" red="0.96470588235294119" green="0.92549019607843142" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGE-Fy-9Jy">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="107" id="9c7-Yo-BMS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOX-h6-GfN">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Iis-TN-bxX"/>
+                                    <constraint firstAttribute="width" constant="60" id="gBi-86-xna"/>
+                                </constraints>
+                                <state key="normal" image="location_icon"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NOX-h6-GfN" firstAttribute="top" secondItem="Hyt-US-P2R" secondAttribute="bottom" constant="70" id="59K-kx-WNb"/>
+                            <constraint firstItem="Hyt-US-P2R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Eao-Yx-XGk"/>
+                            <constraint firstItem="tGE-Fy-9Jy" firstAttribute="top" secondItem="QJu-dp-50Z" secondAttribute="bottom" constant="35" id="GAM-Rt-oor"/>
+                            <constraint firstItem="Hyt-US-P2R" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="ISo-bi-LpP"/>
+                            <constraint firstItem="Hyt-US-P2R" firstAttribute="top" secondItem="tGE-Fy-9Jy" secondAttribute="bottom" constant="20" id="Qnu-KZ-HZj"/>
+                            <constraint firstItem="Hyt-US-P2R" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QqM-40-Ca9"/>
+                            <constraint firstItem="QJu-dp-50Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fLS-UB-5cZ"/>
+                            <constraint firstItem="tGE-Fy-9Jy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jbh-nC-GBo"/>
+                            <constraint firstItem="NOX-h6-GfN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xMN-ke-SYm"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="metersLabel" destination="tGE-Fy-9Jy" id="I43-9l-RMq"/>
+                        <outlet property="metersSlider" destination="Hyt-US-P2R" id="Yzg-hO-qQd"/>
+                        <outlet property="searchLocationButton" destination="NOX-h6-GfN" id="psc-DN-rXo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-366" y="34"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="location_icon" width="24" height="24"/>
+    </resources>
 </document>
