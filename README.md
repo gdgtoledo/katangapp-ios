@@ -12,3 +12,5 @@ Then go to project folder, and install Pods:
 ```shell
 	pod install
 ```
+
+Last, open *.xcworkspace* on XCode IDE to complete the setup of the project.
