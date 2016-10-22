@@ -19,6 +19,8 @@
 		57266B211DAA6FD1002C7C12 /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57266B1E1DAA6FD1002C7C12 /* Quicksand-Light.ttf */; };
 		57266B221DAA6FD1002C7C12 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57266B1F1DAA6FD1002C7C12 /* Quicksand-Regular.ttf */; };
 		57503F7D1DAAAB9000B39E24 /* UIColor+Katanga.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57503F7C1DAAAB9000B39E24 /* UIColor+Katanga.swift */; };
+		578961391DBBEE4F00C10285 /* BusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578961371DBBEE4F00C10285 /* BusStop.swift */; };
+		5789613A1DBBEE4F00C10285 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578961381DBBEE4F00C10285 /* Route.swift */; };
 		7389446DE7BEE16F80D0E5F7 /* Pods_KatangaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A995697FA2C2DAC5D41F9311 /* Pods_KatangaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,8 @@
 		57266B1E1DAA6FD1002C7C12 /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.ttf"; sourceTree = "<group>"; };
 		57266B1F1DAA6FD1002C7C12 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
 		57503F7C1DAAAB9000B39E24 /* UIColor+Katanga.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Katanga.swift"; sourceTree = "<group>"; };
+		578961371DBBEE4F00C10285 /* BusStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStop.swift; sourceTree = "<group>"; };
+		578961381DBBEE4F00C10285 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		A995697FA2C2DAC5D41F9311 /* Pods_KatangaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KatangaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1FE72E15002ADC31951915 /* Pods_Katanga.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Katanga.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF23F5942F1D41FCE071FC77 /* Pods-Katanga.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Katanga.release.xcconfig"; path = "Pods/Target Support Files/Pods-Katanga/Pods-Katanga.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 		57266AE41DAA2D01002C7C12 /* Katanga */ = {
 			isa = PBXGroup;
 			children = (
+				578961361DBBEE4F00C10285 /* Models */,
 				57266B1B1DAA6FD1002C7C12 /* Resources */,
 				57266B161DAA3845002C7C12 /* Extensions */,
 				57266AE51DAA2D01002C7C12 /* AppDelegate.swift */,
@@ -171,6 +176,15 @@
 				57266B1F1DAA6FD1002C7C12 /* Quicksand-Regular.ttf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		578961361DBBEE4F00C10285 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				578961371DBBEE4F00C10285 /* BusStop.swift */,
+				578961381DBBEE4F00C10285 /* Route.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		B3B6F3BA6419274AB4636013 /* Frameworks */ = {
@@ -429,8 +443,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				578961391DBBEE4F00C10285 /* BusStop.swift in Sources */,
 				57266AE81DAA2D01002C7C12 /* InitialViewController.swift in Sources */,
 				57266AE61DAA2D01002C7C12 /* AppDelegate.swift in Sources */,
+				5789613A1DBBEE4F00C10285 /* Route.swift in Sources */,
 				57503F7D1DAAAB9000B39E24 /* UIColor+Katanga.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
