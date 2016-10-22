@@ -19,7 +19,10 @@ struct Route : Unmarshaling {
     init(object: MarshaledObject) throws {
         id = try object.value(for: "id")
         link = try object.value(for: "links.self")
-        name = try object.value(for: "name")
+        
+        let rawName: String = try object.value(for: "name")
+        name = rawName.components(separatedBy: ")").last ?? ""
+    
         busStops = try object.value(for: "busStops")
     }
 }
