@@ -1,4 +1,5 @@
 PODS:
+  - Marshal (1.0.0)
   - RxBlocking (3.0.0-rc.1):
     - RxSwift (~> 3.0.0-rc.1)
   - RxCocoa (3.0.0-rc.1):
@@ -8,17 +9,19 @@ PODS:
     - RxSwift (~> 3.0.0-rc.1)
 
 DEPENDENCIES:
+  - Marshal
   - RxBlocking (= 3.0.0-rc.1)
   - RxCocoa (= 3.0.0-rc.1)
   - RxSwift (= 3.0.0-rc.1)
   - RxTest (= 3.0.0-rc.1)
 
 SPEC CHECKSUMS:
+  Marshal: a3c5c5dbd388112edf3cdabb718f2b4cfe48658a
   RxBlocking: f942482a50abfefa84a33406b67c53af50e6cc2a
   RxCocoa: e72a074a7f38896ec0382d096df5f58df10115c7
   RxSwift: d7a3819dd71789c473e3cbf1a0c02d58b2692739
   RxTest: e7044409e1db9d2a4968ede599909c7a41539256
 
-PODFILE CHECKSUM: 61d41d07d7bc4889a4b19db6fd62f348a58114bb
+PODFILE CHECKSUM: fee96177bdc68750aa3eda9a0c84398c2d957677
 
 COCOAPODS: 1.1.1
