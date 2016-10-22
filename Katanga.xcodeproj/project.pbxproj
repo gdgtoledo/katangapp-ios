@@ -21,6 +21,8 @@
 		57503F7D1DAAAB9000B39E24 /* UIColor+Katanga.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57503F7C1DAAAB9000B39E24 /* UIColor+Katanga.swift */; };
 		578961391DBBEE4F00C10285 /* BusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578961371DBBEE4F00C10285 /* BusStop.swift */; };
 		5789613A1DBBEE4F00C10285 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578961381DBBEE4F00C10285 /* Route.swift */; };
+		5789613D1DBBEEAE00C10285 /* BusApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789613C1DBBEEAE00C10285 /* BusApi.swift */; };
+		578961401DBBEF0000C10285 /* KatangaBusApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789613F1DBBEF0000C10285 /* KatangaBusApiClient.swift */; };
 		7389446DE7BEE16F80D0E5F7 /* Pods_KatangaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A995697FA2C2DAC5D41F9311 /* Pods_KatangaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +66,8 @@
 		57503F7C1DAAAB9000B39E24 /* UIColor+Katanga.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Katanga.swift"; sourceTree = "<group>"; };
 		578961371DBBEE4F00C10285 /* BusStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStop.swift; sourceTree = "<group>"; };
 		578961381DBBEE4F00C10285 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		5789613C1DBBEEAE00C10285 /* BusApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusApi.swift; sourceTree = "<group>"; };
+		5789613F1DBBEF0000C10285 /* KatangaBusApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KatangaBusApiClient.swift; sourceTree = "<group>"; };
 		A995697FA2C2DAC5D41F9311 /* Pods_KatangaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KatangaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1FE72E15002ADC31951915 /* Pods_Katanga.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Katanga.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF23F5942F1D41FCE071FC77 /* Pods-Katanga.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Katanga.release.xcconfig"; path = "Pods/Target Support Files/Pods-Katanga/Pods-Katanga.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 		57266AE41DAA2D01002C7C12 /* Katanga */ = {
 			isa = PBXGroup;
 			children = (
+				5789613B1DBBEEA800C10285 /* Network */,
 				578961361DBBEE4F00C10285 /* Models */,
 				57266B1B1DAA6FD1002C7C12 /* Resources */,
 				57266B161DAA3845002C7C12 /* Extensions */,
@@ -185,6 +190,15 @@
 				578961381DBBEE4F00C10285 /* Route.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5789613B1DBBEEA800C10285 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5789613C1DBBEEAE00C10285 /* BusApi.swift */,
+				5789613F1DBBEF0000C10285 /* KatangaBusApiClient.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		B3B6F3BA6419274AB4636013 /* Frameworks */ = {
@@ -444,8 +458,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				578961391DBBEE4F00C10285 /* BusStop.swift in Sources */,
+				5789613D1DBBEEAE00C10285 /* BusApi.swift in Sources */,
 				57266AE81DAA2D01002C7C12 /* InitialViewController.swift in Sources */,
 				57266AE61DAA2D01002C7C12 /* AppDelegate.swift in Sources */,
+				578961401DBBEF0000C10285 /* KatangaBusApiClient.swift in Sources */,
 				5789613A1DBBEE4F00C10285 /* Route.swift in Sources */,
 				57503F7D1DAAAB9000B39E24 /* UIColor+Katanga.swift in Sources */,
 			);
