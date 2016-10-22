@@ -52,7 +52,7 @@
                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="wgf-ou-djy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="5vv-cL-XE6"/>
-                    <constraint firstAttribute="bottom" secondItem="wgf-ou-djy" secondAttribute="bottom" constant="5" id="HaP-eR-uIj"/>
+                    <constraint firstAttribute="bottom" secondItem="wgf-ou-djy" secondAttribute="bottom" id="HaP-eR-uIj"/>
                     <constraint firstItem="wgf-ou-djy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="bMo-uc-qp6"/>
                     <constraint firstAttribute="trailing" secondItem="wgf-ou-djy" secondAttribute="trailing" constant="5" id="vsX-6n-17Z"/>
                 </constraints>

@@ -36,7 +36,7 @@ class RoutesCell: UITableViewCell {
     
     @IBOutlet private weak var containerView: UIView! {
         didSet {
-            containerView.layer.cornerRadius = 10
+            containerView.layer.cornerRadius = 3
             containerView.layer.masksToBounds = true
         }
     }
