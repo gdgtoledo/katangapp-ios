@@ -58,9 +58,9 @@ class InitialViewController: UIViewController {
             .addDisposableTo(disposeBag)
         
         searchLocationButton.rx.tap
-            .bindNext {
-                self.spinner?.startAnimating()
-                self.performSegue(withIdentifier: "shownearstops", sender: nil)
+            .bindNext { [weak self] in
+                self?.spinner?.startAnimating()
+                self?.performSegue(withIdentifier: "shownearstops", sender: nil)
             }
             .addDisposableTo(disposeBag)
     }

@@ -68,9 +68,9 @@ class NearBusStopsViewController: UIViewController {
         refreshControl?.tintColor = .katangaYellow
         
         refreshControl?.rx.controlEvent(.valueChanged)
-            .bindNext {
-                self.disposeBag = DisposeBag()
-                self.setupRx()
+            .bindNext { [weak self] in
+                self?.disposeBag = DisposeBag()
+                self?.setupRx()
             }
             .addDisposableTo(refreshControlBag)
         
