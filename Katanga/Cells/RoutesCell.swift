@@ -47,6 +47,12 @@ class RoutesCell: UITableViewCell {
     
     //MARK: UITableViewCell
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        selectionStyle = .none
+    }
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         

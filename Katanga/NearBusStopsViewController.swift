@@ -54,7 +54,7 @@ class NearBusStopsViewController: UIViewController {
     
         //TODO Real values
         KatangaBusApiClient()
-            .nearbyBusStops(latitude: 39.8628316, longitude: -4.0273231, meters: 500)
+            .nearbyBusStops(latitude: 39.861293, longitude: -4.026146, meters: 1000)
             .trackActivity(activityIndicator)
             .scan([], accumulator: { $0 + [$1] })
             .asDriver(onErrorJustReturn: [])
@@ -67,7 +67,6 @@ class NearBusStopsViewController: UIViewController {
                 cell.items = nearBusStop.times
             }
             .addDisposableTo(disposeBag)
-        
         
         activityIndicator
             .drive(spinner.rx.animating)

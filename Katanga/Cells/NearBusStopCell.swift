@@ -83,6 +83,8 @@ class NearBusStopCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        selectionStyle = .none
+        
         tableView.customizeTableView(withColor: .clear)
         
         setupRx()
