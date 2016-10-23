@@ -12,7 +12,13 @@ import RxCocoa
 
 class NearBusStopsViewController: UIViewController {
     
+    
+    //MARK: Private variables
+    
     private var disposeBag = DisposeBag()
+    
+    
+    //MARK: Outlets
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -24,6 +30,9 @@ class NearBusStopsViewController: UIViewController {
             tableView.estimatedRowHeight = 200
         }
     }
+    
+    
+    //MARK: UIViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +45,9 @@ class NearBusStopsViewController: UIViewController {
         
         setupRx()
     }
+    
+    
+    //MARK: Private methods
     
     private func setupRx() {
     

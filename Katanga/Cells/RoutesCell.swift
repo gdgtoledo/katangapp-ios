@@ -44,6 +44,9 @@ class RoutesCell: UITableViewCell {
     @IBOutlet private weak var routeIdLabel: UILabel!
     @IBOutlet private weak var routeNameLabel: UILabel!
     
+    
+    //MARK: UITableViewCell
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         

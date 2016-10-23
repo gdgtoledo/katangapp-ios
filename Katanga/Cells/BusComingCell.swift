@@ -10,6 +10,9 @@ import UIKit
 
 class BusComingCell: UITableViewCell {
     
+    
+    //MARK: Public variables
+    
     public var routeId: String {
         set {
             routeIdLabel.text = newValue
@@ -28,6 +31,9 @@ class BusComingCell: UITableViewCell {
         }
     }
     
+    
+    //MARK: Private constants
+    
     private let busInStopColor =
             UIColor(red: 255/255.0, green: 75/255.0, blue: 69/255.0, alpha: 1.0)
     
@@ -35,8 +41,13 @@ class BusComingCell: UITableViewCell {
         UIColor(red: 255/255.0, green: 179/255.0, blue: 0/255.0, alpha: 1.0)
     
     
+    //MARK: Outlets
+    
     @IBOutlet private weak var routeIdLabel: UILabel!
     @IBOutlet private weak var timeLabel: UILabel!
+    
+    
+    //MARK: UITableViewCell
 
     override func prepareForReuse() {
         super.prepareForReuse()
@@ -46,6 +57,9 @@ class BusComingCell: UITableViewCell {
         
         timeLabel.textColor = .black
     }
+    
+    
+    //MARK: Private methods
     
     private func setTimeText(forMinutes minutes: Double) -> String {
         let mins = Int(minutes)
