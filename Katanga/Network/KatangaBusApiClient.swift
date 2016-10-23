@@ -34,7 +34,8 @@ struct KatangaBusApiClient : BusApi {
         
         return URLSession.shared.rx.data(request)
             .debug()
-            .flatMap { Observable.of(try (try JSONParser.JSONObjectWithData($0)).value(for: "paradas"))}
+            .flatMap { Observable.of(try JSONParser.JSONObjectWithData($0))}
+            .map { try $0.value(for: "paradas")}
             .flatMap { Observable.from($0) }
     }
 }
