@@ -15,13 +15,13 @@ struct BusStop : Unmarshaling {
     let id: String
     let latitude: Double
     let longitude: Double
-    let routeId: String
+    let routeId: String?
     
     init(object: MarshaledObject) throws {
         address = try object.value(for: "address")
         id = try object.value(for: "id")
         latitude = try object.value(for: "latitude")
         longitude = try object.value(for: "longitude")
-        routeId = try object.value(for: "routeId")
+        routeId = try? object.value(for: "routeId")
     }
 }
