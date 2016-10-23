@@ -63,8 +63,7 @@
                                     <constraint firstItem="E5G-vu-ge9" firstAttribute="centerY" secondItem="WP3-4b-umP" secondAttribute="centerY" id="uOP-Zj-k8z"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6SD-Dp-7lN">
-                                <frame key="frameInset" minY="100" width="353" height="155"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6SD-Dp-7lN">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -75,7 +74,7 @@
                             <constraint firstAttribute="trailing" secondItem="6SD-Dp-7lN" secondAttribute="trailing" id="JuX-ic-L2Q"/>
                             <constraint firstAttribute="trailing" secondItem="WP3-4b-umP" secondAttribute="trailing" id="Ov7-iT-SNM"/>
                             <constraint firstItem="WP3-4b-umP" firstAttribute="leading" secondItem="dst-HH-Zac" secondAttribute="leading" id="cEw-fq-uF7"/>
-                            <constraint firstAttribute="height" constant="259" id="mnL-3r-e4H"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="259" id="mnL-3r-e4H"/>
                             <constraint firstItem="WP3-4b-umP" firstAttribute="top" secondItem="dst-HH-Zac" secondAttribute="top" id="oXL-WD-LFb"/>
                             <constraint firstItem="6SD-Dp-7lN" firstAttribute="top" secondItem="WP3-4b-umP" secondAttribute="bottom" id="vGO-TA-Mh7"/>
                         </constraints>
