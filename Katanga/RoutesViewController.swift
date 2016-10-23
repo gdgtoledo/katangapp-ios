@@ -29,8 +29,7 @@ class RoutesViewController : UIViewController {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
-            let nib = UINib(nibName: "RoutesCell", bundle: nil)
-            tableView.register(nib, forCellReuseIdentifier: "cell")
+            tableView.register(RoutesCell.self)
             tableView.tableFooterView = UIView()
         }
     }
@@ -58,7 +57,7 @@ class RoutesViewController : UIViewController {
             .trackActivity(activityIndicator)
             .scan([], accumulator: { $0 + [$1] })
             .asDriver(onErrorJustReturn: [])
-            .drive(tableView.rx.items(cellIdentifier: "cell", cellType: RoutesCell.self)) { row, route, routeCell in
+            .drive(tableView.rx.items(cellIdentifier: RoutesCell.reuseIdentifier, cellType: RoutesCell.self)) { row, route, routeCell in
                 routeCell.routeId = route.id
                 routeCell.routeName = route.name
             }

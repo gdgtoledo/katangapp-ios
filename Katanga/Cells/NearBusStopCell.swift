@@ -47,8 +47,7 @@ class NearBusStopCell: UITableViewCell {
     
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
-            let nib = UINib(nibName: "BusComingCell", bundle: nil)
-            tableView.register(nib, forCellReuseIdentifier: "cell")
+            tableView.register(BusComingCell.self)
             
             tableView.rowHeight = Constants.rowHeight
         }
@@ -109,7 +108,7 @@ class NearBusStopCell: UITableViewCell {
         
         _items
             .asObservable()
-            .bindTo(tableView.rx.items(cellIdentifier: "cell", cellType: BusComingCell.self)) { row, element, cell in
+            .bindTo(tableView.rx.items(cellIdentifier: BusComingCell.reuseIdentifier, cellType: BusComingCell.self)) { row, element, cell in
                 cell.routeId = element.id
                 cell.time = element.minutes
             }.addDisposableTo(disposeBag)
