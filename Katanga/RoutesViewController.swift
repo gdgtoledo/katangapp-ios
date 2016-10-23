@@ -40,11 +40,7 @@ class RoutesViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.backgroundColor = .black
-        tableView.separatorColor = .black
-        
-        tableView.separatorInset = UIEdgeInsets.zero
-        tableView.layoutMargins = UIEdgeInsets.zero
+        tableView.customizeTableView(withColor: .black)
         
         setupRx()
     }

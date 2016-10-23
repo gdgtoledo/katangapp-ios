@@ -31,3 +31,14 @@ extension Reactive where Base : UITableView {
         return items(cellIdentifier: cellType.reuseIdentifier, cellType: cellType)
     }
 }
+
+extension UITableView {
+    
+    func customizeTableView(withColor color: UIColor) {
+        backgroundColor = color
+        separatorColor = color
+        
+        separatorInset = UIEdgeInsets.zero
+        layoutMargins = UIEdgeInsets.zero
+    }
+}

@@ -83,11 +83,7 @@ class NearBusStopCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        tableView.backgroundColor = .clear
-        tableView.separatorColor = .clear
-        
-        tableView.separatorInset = UIEdgeInsets.zero
-        tableView.layoutMargins = UIEdgeInsets.zero
+        tableView.customizeTableView(withColor: .clear)
         
         setupRx()
     }
