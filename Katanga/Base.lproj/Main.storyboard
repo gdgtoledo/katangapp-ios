@@ -55,9 +55,6 @@
                                     <constraint firstAttribute="width" constant="60" id="gBi-86-xna"/>
                                 </constraints>
                                 <state key="normal" image="location_icon"/>
-                                <connections>
-                                    <segue destination="D7s-wF-0XA" kind="show" id="JDM-5c-8oA"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -78,6 +75,7 @@
                         <outlet property="metersLabel" destination="tGE-Fy-9Jy" id="I43-9l-RMq"/>
                         <outlet property="metersSlider" destination="Hyt-US-P2R" id="Yzg-hO-qQd"/>
                         <outlet property="searchLocationButton" destination="NOX-h6-GfN" id="psc-DN-rXo"/>
+                        <segue destination="D7s-wF-0XA" kind="show" identifier="shownearstops" id="iFS-Zv-98I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -143,10 +141,10 @@
             </objects>
             <point key="canvasLocation" x="2448.8000000000002" y="794.75262368815595"/>
         </scene>
-        <!--Líneas-->
+        <!--Paradas cercanas-->
         <scene sceneID="YXg-LU-LN3">
             <objects>
-                <viewController title="Líneas" id="D7s-wF-0XA" sceneMemberID="viewController">
+                <viewController title="Paradas cercanas" id="D7s-wF-0XA" customClass="NearBusStopsViewController" customModule="Katanga" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tcD-Tq-CIJ"/>
                         <viewControllerLayoutGuide type="bottom" id="dXg-vL-jjK"/>
@@ -154,12 +152,26 @@
                     <view key="view" contentMode="scaleToFill" id="GTz-Tp-gpM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jfe-7T-Qih">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jfe-7T-Qih" secondAttribute="trailing" id="N2t-Vr-zTA"/>
+                            <constraint firstItem="jfe-7T-Qih" firstAttribute="leading" secondItem="GTz-Tp-gpM" secondAttribute="leading" id="g0Y-EB-84N"/>
+                            <constraint firstAttribute="bottom" secondItem="jfe-7T-Qih" secondAttribute="bottom" id="k8N-77-syk"/>
+                            <constraint firstItem="jfe-7T-Qih" firstAttribute="top" secondItem="tcD-Tq-CIJ" secondAttribute="bottom" id="zJJ-bV-7GY"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="jfe-7T-Qih" id="jET-Ff-yfi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZrU-AG-nOw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3368.8000000000002" y="761.46926536731644"/>
+            <point key="canvasLocation" x="3373.5999999999999" y="794.75262368815595"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="f6K-g5-VUq">
