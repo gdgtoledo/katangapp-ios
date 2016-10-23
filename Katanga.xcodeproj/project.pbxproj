@@ -15,6 +15,9 @@
 		571EBB151DBCBD6600DC71C5 /* busboldyellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 571EBB141DBCBD6600DC71C5 /* busboldyellow.png */; };
 		571EBB181DBCC86F00DC71C5 /* BusComingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571EBB161DBCC86F00DC71C5 /* BusComingCell.swift */; };
 		571EBB191DBCC86F00DC71C5 /* BusComingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 571EBB171DBCC86F00DC71C5 /* BusComingCell.xib */; };
+		571EBB1B1DBCD90C00DC71C5 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571EBB1A1DBCD90C00DC71C5 /* NibLoadable.swift */; };
+		571EBB1D1DBCD96100DC71C5 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571EBB1C1DBCD96100DC71C5 /* ReusableView.swift */; };
+		571EBB1F1DBCD9AF00DC71C5 /* UITableView+Katanga.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571EBB1E1DBCD9AF00DC71C5 /* UITableView+Katanga.swift */; };
 		57266AE61DAA2D01002C7C12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266AE51DAA2D01002C7C12 /* AppDelegate.swift */; };
 		57266AE81DAA2D01002C7C12 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266AE71DAA2D01002C7C12 /* InitialViewController.swift */; };
 		57266AEB1DAA2D01002C7C12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57266AE91DAA2D01002C7C12 /* Main.storyboard */; };
@@ -66,6 +69,9 @@
 		571EBB141DBCBD6600DC71C5 /* busboldyellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = busboldyellow.png; sourceTree = "<group>"; };
 		571EBB161DBCC86F00DC71C5 /* BusComingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusComingCell.swift; sourceTree = "<group>"; };
 		571EBB171DBCC86F00DC71C5 /* BusComingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusComingCell.xib; sourceTree = "<group>"; };
+		571EBB1A1DBCD90C00DC71C5 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		571EBB1C1DBCD96100DC71C5 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		571EBB1E1DBCD9AF00DC71C5 /* UITableView+Katanga.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Katanga.swift"; sourceTree = "<group>"; };
 		57266AE21DAA2D01002C7C12 /* Katanga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Katanga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57266AE51DAA2D01002C7C12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57266AE71DAA2D01002C7C12 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
@@ -198,6 +204,9 @@
 			children = (
 				578961461DBC012B00C10285 /* ActivityIndicator.swift */,
 				57503F7C1DAAAB9000B39E24 /* UIColor+Katanga.swift */,
+				571EBB1A1DBCD90C00DC71C5 /* NibLoadable.swift */,
+				571EBB1C1DBCD96100DC71C5 /* ReusableView.swift */,
+				571EBB1E1DBCD9AF00DC71C5 /* UITableView+Katanga.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -517,6 +526,7 @@
 				5789614E1DBC1DCB00C10285 /* NearBusStop.swift in Sources */,
 				578961391DBBEE4F00C10285 /* BusStop.swift in Sources */,
 				5789613D1DBBEEAE00C10285 /* BusApi.swift in Sources */,
+				571EBB1B1DBCD90C00DC71C5 /* NibLoadable.swift in Sources */,
 				571EBB0D1DBCB7B800DC71C5 /* NearBusStopCell.swift in Sources */,
 				57266AE81DAA2D01002C7C12 /* InitialViewController.swift in Sources */,
 				57266AE61DAA2D01002C7C12 /* AppDelegate.swift in Sources */,
@@ -524,8 +534,10 @@
 				571EBB181DBCC86F00DC71C5 /* BusComingCell.swift in Sources */,
 				571EBB0A1DBCB3E800DC71C5 /* NearBusStopsViewController.swift in Sources */,
 				5789613A1DBBEE4F00C10285 /* Route.swift in Sources */,
+				571EBB1D1DBCD96100DC71C5 /* ReusableView.swift in Sources */,
 				578961421DBBF8B900C10285 /* RoutesViewController.swift in Sources */,
 				5789614B1DBC168A00C10285 /* RoutesCell.swift in Sources */,
+				571EBB1F1DBCD9AF00DC71C5 /* UITableView+Katanga.swift in Sources */,
 				578961471DBC012B00C10285 /* ActivityIndicator.swift in Sources */,
 				57503F7D1DAAAB9000B39E24 /* UIColor+Katanga.swift in Sources */,
 			);
