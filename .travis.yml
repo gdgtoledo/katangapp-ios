@@ -1,0 +1,13 @@
+language: objective-c
+os: osx
+osx_image: xcode8
+
+
+before_install:
+   - gem install cocoapods --version 1.1.1
+   - pod repo update > /dev/null
+
+script:
+   - pod install
+   - set -o pipefail
+   - xcodebuild -workspace Katanga.xcworkspace -scheme Katanga -destination "platform=iOS Simulator,name=iPhone 6 Plus" | xcpretty

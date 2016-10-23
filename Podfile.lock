@@ -1,34 +1,27 @@
 PODS:
-  - Alamofire (4.0.1)
-  - RxAlamofire (3.0.0-beta.1):
-    - RxAlamofire/Core (= 3.0.0-beta.1)
-  - RxAlamofire/Core (3.0.0-beta.1):
-    - Alamofire (~> 4.0)
-    - RxCocoa (~> 3.0.0-beta.1)
-    - RxSwift (~> 3.0.0-beta.1)
-  - RxBlocking (3.0.0-beta.1):
-    - RxSwift (~> 3.0.0-beta.1)
-  - RxCocoa (3.0.0-beta.1):
-    - RxSwift (~> 3.0.0-beta.1)
-  - RxSwift (3.0.0-beta.1)
-  - RxTests (3.0.0-beta.1):
-    - RxSwift (~> 3.0.0-beta.1)
+  - Marshal (1.0.0)
+  - RxBlocking (3.0.0-rc.1):
+    - RxSwift (~> 3.0.0-rc.1)
+  - RxCocoa (3.0.0-rc.1):
+    - RxSwift (~> 3.0.0-rc.1)
+  - RxSwift (3.0.0-rc.1)
+  - RxTest (3.0.0-rc.1):
+    - RxSwift (~> 3.0.0-rc.1)
 
 DEPENDENCIES:
-  - RxAlamofire (= 3.0.0-beta.1)
-  - RxBlocking (= 3.0.0-beta.1)
-  - RxCocoa (= 3.0.0-beta.1)
-  - RxSwift (= 3.0.0-beta.1)
-  - RxTests (= 3.0.0-beta.1)
+  - Marshal
+  - RxBlocking (= 3.0.0-rc.1)
+  - RxCocoa (= 3.0.0-rc.1)
+  - RxSwift (= 3.0.0-rc.1)
+  - RxTest (= 3.0.0-rc.1)
 
 SPEC CHECKSUMS:
-  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
-  RxAlamofire: 3e62073fbe1c0269c942af44b073c10d9dda81ab
-  RxBlocking: 422944880fe63b432c459dc87be7c8178dcf45f3
-  RxCocoa: 8cecf331302b8ae5381bbab1bccba4ede2eae6a8
-  RxSwift: 0823e8d7969c23bfa9ddfb2afa4881e424a1a710
-  RxTests: 819cbca750007349f03cfdb89bc07d412f67ab96
+  Marshal: a3c5c5dbd388112edf3cdabb718f2b4cfe48658a
+  RxBlocking: f942482a50abfefa84a33406b67c53af50e6cc2a
+  RxCocoa: e72a074a7f38896ec0382d096df5f58df10115c7
+  RxSwift: d7a3819dd71789c473e3cbf1a0c02d58b2692739
+  RxTest: e7044409e1db9d2a4968ede599909c7a41539256
 
-PODFILE CHECKSUM: 72575a86431ce4f7f227ea61850880e761bc1e86
+PODFILE CHECKSUM: fee96177bdc68750aa3eda9a0c84398c2d957677
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.1
