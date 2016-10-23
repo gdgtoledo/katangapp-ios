@@ -108,7 +108,7 @@ class NearBusStopCell: UITableViewCell {
         
         _items
             .asObservable()
-            .bindTo(tableView.rx.items(cellIdentifier: BusComingCell.reuseIdentifier, cellType: BusComingCell.self)) { row, element, cell in
+            .bindTo(tableView.rx.items(cellType: BusComingCell.self)) { row, element, cell in
                 cell.routeId = element.id
                 cell.time = element.minutes
             }.addDisposableTo(disposeBag)

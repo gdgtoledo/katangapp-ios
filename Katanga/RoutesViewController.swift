@@ -57,7 +57,7 @@ class RoutesViewController : UIViewController {
             .trackActivity(activityIndicator)
             .scan([], accumulator: { $0 + [$1] })
             .asDriver(onErrorJustReturn: [])
-            .drive(tableView.rx.items(cellIdentifier: RoutesCell.reuseIdentifier, cellType: RoutesCell.self)) { row, route, routeCell in
+            .drive(tableView.rx.items(cellType: RoutesCell.self)) { row, route, routeCell in
                 routeCell.routeId = route.id
                 routeCell.routeName = route.name
             }
