@@ -13,6 +13,8 @@
 		571EBB0E1DBCB7B800DC71C5 /* NearBusStopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 571EBB0C1DBCB7B800DC71C5 /* NearBusStopCell.xib */; };
 		571EBB131DBCBD3600DC71C5 /* logo_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 571EBB121DBCBD3600DC71C5 /* logo_small.png */; };
 		571EBB151DBCBD6600DC71C5 /* busboldyellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 571EBB141DBCBD6600DC71C5 /* busboldyellow.png */; };
+		571EBB181DBCC86F00DC71C5 /* BusComingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571EBB161DBCC86F00DC71C5 /* BusComingCell.swift */; };
+		571EBB191DBCC86F00DC71C5 /* BusComingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 571EBB171DBCC86F00DC71C5 /* BusComingCell.xib */; };
 		57266AE61DAA2D01002C7C12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266AE51DAA2D01002C7C12 /* AppDelegate.swift */; };
 		57266AE81DAA2D01002C7C12 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266AE71DAA2D01002C7C12 /* InitialViewController.swift */; };
 		57266AEB1DAA2D01002C7C12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57266AE91DAA2D01002C7C12 /* Main.storyboard */; };
@@ -62,6 +64,8 @@
 		571EBB0C1DBCB7B800DC71C5 /* NearBusStopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearBusStopCell.xib; sourceTree = "<group>"; };
 		571EBB121DBCBD3600DC71C5 /* logo_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_small.png; sourceTree = "<group>"; };
 		571EBB141DBCBD6600DC71C5 /* busboldyellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = busboldyellow.png; sourceTree = "<group>"; };
+		571EBB161DBCC86F00DC71C5 /* BusComingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusComingCell.swift; sourceTree = "<group>"; };
+		571EBB171DBCC86F00DC71C5 /* BusComingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusComingCell.xib; sourceTree = "<group>"; };
 		57266AE21DAA2D01002C7C12 /* Katanga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Katanga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57266AE51DAA2D01002C7C12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57266AE71DAA2D01002C7C12 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
@@ -243,6 +247,8 @@
 				571EBB0B1DBCB7B800DC71C5 /* NearBusStopCell.swift */,
 				571EBB0C1DBCB7B800DC71C5 /* NearBusStopCell.xib */,
 				5789614A1DBC168A00C10285 /* RoutesCell.xib */,
+				571EBB161DBCC86F00DC71C5 /* BusComingCell.swift */,
+				571EBB171DBCC86F00DC71C5 /* BusComingCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -384,6 +390,7 @@
 				571EBB0E1DBCB7B800DC71C5 /* NearBusStopCell.xib in Resources */,
 				57266AF01DAA2D01002C7C12 /* LaunchScreen.storyboard in Resources */,
 				57266B221DAA6FD1002C7C12 /* Quicksand-Regular.ttf in Resources */,
+				571EBB191DBCC86F00DC71C5 /* BusComingCell.xib in Resources */,
 				57266AED1DAA2D01002C7C12 /* Assets.xcassets in Resources */,
 				571EBB151DBCBD6600DC71C5 /* busboldyellow.png in Resources */,
 				571EBB131DBCBD3600DC71C5 /* logo_small.png in Resources */,
@@ -514,6 +521,7 @@
 				57266AE81DAA2D01002C7C12 /* InitialViewController.swift in Sources */,
 				57266AE61DAA2D01002C7C12 /* AppDelegate.swift in Sources */,
 				578961401DBBEF0000C10285 /* KatangaBusApiClient.swift in Sources */,
+				571EBB181DBCC86F00DC71C5 /* BusComingCell.swift in Sources */,
 				571EBB0A1DBCB3E800DC71C5 /* NearBusStopsViewController.swift in Sources */,
 				5789613A1DBBEE4F00C10285 /* Route.swift in Sources */,
 				578961421DBBF8B900C10285 /* RoutesViewController.swift in Sources */,
