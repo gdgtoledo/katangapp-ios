@@ -19,14 +19,21 @@ class BusComingCell: UITableViewCell {
         }
     }
     
-    public var time: String {
+    public var time: Double {
         set {
-            timeLabel.text = newValue
+            timeLabel.text = setTimeText(forMinutes: newValue)
         }
         get {
-            return timeLabel.text ?? ""
+            return 0
         }
     }
+    
+    private let busInStopColor =
+            UIColor(red: 255/255.0, green: 75/255.0, blue: 69/255.0, alpha: 1.0)
+    
+    private let nearBusColor =
+        UIColor(red: 255/255.0, green: 179/255.0, blue: 0/255.0, alpha: 1.0)
+    
     
     @IBOutlet private weak var routeIdLabel: UILabel!
     @IBOutlet private weak var timeLabel: UILabel!
@@ -36,5 +43,29 @@ class BusComingCell: UITableViewCell {
         
         routeIdLabel.text = ""
         timeLabel.text = ""
+        
+        timeLabel.textColor = .black
+    }
+    
+    private func setTimeText(forMinutes minutes: Double) -> String {
+        let mins = Int(minutes)
+        
+        var text = "\(mins) minutos"
+        
+        if mins <= 5 {
+            timeLabel.textColor = busInStopColor
+        }
+        else if mins < 10 {
+            timeLabel.textColor = nearBusColor
+        }
+        
+        if mins == 0 {
+            text = "PRÓXIMO"
+        }
+        else if mins > 60 {
+            text = "60+ minutos"
+        }
+        
+        return text
     }
 }
