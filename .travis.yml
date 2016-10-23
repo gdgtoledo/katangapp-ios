@@ -9,4 +9,5 @@ before_install:
 
 script:
    - pod install
-   - xcodebuild clean -workspace Katanga.xcworkspace -scheme Katanga -destination "platform=iOS Simulator,name=iPhone 6 Plus"
+   - set -o pipefail
+   - xcodebuild -workspace Katanga.xcworkspace -scheme Katanga -destination "platform=iOS Simulator,name=iPhone 6 Plus" | xcpretty
