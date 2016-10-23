@@ -156,16 +156,22 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jfe-7T-Qih">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="NEZ-xC-UdX">
+                                <color key="color" red="0.96470588239999999" green="0.92549019610000005" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="NEZ-xC-UdX" firstAttribute="centerX" secondItem="GTz-Tp-gpM" secondAttribute="centerX" id="H5X-3X-Iml"/>
                             <constraint firstAttribute="trailing" secondItem="jfe-7T-Qih" secondAttribute="trailing" id="N2t-Vr-zTA"/>
                             <constraint firstItem="jfe-7T-Qih" firstAttribute="leading" secondItem="GTz-Tp-gpM" secondAttribute="leading" id="g0Y-EB-84N"/>
                             <constraint firstAttribute="bottom" secondItem="jfe-7T-Qih" secondAttribute="bottom" id="k8N-77-syk"/>
+                            <constraint firstItem="NEZ-xC-UdX" firstAttribute="centerY" secondItem="GTz-Tp-gpM" secondAttribute="centerY" id="oE7-bU-Xp0"/>
                             <constraint firstItem="jfe-7T-Qih" firstAttribute="top" secondItem="tcD-Tq-CIJ" secondAttribute="bottom" id="zJJ-bV-7GY"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="spinner" destination="NEZ-xC-UdX" id="dUq-92-KEX"/>
                         <outlet property="tableView" destination="jfe-7T-Qih" id="jET-Ff-yfi"/>
                     </connections>
                 </viewController>
