@@ -47,7 +47,9 @@ class NearBusStopCell: UITableViewCell {
     
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
-            tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+            let nib = UINib(nibName: "BusComingCell", bundle: nil)
+            tableView.register(nib, forCellReuseIdentifier: "cell")
+            
             tableView.rowHeight = Constants.rowHeight
         }
     }
@@ -82,6 +84,12 @@ class NearBusStopCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        tableView.backgroundColor = .clear
+        tableView.separatorColor = .clear
+        
+        tableView.separatorInset = UIEdgeInsets.zero
+        tableView.layoutMargins = UIEdgeInsets.zero
+        
         setupRx()
     }
     
@@ -101,8 +109,9 @@ class NearBusStopCell: UITableViewCell {
         
         _items
             .asObservable()
-            .bindTo(tableView.rx.items(cellIdentifier: "cell")) { row, element, cell in
-                cell.textLabel?.text = "\(element.minutes)"
+            .bindTo(tableView.rx.items(cellIdentifier: "cell", cellType: BusComingCell.self)) { row, element, cell in
+                cell.routeId = element.id
+                cell.time = "\(element.minutes)"
             }.addDisposableTo(disposeBag)
         
         _items
