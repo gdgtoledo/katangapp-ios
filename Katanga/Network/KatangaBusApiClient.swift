@@ -25,9 +25,9 @@ import Marshal
 
 struct KatangaBusApiClient : BusApi {
 
-    var disposeBag = DisposeBag()
-
     let baseURL = "https://secret-depths-4660.herokuapp.com"
+
+    var disposeBag = DisposeBag()
 
     func allRoutes() -> Observable<Route> {
         let url = URL(string: "\(baseURL)/api/routes")!

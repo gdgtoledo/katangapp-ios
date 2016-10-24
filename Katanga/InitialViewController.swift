@@ -28,6 +28,9 @@ class InitialViewController: UIViewController {
 
     private var spinner: UIActivityIndicatorView?
 
+    @IBOutlet weak var metersLabel: UILabel!
+    @IBOutlet weak var metersSlider: UISlider!
+
     @IBOutlet weak var searchLocationButton: UIButton! {
         didSet {
             searchLocationButton.backgroundColor = .katangaYellow
@@ -40,9 +43,6 @@ class InitialViewController: UIViewController {
             searchLocationButton.addSubview(spinner!)
         }
     }
-
-    @IBOutlet weak var metersSlider: UISlider!
-    @IBOutlet weak var metersLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()

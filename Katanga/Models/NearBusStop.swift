@@ -23,8 +23,8 @@ import Marshal
 
 struct NearBusStop : Unmarshaling {
     let busStop: BusStop
-    let times: [BusStopTime]
     let distance: Double
+    let times: [BusStopTime]
 
     init(object: MarshaledObject) throws {
         busStop = try object.value(for: "parada")

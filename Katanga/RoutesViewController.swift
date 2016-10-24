@@ -24,9 +24,9 @@ import RxSwift
 
 class RoutesViewController : UIViewController {
 
-    private var disposeBag = DisposeBag()
-
     private let activityIndicator = ActivityIndicator()
+
+    private var disposeBag = DisposeBag()
 
     @IBOutlet weak var spinner: UIActivityIndicatorView! {
         didSet {

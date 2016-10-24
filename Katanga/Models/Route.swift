@@ -23,10 +23,10 @@ import Marshal
 
 struct Route : Unmarshaling {
 
+    let busStops: [BusStop]
     let id: String
     let link: String
     let name: String
-    let busStops: [BusStop]
 
     init(object: MarshaledObject) throws {
         id = try object.value(for: "id")

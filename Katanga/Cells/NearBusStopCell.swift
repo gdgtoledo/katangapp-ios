@@ -24,16 +24,6 @@ import RxSwift
 
 class NearBusStopCell: UITableViewCell {
 
-    public var items: [BusStopTime] {
-        set {
-            _items.value.append(contentsOf: newValue)
-        }
-
-        get {
-            return _items.value
-        }
-    }
-
     public var busStopName: String {
         set {
             busStopNameLabel.text = newValue
@@ -51,6 +41,16 @@ class NearBusStopCell: UITableViewCell {
 
         get {
             return distanceLabel.text ?? ""
+        }
+    }
+
+    public var items: [BusStopTime] {
+        set {
+            _items.value.append(contentsOf: newValue)
+        }
+
+        get {
+            return _items.value
         }
     }
 

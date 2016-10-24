@@ -55,9 +55,9 @@ public class ActivityIndicator : SharedSequenceConvertibleType {
     public typealias E = Bool
     public typealias SharingStrategy = DriverSharingStrategy
 
+    private let _loading: SharedSequence<SharingStrategy, Bool>
     private let _lock = NSRecursiveLock()
     private let _variable = Variable(0)
-    private let _loading: SharedSequence<SharingStrategy, Bool>
 
     public init() {
         _loading = _variable.asDriver()

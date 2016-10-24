@@ -24,14 +24,18 @@ import RxCocoa
 
 class NearBusStopsViewController: UIViewController {
 
-    private var disposeBag = DisposeBag()
-    private var refreshControlBag = DisposeBag()
-
     private let activityIndicator = ActivityIndicator()
 
+    private var disposeBag = DisposeBag()
     private var nearBusStops: Driver<[NearBusStop]>?
-
     private var refreshControl: UIRefreshControl?
+    private var refreshControlBag = DisposeBag()
+
+    @IBOutlet weak var spinner: UIActivityIndicatorView! {
+        didSet {
+            spinner.hidesWhenStopped = true
+        }
+    }
 
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -40,12 +44,6 @@ class NearBusStopsViewController: UIViewController {
 
             tableView.rowHeight = UITableViewAutomaticDimension
             tableView.estimatedRowHeight = 200
-        }
-    }
-
-    @IBOutlet weak var spinner: UIActivityIndicatorView! {
-        didSet {
-            spinner.hidesWhenStopped = true
         }
     }
 

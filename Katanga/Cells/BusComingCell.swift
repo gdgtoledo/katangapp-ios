@@ -22,6 +22,12 @@ import UIKit
 
 class BusComingCell: UITableViewCell {
 
+    private let busInStopColor =
+        UIColor(red: 255/255.0, green: 75/255.0, blue: 69/255.0, alpha: 1.0)
+
+    private let nearBusColor =
+        UIColor(red: 255/255.0, green: 179/255.0, blue: 0/255.0, alpha: 1.0)
+
     public var routeId: String {
         set {
             routeIdLabel.text = newValue
@@ -41,12 +47,6 @@ class BusComingCell: UITableViewCell {
             return 0
         }
     }
-
-    private let busInStopColor =
-            UIColor(red: 255/255.0, green: 75/255.0, blue: 69/255.0, alpha: 1.0)
-
-    private let nearBusColor =
-        UIColor(red: 255/255.0, green: 179/255.0, blue: 0/255.0, alpha: 1.0)
 
     @IBOutlet private weak var routeIdLabel: UILabel!
     @IBOutlet private weak var timeLabel: UILabel!
