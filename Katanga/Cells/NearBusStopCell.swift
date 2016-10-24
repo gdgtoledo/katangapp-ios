@@ -71,7 +71,6 @@ class NearBusStopCell: UITableViewCell {
 
     @IBOutlet private weak var busStopNameLabel: UILabel!
     @IBOutlet private weak var distanceLabel: UILabel!
-
     @IBOutlet private weak var heightConstraint: NSLayoutConstraint!
     @IBOutlet private weak var headerHeightConstraint: NSLayoutConstraint!
 
@@ -97,13 +96,13 @@ class NearBusStopCell: UITableViewCell {
         super.prepareForReuse()
 
         disposeBag = DisposeBag()
+
         _items.value = []
 
         setupRx()
     }
 
     private func setupRx() {
-
         _items
             .asObservable()
             .bindTo(tableView.rx.items(cellType: BusComingCell.self)) { row, element, cell in

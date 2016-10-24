@@ -62,7 +62,6 @@ class BusComingCell: UITableViewCell {
 
         routeIdLabel.text = ""
         timeLabel.text = ""
-
         timeLabel.textColor = .black
     }
 

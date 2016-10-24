@@ -42,6 +42,7 @@ struct KatangaBusApiClient : BusApi {
     func nearbyBusStops(latitude: Double, longitude: Double, meters: Int) -> Observable<NearBusStop> {
 
         let url = URL(string: "\(baseURL)/main?lt=\(latitude)&ln=\(longitude)&r=\(meters)")!
+
         let request = URLRequest(url: url)
 
         return URLSession.shared.rx.data(request: request)

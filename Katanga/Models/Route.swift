@@ -33,6 +33,7 @@ struct Route : Unmarshaling {
         link = try object.value(for: "links.self")
 
         let rawName: String = try object.value(for: "name")
+
         name = rawName.components(separatedBy: ")").last ?? ""
 
         busStops = try object.value(for: "busStops")

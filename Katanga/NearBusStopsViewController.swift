@@ -82,13 +82,12 @@ class NearBusStopsViewController: UIViewController {
     }
 
     private func setupRx() {
-
             nearBusStops?.drive(tableView.rx.items(cellType: NearBusStopCell.self)) { row, nearBusStop, cell in
                 cell.busStopName = nearBusStop.busStop.address
 
                 let distanceFormatted = String(format: "%.2f", nearBusStop.distance)
-                cell.distance = "(\(distanceFormatted) metros)"
 
+                cell.distance = "(\(distanceFormatted) metros)"
                 cell.items = nearBusStop.times
             }
             .addDisposableTo(disposeBag)

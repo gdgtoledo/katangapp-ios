@@ -22,6 +22,7 @@ import Foundation
 import Marshal
 
 struct NearBusStop : Unmarshaling {
+
     let busStop: BusStop
     let distance: Double
     let times: [BusStopTime]
@@ -35,6 +36,7 @@ struct NearBusStop : Unmarshaling {
 }
 
 struct BusStopTime : Unmarshaling {
+
     let id: String
     let minutes: Double
 

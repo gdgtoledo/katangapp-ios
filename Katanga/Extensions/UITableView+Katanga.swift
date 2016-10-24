@@ -26,6 +26,7 @@ extension UITableView {
 
     func register<T: UITableViewCell>(_ : T.Type) where T: NibLoadableView, T: ReusableView {
         let nib = UINib(nibName: T.nibName, bundle: nil)
+
         register(nib, forCellReuseIdentifier: T.reuseIdentifier)
     }
 
@@ -38,6 +39,7 @@ extension Reactive where Base : UITableView {
         -> (_ source: O)
         -> (_ configureCell: @escaping (Int, S.Iterator.Element, Cell) -> Void)
         -> Disposable
+
         where O.E == S, Cell : ReusableView {
 
         return items(cellIdentifier: cellType.reuseIdentifier, cellType: cellType)
@@ -49,10 +51,9 @@ extension UITableView {
 
     func customizeTableView(withColor color: UIColor) {
         backgroundColor = color
-        separatorColor = color
-
-        separatorInset = UIEdgeInsets.zero
         layoutMargins = UIEdgeInsets.zero
+        separatorColor = color
+        separatorInset = UIEdgeInsets.zero
     }
 
 }
