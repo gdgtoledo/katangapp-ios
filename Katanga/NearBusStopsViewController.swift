@@ -24,9 +24,6 @@ import RxCocoa
 
 class NearBusStopsViewController: UIViewController {
 
-
-    //MARK: Private variables
-
     private var disposeBag = DisposeBag()
     private var refreshControlBag = DisposeBag()
 
@@ -35,8 +32,6 @@ class NearBusStopsViewController: UIViewController {
     private var nearBusStops: Driver<[NearBusStop]>?
 
     private var refreshControl: UIRefreshControl?
-
-    //MARK: Outlets
 
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -54,8 +49,6 @@ class NearBusStopsViewController: UIViewController {
         }
     }
 
-    //MARK: UIViewController
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -71,9 +64,6 @@ class NearBusStopsViewController: UIViewController {
 
         setupRx()
     }
-
-
-    //MARK: Private methods
 
     private func setupRefresh() {
         refreshControl = UIRefreshControl()

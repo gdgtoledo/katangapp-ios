@@ -24,14 +24,9 @@ import RxCocoa
 
 class InitialViewController: UIViewController {
 
-    //MARK: Private variables
-
     private var disposeBag = DisposeBag()
 
     private var spinner: UIActivityIndicatorView?
-
-
-    //MARK: Outlets
 
     @IBOutlet weak var searchLocationButton: UIButton! {
         didSet {
@@ -49,17 +44,11 @@ class InitialViewController: UIViewController {
     @IBOutlet weak var metersSlider: UISlider!
     @IBOutlet weak var metersLabel: UILabel!
 
-
-    //MARK: UIViewController
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setUpRx()
     }
-
-
-    //MARK: Private methods
 
     private func setUpRx() {
         metersSlider.rx.value

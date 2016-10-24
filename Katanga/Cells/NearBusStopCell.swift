@@ -24,8 +24,6 @@ import RxSwift
 
 class NearBusStopCell: UITableViewCell {
 
-    //MARK: Public variables
-
     public var items: [BusStopTime] {
         set {
             _items.value.append(contentsOf: newValue)
@@ -53,8 +51,6 @@ class NearBusStopCell: UITableViewCell {
         }
     }
 
-    //MARK: Outlets
-
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
             tableView.register(BusComingCell.self)
@@ -76,8 +72,6 @@ class NearBusStopCell: UITableViewCell {
     @IBOutlet private weak var heightConstraint: NSLayoutConstraint!
     @IBOutlet private weak var headerHeightConstraint: NSLayoutConstraint!
 
-    //MARK: Private vars
-
     private var disposeBag = DisposeBag()
     private var _items = Variable<[BusStopTime]>([])
 
@@ -85,8 +79,6 @@ class NearBusStopCell: UITableViewCell {
         static let cornerRadius: CGFloat = 10
         static let rowHeight: CGFloat = 40
     }
-
-    //MARK: UITableViewCell
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -106,8 +98,6 @@ class NearBusStopCell: UITableViewCell {
 
         setupRx()
     }
-
-    //MARK: Private methods
 
     private func setupRx() {
 

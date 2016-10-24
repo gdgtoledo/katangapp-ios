@@ -24,14 +24,9 @@ import RxSwift
 
 class RoutesViewController : UIViewController {
 
-    //MARK: Private variables
-
     private var disposeBag = DisposeBag()
 
     private let activityIndicator = ActivityIndicator()
-
-
-    //MARK: Outlets
 
     @IBOutlet weak var spinner: UIActivityIndicatorView! {
         didSet {
@@ -46,9 +41,6 @@ class RoutesViewController : UIViewController {
         }
     }
 
-
-    //MARK: UIViewController
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -56,9 +48,6 @@ class RoutesViewController : UIViewController {
 
         setupRx()
     }
-
-
-    //MARK: Private methods
 
     private func setupRx() {
         KatangaBusApiClient().allRoutes()

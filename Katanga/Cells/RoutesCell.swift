@@ -22,8 +22,6 @@ import UIKit
 
 class RoutesCell: UITableViewCell {
 
-    //MARK: Public variables
-
     public var routeId: String {
         set {
             routeIdLabel.text = newValue
@@ -42,8 +40,6 @@ class RoutesCell: UITableViewCell {
         }
     }
 
-    //MARK: Outlets
-
     @IBOutlet private weak var containerView: UIView! {
         didSet {
             containerView.layer.cornerRadius = 3
@@ -53,8 +49,6 @@ class RoutesCell: UITableViewCell {
 
     @IBOutlet private weak var routeIdLabel: UILabel!
     @IBOutlet private weak var routeNameLabel: UILabel!
-
-    //MARK: UITableViewCell
 
     override func awakeFromNib() {
         super.awakeFromNib()
