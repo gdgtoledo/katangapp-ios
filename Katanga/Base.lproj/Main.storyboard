@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GOh-kE-j4n">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -70,18 +70,158 @@
                             <constraint firstItem="NOX-h6-GfN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xMN-ke-SYm"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="1F1-Mn-ung"/>
                     <connections>
                         <outlet property="metersLabel" destination="tGE-Fy-9Jy" id="I43-9l-RMq"/>
                         <outlet property="metersSlider" destination="Hyt-US-P2R" id="Yzg-hO-qQd"/>
                         <outlet property="searchLocationButton" destination="NOX-h6-GfN" id="psc-DN-rXo"/>
+                        <segue destination="D7s-wF-0XA" kind="show" identifier="shownearstops" id="iFS-Zv-98I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-366" y="34"/>
+            <point key="canvasLocation" x="2450.4000000000001" y="33.733133433283363"/>
+        </scene>
+        <!--Paradas cercanas-->
+        <scene sceneID="YLd-ZY-7gn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="22t-2E-m3Y" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Paradas cercanas" image="location_icon" id="0fe-eG-Zoa"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="fQP-11-gvz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.96470588239999999" green="0.92549019610000005" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="BOT-x7-vJo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P7e-7u-JMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1511.2" y="33.733133433283363"/>
+        </scene>
+        <!--Líneas-->
+        <scene sceneID="zn7-UN-IpD">
+            <objects>
+                <viewController id="87T-h1-h0O" customClass="RoutesViewController" customModule="Katanga" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f6t-Om-HQf"/>
+                        <viewControllerLayoutGuide type="bottom" id="mtS-KT-Cle"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LRT-cf-PfK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f7e-5f-oec">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="XV8-iZ-vqo">
+                                <color key="color" red="0.96470588239999999" green="0.92549019610000005" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="f7e-5f-oec" secondAttribute="trailing" id="5Yp-Sd-H5a"/>
+                            <constraint firstItem="XV8-iZ-vqo" firstAttribute="centerY" secondItem="LRT-cf-PfK" secondAttribute="centerY" id="929-Al-dud"/>
+                            <constraint firstItem="f7e-5f-oec" firstAttribute="top" secondItem="f6t-Om-HQf" secondAttribute="bottom" id="RcH-SA-Zhx"/>
+                            <constraint firstItem="XV8-iZ-vqo" firstAttribute="centerX" secondItem="LRT-cf-PfK" secondAttribute="centerX" id="aga-hF-kQF"/>
+                            <constraint firstAttribute="bottom" secondItem="f7e-5f-oec" secondAttribute="bottom" id="ixT-j6-0sn"/>
+                            <constraint firstItem="f7e-5f-oec" firstAttribute="leading" secondItem="LRT-cf-PfK" secondAttribute="leading" id="smq-8F-Dr6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Líneas" id="Egk-YU-aV2"/>
+                    <connections>
+                        <outlet property="spinner" destination="XV8-iZ-vqo" id="UBc-I5-MIA"/>
+                        <outlet property="tableView" destination="f7e-5f-oec" id="3Kt-8B-pU8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yhR-iV-JAZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2448.8000000000002" y="794.75262368815595"/>
+        </scene>
+        <!--Paradas cercanas-->
+        <scene sceneID="YXg-LU-LN3">
+            <objects>
+                <viewController title="Paradas cercanas" id="D7s-wF-0XA" customClass="NearBusStopsViewController" customModule="Katanga" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tcD-Tq-CIJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="dXg-vL-jjK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GTz-Tp-gpM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jfe-7T-Qih">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="NEZ-xC-UdX">
+                                <color key="color" red="0.96470588239999999" green="0.92549019610000005" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NEZ-xC-UdX" firstAttribute="centerX" secondItem="GTz-Tp-gpM" secondAttribute="centerX" id="H5X-3X-Iml"/>
+                            <constraint firstAttribute="trailing" secondItem="jfe-7T-Qih" secondAttribute="trailing" id="N2t-Vr-zTA"/>
+                            <constraint firstItem="jfe-7T-Qih" firstAttribute="leading" secondItem="GTz-Tp-gpM" secondAttribute="leading" id="g0Y-EB-84N"/>
+                            <constraint firstAttribute="bottom" secondItem="jfe-7T-Qih" secondAttribute="bottom" id="k8N-77-syk"/>
+                            <constraint firstItem="NEZ-xC-UdX" firstAttribute="centerY" secondItem="GTz-Tp-gpM" secondAttribute="centerY" id="oE7-bU-Xp0"/>
+                            <constraint firstItem="jfe-7T-Qih" firstAttribute="top" secondItem="tcD-Tq-CIJ" secondAttribute="bottom" id="zJJ-bV-7GY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="spinner" destination="NEZ-xC-UdX" id="dUq-92-KEX"/>
+                        <outlet property="tableView" destination="jfe-7T-Qih" id="jET-Ff-yfi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZrU-AG-nOw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3373.5999999999999" y="794.75262368815595"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="f6K-g5-VUq">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="GOh-kE-j4n" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="UTP-rO-ayD">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.96470588239999999" green="0.92549019610000005" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="22t-2E-m3Y" kind="relationship" relationship="viewControllers" id="CZa-PI-v4a"/>
+                        <segue destination="QdF-Bp-w77" kind="relationship" relationship="viewControllers" id="E7D-PD-y3L"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w8f-gf-Wq9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="572" y="33.733133433283363"/>
+        </scene>
+        <!--Líneas-->
+        <scene sceneID="4We-NN-uUo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QdF-Bp-w77" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Líneas" image="lines_icon" id="BXm-2X-NcP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Jxg-y6-hrD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="87T-h1-h0O" kind="relationship" relationship="rootViewController" id="u47-cz-tm0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hm4-Kw-2U7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1509.5999999999999" y="794.75262368815595"/>
         </scene>
     </scenes>
     <resources>
+        <image name="lines_icon" width="24" height="24"/>
         <image name="location_icon" width="24" height="24"/>
     </resources>
 </document>
