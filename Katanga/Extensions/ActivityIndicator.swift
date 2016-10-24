@@ -59,19 +59,14 @@ public class ActivityIndicator : SharedSequenceConvertibleType {
     private let _lock = NSRecursiveLock()
     private let _variable = Variable(0)
 
+    public func asSharedSequence() -> SharedSequence<SharingStrategy, E> {
+        return _loading
+    }
+
     public init() {
         _loading = _variable.asDriver()
             .map { $0 > 0 }
             .distinctUntilChanged()
-    }
-
-    fileprivate func trackActivityOfObservable<O: ObservableConvertibleType>(_ source: O) -> Observable<O.E> {
-        return Observable.using({ () -> ActivityToken<O.E> in
-            self.increment()
-            return ActivityToken(source: source.asObservable(), disposeAction: self.decrement)
-        }) { t in
-            return t.asObservable()
-        }
     }
 
     private func increment() {
@@ -86,8 +81,13 @@ public class ActivityIndicator : SharedSequenceConvertibleType {
         _lock.unlock()
     }
 
-    public func asSharedSequence() -> SharedSequence<SharingStrategy, E> {
-        return _loading
+    fileprivate func trackActivityOfObservable<O: ObservableConvertibleType>(_ source: O) -> Observable<O.E> {
+        return Observable.using({ () -> ActivityToken<O.E> in
+            self.increment()
+            return ActivityToken(source: source.asObservable(), disposeAction: self.decrement)
+        }) { t in
+            return t.asObservable()
+        }
     }
 
 }
