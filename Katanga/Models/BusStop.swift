@@ -22,13 +22,13 @@ import Foundation
 import Marshal
 
 struct BusStop : Unmarshaling {
-    
+
     let address: String
     let id: String
     let latitude: Double
     let longitude: Double
     let routeId: String?
-    
+
     init(object: MarshaledObject) throws {
         address = try object.value(for: "address")
         id = try object.value(for: "id")

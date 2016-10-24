@@ -22,19 +22,19 @@ import Foundation
 import Marshal
 
 struct Route : Unmarshaling {
-    
+
     let id: String
     let link: String
     let name: String
     let busStops: [BusStop]
-    
+
     init(object: MarshaledObject) throws {
         id = try object.value(for: "id")
         link = try object.value(for: "links.self")
-        
+
         let rawName: String = try object.value(for: "name")
         name = rawName.components(separatedBy: ")").last ?? ""
-    
+
         busStops = try object.value(for: "busStops")
     }
 }

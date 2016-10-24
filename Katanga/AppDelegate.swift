@@ -27,17 +27,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        
+
+
         UINavigationBar.appearance().barTintColor = .black
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().tintColor = .katangaYellow
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.katangaYellow]
-        
+
         UITabBar.appearance().tintColor = .katangaYellow
         UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.white],  for: .normal)
-        
+
         return true
     }
 }
-

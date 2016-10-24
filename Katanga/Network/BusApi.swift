@@ -22,8 +22,8 @@ import Foundation
 import RxSwift
 
 protocol BusApi {
-    
+
     func allRoutes() -> Observable<Route>
-    
+
     func nearbyBusStops(latitude: Double, longitude: Double, meters: Int) -> Observable<NearBusStop>
 }

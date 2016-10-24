@@ -23,43 +23,43 @@ import RxCocoa
 import RxSwift
 
 class RoutesViewController : UIViewController {
-    
+
     //MARK: Private variables
-    
+
     private var disposeBag = DisposeBag()
-    
+
     private let activityIndicator = ActivityIndicator()
-    
-    
+
+
     //MARK: Outlets
-    
+
     @IBOutlet weak var spinner: UIActivityIndicatorView! {
         didSet {
             spinner.hidesWhenStopped = true
         }
     }
-    
+
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.register(RoutesCell.self)
             tableView.tableFooterView = UIView()
         }
     }
-    
-    
+
+
     //MARK: UIViewController
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         tableView.customizeTableView(withColor: .black)
-        
+
         setupRx()
     }
-    
-    
+
+
     //MARK: Private methods
-    
+
     private func setupRx() {
         KatangaBusApiClient().allRoutes()
             .trackActivity(activityIndicator)
@@ -70,10 +70,10 @@ class RoutesViewController : UIViewController {
                 routeCell.routeName = route.name
             }
             .addDisposableTo(disposeBag)
-        
+
         activityIndicator
             .drive(spinner.rx.isAnimating)
             .addDisposableTo(disposeBag)
     }
-    
+
 }
