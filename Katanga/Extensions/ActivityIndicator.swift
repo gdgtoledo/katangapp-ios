@@ -13,13 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-//
-//  ActivityIndicator.swift
-//  RxExample
-//
-//  Created by Krunoslav Zaher on 10/18/15.
-//  Copyright © 2015 Krunoslav Zaher. All rights reserved.
-//
+
+/*!
+ @author Víctor Galán
+ */
 
 import Foundation
 #if !RX_NO_MODULE

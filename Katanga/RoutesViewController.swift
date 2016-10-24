@@ -13,13 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-//
-//  RoutesViewController.swift
-//  Katanga
-//
-//  Created by Víctor Galán on 22/10/16.
-//  Copyright © 2016 Software Craftsmanship Toledo. All rights reserved.
-//
+
+/*!
+ @author Víctor Galán
+ */
 
 import UIKit
 import RxCocoa

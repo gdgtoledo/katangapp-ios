@@ -13,13 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-//
-//  KatangaTests.swift
-//  KatangaTests
-//
-//  Created by Víctor Galán on 9/10/16.
-//  Copyright © 2016 Software Craftsmanship Toledo. All rights reserved.
-//
+
+/*!
+ @author Víctor Galán
+ */
 
 import XCTest
 @testable import Katanga
