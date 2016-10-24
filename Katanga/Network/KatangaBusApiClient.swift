@@ -21,7 +21,7 @@ struct KatangaBusApiClient : BusApi {
         let url = URL(string: "\(baseURL)/api/routes")!
         let request = URLRequest(url: url)
         
-        return URLSession.shared.rx.data(request)
+        return URLSession.shared.rx.data(request: request)
             .map { try JSONParser.JSONArrayWithData($0) }
             .flatMap { Observable.from($0) }
             .map { try $0.value(for: "") as Route }
@@ -32,7 +32,7 @@ struct KatangaBusApiClient : BusApi {
         let url = URL(string: "\(baseURL)/main?lt=\(latitude)&ln=\(longitude)&r=\(meters)")!
         let request = URLRequest(url: url)
         
-        return URLSession.shared.rx.data(request)
+        return URLSession.shared.rx.data(request: request)
             .debug()
             .map { try JSONParser.JSONObjectWithData($0) }
             .map { try $0.value(for: "paradas")}

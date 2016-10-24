@@ -94,7 +94,7 @@ class NearBusStopsViewController: UIViewController {
             .addDisposableTo(disposeBag)
         
         activityIndicator
-            .drive(spinner.rx.animating)
+            .drive(spinner.rx.isAnimating)
             .addDisposableTo(disposeBag)
     }
 }
