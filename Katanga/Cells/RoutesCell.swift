@@ -24,33 +24,33 @@ class RoutesCell: UITableViewCell {
 
     public var routeId: String {
         set {
-            routeIdLabel.text = newValue
+            _routeIdLabel.text = newValue
         }
 
         get {
-            return routeIdLabel.text ?? ""
+            return _routeIdLabel.text ?? ""
         }
     }
 
     public var routeName: String {
         set {
-            routeNameLabel.text = newValue
+            _routeNameLabel.text = newValue
         }
 
         get {
-            return routeNameLabel.text ?? ""
+            return _routeNameLabel.text ?? ""
         }
     }
 
-    @IBOutlet private weak var containerView: UIView! {
+    @IBOutlet private weak var _containerView: UIView! {
         didSet {
-            containerView.layer.cornerRadius = 3
-            containerView.layer.masksToBounds = true
+            _containerView.layer.cornerRadius = 3
+            _containerView.layer.masksToBounds = true
         }
     }
 
-    @IBOutlet private weak var routeIdLabel: UILabel!
-    @IBOutlet private weak var routeNameLabel: UILabel!
+    @IBOutlet private weak var _routeIdLabel: UILabel!
+    @IBOutlet private weak var _routeNameLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -61,8 +61,8 @@ class RoutesCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
 
-        routeIdLabel.text = ""
-        routeNameLabel.text = ""
+        _routeIdLabel.text = ""
+        _routeNameLabel.text = ""
     }
 
 }

@@ -24,9 +24,9 @@ import UIKit
 
 class RoutesViewController : UIViewController {
 
-    private let activityIndicator = ActivityIndicator()
+    private let _activityIndicator = ActivityIndicator()
 
-    private var disposeBag = DisposeBag()
+    private var _disposeBag = DisposeBag()
 
     @IBOutlet weak var spinner: UIActivityIndicatorView! {
         didSet {
@@ -51,18 +51,18 @@ class RoutesViewController : UIViewController {
 
     private func setupRx() {
         KatangaBusApiClient().allRoutes()
-            .trackActivity(activityIndicator)
+            .trackActivity(_activityIndicator)
             .scan([], accumulator: { $0 + [$1] })
             .asDriver(onErrorJustReturn: [])
             .drive(tableView.rx.items(cellType: RoutesCell.self)) { row, route, routeCell in
                 routeCell.routeId = route.id
                 routeCell.routeName = route.name
             }
-            .addDisposableTo(disposeBag)
+            .addDisposableTo(_disposeBag)
 
-        activityIndicator
+        _activityIndicator
             .drive(spinner.rx.isAnimating)
-            .addDisposableTo(disposeBag)
+            .addDisposableTo(_disposeBag)
     }
 
 }
