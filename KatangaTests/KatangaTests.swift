@@ -19,6 +19,7 @@
  */
 
 import XCTest
+
 @testable import Katanga
 
 class KatangaTests: XCTestCase {

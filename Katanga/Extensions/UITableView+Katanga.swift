@@ -18,9 +18,9 @@
  @author Víctor Galán
  */
 
-import UIKit
-import RxSwift
 import RxCocoa
+import RxSwift
+import UIKit
 
 extension UITableView {
 

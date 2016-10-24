@@ -19,9 +19,9 @@
  */
 
 import Foundation
+import Marshal
 import RxSwift
 import RxCocoa
-import Marshal
 
 struct KatangaBusApiClient : BusApi {
 

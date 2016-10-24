@@ -20,8 +20,8 @@
 
 import Foundation
 #if !RX_NO_MODULE
-    import RxSwift
     import RxCocoa
+    import RxSwift
 #endif
 
 private struct ActivityToken<E> : ObservableConvertibleType, Disposable {
