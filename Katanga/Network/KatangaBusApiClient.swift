@@ -50,4 +50,5 @@ struct KatangaBusApiClient : BusApi {
             .map { try $0.value(for: "paradas")}
             .flatMap { Observable.from($0) }
     }
+
 }

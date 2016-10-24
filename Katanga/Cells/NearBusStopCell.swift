@@ -28,6 +28,7 @@ class NearBusStopCell: UITableViewCell {
         set {
             _items.value.append(contentsOf: newValue)
         }
+
         get {
             return _items.value
         }
@@ -37,6 +38,7 @@ class NearBusStopCell: UITableViewCell {
         set {
             busStopNameLabel.text = newValue
         }
+
         get {
             return busStopNameLabel.text ?? ""
         }
@@ -46,6 +48,7 @@ class NearBusStopCell: UITableViewCell {
         set {
             distanceLabel.text = newValue
         }
+
         get {
             return distanceLabel.text ?? ""
         }

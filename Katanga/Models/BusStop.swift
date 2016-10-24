@@ -36,4 +36,5 @@ struct BusStop : Unmarshaling {
         longitude = try object.value(for: "longitude")
         routeId = try? object.value(for: "routeId")
     }
+
 }

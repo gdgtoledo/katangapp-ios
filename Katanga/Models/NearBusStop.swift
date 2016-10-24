@@ -42,4 +42,5 @@ struct BusStopTime : Unmarshaling {
         id = try object.value(for: "idl")
         minutes = try object.value(for: "time")
     }
+
 }

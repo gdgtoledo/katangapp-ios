@@ -28,6 +28,7 @@ extension UITableView {
         let nib = UINib(nibName: T.nibName, bundle: nil)
         register(nib, forCellReuseIdentifier: T.reuseIdentifier)
     }
+
 }
 
 extension Reactive where Base : UITableView {
@@ -41,6 +42,7 @@ extension Reactive where Base : UITableView {
 
         return items(cellIdentifier: cellType.reuseIdentifier, cellType: cellType)
     }
+
 }
 
 extension UITableView {
@@ -52,4 +54,5 @@ extension UITableView {
         separatorInset = UIEdgeInsets.zero
         layoutMargins = UIEdgeInsets.zero
     }
+
 }

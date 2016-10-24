@@ -64,4 +64,5 @@ class InitialViewController: UIViewController {
             }
             .addDisposableTo(disposeBag)
     }
+
 }

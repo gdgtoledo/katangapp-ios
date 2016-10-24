@@ -26,6 +26,7 @@ class BusComingCell: UITableViewCell {
         set {
             routeIdLabel.text = newValue
         }
+
         get {
             return routeIdLabel.text ?? ""
         }
@@ -35,6 +36,7 @@ class BusComingCell: UITableViewCell {
         set {
             timeLabel.text = setTimeText(forMinutes: newValue)
         }
+
         get {
             return 0
         }
@@ -85,4 +87,5 @@ class BusComingCell: UITableViewCell {
 
         return text
     }
+
 }

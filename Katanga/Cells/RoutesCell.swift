@@ -26,6 +26,7 @@ class RoutesCell: UITableViewCell {
         set {
             routeIdLabel.text = newValue
         }
+
         get {
             return routeIdLabel.text ?? ""
         }
@@ -35,6 +36,7 @@ class RoutesCell: UITableViewCell {
         set {
             routeNameLabel.text = newValue
         }
+
         get {
             return routeNameLabel.text ?? ""
         }

@@ -25,6 +25,7 @@ import Foundation
 #endif
 
 private struct ActivityToken<E> : ObservableConvertibleType, Disposable {
+
     private let _source: Observable<E>
     private let _dispose: Cancelable
 
@@ -40,6 +41,7 @@ private struct ActivityToken<E> : ObservableConvertibleType, Disposable {
     func asObservable() -> Observable<E> {
         return _source
     }
+
 }
 
 /**
@@ -49,6 +51,7 @@ private struct ActivityToken<E> : ObservableConvertibleType, Disposable {
  When all activities complete `false` will be sent.
  */
 public class ActivityIndicator : SharedSequenceConvertibleType {
+
     public typealias E = Bool
     public typealias SharingStrategy = DriverSharingStrategy
 
@@ -86,10 +89,13 @@ public class ActivityIndicator : SharedSequenceConvertibleType {
     public func asSharedSequence() -> SharedSequence<SharingStrategy, E> {
         return _loading
     }
+
 }
 
 public extension ObservableConvertibleType {
+
     public func trackActivity(_ activityIndicator: ActivityIndicator) -> Observable<E> {
         return activityIndicator.trackActivityOfObservable(self)
     }
+
 }

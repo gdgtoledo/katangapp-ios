@@ -37,4 +37,5 @@ struct Route : Unmarshaling {
 
         busStops = try object.value(for: "busStops")
     }
+
 }
