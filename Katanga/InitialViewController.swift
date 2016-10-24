@@ -24,10 +24,6 @@ import UIKit
 
 class InitialViewController: UIViewController {
 
-    private var _disposeBag = DisposeBag()
-
-    private var _spinner: UIActivityIndicatorView?
-
     @IBOutlet weak var metersLabel: UILabel!
     @IBOutlet weak var metersSlider: UISlider!
 
@@ -43,6 +39,10 @@ class InitialViewController: UIViewController {
             searchLocationButton.addSubview(_spinner!)
         }
     }
+
+    private var _disposeBag = DisposeBag()
+
+    private var _spinner: UIActivityIndicatorView?
 
     override func viewDidLoad() {
         super.viewDidLoad()

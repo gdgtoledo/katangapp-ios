@@ -54,13 +54,7 @@ class NearBusStopCell: UITableViewCell {
         }
     }
 
-    @IBOutlet private weak var _tableView: UITableView! {
-        didSet {
-            _tableView.register(BusComingCell.self)
-
-            _tableView.rowHeight = Constants.rowHeight
-        }
-    }
+    @IBOutlet private weak var _busStopNameLabel: UILabel!
 
     @IBOutlet private weak var _containerView: UIView! {
         didSet {
@@ -69,10 +63,17 @@ class NearBusStopCell: UITableViewCell {
         }
     }
 
-    @IBOutlet private weak var _busStopNameLabel: UILabel!
     @IBOutlet private weak var _distanceLabel: UILabel!
     @IBOutlet private weak var _heightConstraint: NSLayoutConstraint!
     @IBOutlet private weak var _headerHeightConstraint: NSLayoutConstraint!
+
+    @IBOutlet private weak var _tableView: UITableView! {
+        didSet {
+            _tableView.register(BusComingCell.self)
+
+            _tableView.rowHeight = Constants.rowHeight
+        }
+    }
 
     private var _disposeBag = DisposeBag()
     private var _items = Variable<[BusStopTime]>([])

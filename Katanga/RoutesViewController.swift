@@ -24,10 +24,6 @@ import UIKit
 
 class RoutesViewController : UIViewController {
 
-    private let _activityIndicator = ActivityIndicator()
-
-    private var _disposeBag = DisposeBag()
-
     @IBOutlet weak var spinner: UIActivityIndicatorView! {
         didSet {
             spinner.hidesWhenStopped = true
@@ -40,6 +36,10 @@ class RoutesViewController : UIViewController {
             tableView.tableFooterView = UIView()
         }
     }
+
+    private let _activityIndicator = ActivityIndicator()
+
+    private var _disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
