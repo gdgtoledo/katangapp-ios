@@ -26,57 +26,57 @@ class NearBusStopCell: UITableViewCell {
 
     public var busStopName: String {
         set {
-            _busStopNameLabel.text = newValue
+            busStopNameLabel.text = newValue
         }
 
         get {
-            return _busStopNameLabel.text ?? ""
+            return busStopNameLabel.text ?? ""
         }
     }
 
     public var distance: String {
         set {
-            _distanceLabel.text = newValue
+            distanceLabel.text = newValue
         }
 
         get {
-            return _distanceLabel.text ?? ""
+            return distanceLabel.text ?? ""
         }
     }
 
-    public var items: [BusStopTime] {
+    public var bustStopTimes: [BusStopTime] {
         set {
-            _items.value.append(contentsOf: newValue)
+            dataSource.value.append(contentsOf: newValue)
         }
 
         get {
-            return _items.value
+            return dataSource.value
         }
     }
 
-    @IBOutlet private weak var _busStopNameLabel: UILabel!
+    @IBOutlet private weak var busStopNameLabel: UILabel!
 
-    @IBOutlet private weak var _containerView: UIView! {
+    @IBOutlet private weak var containerView: UIView! {
         didSet {
-            _containerView.layer.cornerRadius = Constants.cornerRadius
-            _containerView.layer.masksToBounds = true
+            containerView.layer.cornerRadius = Constants.cornerRadius
+            containerView.layer.masksToBounds = true
         }
     }
 
-    @IBOutlet private weak var _distanceLabel: UILabel!
-    @IBOutlet private weak var _heightConstraint: NSLayoutConstraint!
-    @IBOutlet private weak var _headerHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var distanceLabel: UILabel!
+    @IBOutlet private weak var heightConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var headerHeightConstraint: NSLayoutConstraint!
 
-    @IBOutlet private weak var _tableView: UITableView! {
+    @IBOutlet private weak var tableView: UITableView! {
         didSet {
-            _tableView.register(BusComingCell.self)
+            tableView.register(BusComingCell.self)
 
-            _tableView.rowHeight = Constants.rowHeight
+            tableView.rowHeight = Constants.rowHeight
         }
     }
 
-    private var _disposeBag = DisposeBag()
-    private var _items = Variable<[BusStopTime]>([])
+    private var disposeBag = DisposeBag()
+    private var dataSource = Variable<[BusStopTime]>([])
 
     private struct Constants {
         static let cornerRadius: CGFloat = 10
@@ -88,7 +88,7 @@ class NearBusStopCell: UITableViewCell {
 
         selectionStyle = .none
 
-        _tableView.customizeTableView(withColor: .clear)
+        tableView.customizeTableView(withColor: .clear)
 
         setupRx()
     }
@@ -96,28 +96,28 @@ class NearBusStopCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
 
-        _disposeBag = DisposeBag()
+        disposeBag = DisposeBag()
 
-        _items.value = []
+        dataSource.value = []
 
         setupRx()
     }
 
     private func setupRx() {
-        _items
+        dataSource
             .asObservable()
-            .bindTo(_tableView.rx.items(cellType: BusComingCell.self)) { row, element, cell in
+            .bindTo(tableView.rx.items(cellType: BusComingCell.self)) { row, element, cell in
                 cell.routeId = element.id
                 cell.time = element.minutes
-            }.addDisposableTo(_disposeBag)
+            }.addDisposableTo(disposeBag)
 
-        _items
+        dataSource
             .asObservable()
             .map { CGFloat($0.count) }
             .filter { $0 > 0 }
-            .map {  $0 * Constants.rowHeight + self._headerHeightConstraint.constant }
-            .bindTo(_heightConstraint.rx.constant)
-            .addDisposableTo(_disposeBag)
+            .map {  $0 * Constants.rowHeight + self.headerHeightConstraint.constant }
+            .bindTo(heightConstraint.rx.constant)
+            .addDisposableTo(disposeBag)
     }
 
 }

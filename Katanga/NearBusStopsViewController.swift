@@ -24,12 +24,12 @@ import UIKit
 
 class NearBusStopsViewController: UIViewController {
 
-    private let _activityIndicator = ActivityIndicator()
+    private let activityIndicator = ActivityIndicator()
 
-    private var _disposeBag = DisposeBag()
-    private var _nearBusStops: Driver<[NearBusStop]>?
-    private var _refreshControl: UIRefreshControl?
-    private var _refreshControlBag = DisposeBag()
+    private var disposeBag = DisposeBag()
+    private var nearBusStops: Driver<[NearBusStop]>?
+    private var refreshControl: UIRefreshControl?
+    private var refreshControlBag = DisposeBag()
 
     @IBOutlet weak var spinner: UIActivityIndicatorView! {
         didSet {
@@ -54,9 +54,9 @@ class NearBusStopsViewController: UIViewController {
 
         tableView.customizeTableView(withColor: .black)
 
-        _nearBusStops = KatangaBusApiClient()
+        nearBusStops = KatangaBusApiClient()
                 .nearbyBusStops(latitude: 39.861293, longitude: -4.026146, meters: 1000)
-                .trackActivity(_activityIndicator)
+                .trackActivity(activityIndicator)
                 .scan([], accumulator: { $0 + [$1] })
                 .asDriver(onErrorJustReturn: [])
 
@@ -64,37 +64,37 @@ class NearBusStopsViewController: UIViewController {
     }
 
     private func setupRefresh() {
-        _refreshControl = UIRefreshControl()
-        _refreshControl?.tintColor = .katangaYellow
+        refreshControl = UIRefreshControl()
+        refreshControl?.tintColor = .katangaYellow
 
-        _refreshControl?.rx.controlEvent(.valueChanged)
+        refreshControl?.rx.controlEvent(.valueChanged)
             .bindNext { [weak self] in
-                self?._disposeBag = DisposeBag()
+                self?.disposeBag = DisposeBag()
                 self?.setupRx()
             }
-            .addDisposableTo(_refreshControlBag)
+            .addDisposableTo(refreshControlBag)
 
-        tableView.addSubview(_refreshControl!)
+        tableView.addSubview(refreshControl!)
 
-        _activityIndicator
-            .drive(_refreshControl!.rx.refreshing)
-            .addDisposableTo(_refreshControlBag)
+        activityIndicator
+            .drive(refreshControl!.rx.refreshing)
+            .addDisposableTo(refreshControlBag)
     }
 
     private func setupRx() {
-            _nearBusStops?.drive(tableView.rx.items(cellType: NearBusStopCell.self)) { row, nearBusStop, cell in
+            nearBusStops?.drive(tableView.rx.items(cellType: NearBusStopCell.self)) { row, nearBusStop, cell in
                 cell.busStopName = nearBusStop.busStop.address
 
                 let distanceFormatted = String(format: "%.2f", nearBusStop.distance)
 
                 cell.distance = "(\(distanceFormatted) metros)"
-                cell.items = nearBusStop.times
+                cell.bustStopTimes = nearBusStop.times
             }
-            .addDisposableTo(_disposeBag)
+            .addDisposableTo(disposeBag)
 
-        _activityIndicator
+        activityIndicator
             .drive(spinner.rx.isAnimating)
-            .addDisposableTo(_disposeBag)
+            .addDisposableTo(disposeBag)
     }
 
 }

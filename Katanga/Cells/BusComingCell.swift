@@ -22,25 +22,25 @@ import UIKit
 
 class BusComingCell: UITableViewCell {
 
-    private let _busInStopColor =
+    private let busInStopColor =
         UIColor(red: 255/255.0, green: 75/255.0, blue: 69/255.0, alpha: 1.0)
 
-    private let _nearBusColor =
+    private let nearBusColor =
         UIColor(red: 255/255.0, green: 179/255.0, blue: 0/255.0, alpha: 1.0)
 
     public var routeId: String {
         set {
-            _routeIdLabel.text = newValue
+            routeIdLabel.text = newValue
         }
 
         get {
-            return _routeIdLabel.text ?? ""
+            return routeIdLabel.text ?? ""
         }
     }
 
     public var time: Double {
         set {
-            _timeLabel.text = setTimeText(forMinutes: newValue)
+            timeLabel.text = setTimeText(forMinutes: newValue)
         }
 
         get {
@@ -48,8 +48,8 @@ class BusComingCell: UITableViewCell {
         }
     }
 
-    @IBOutlet private weak var _routeIdLabel: UILabel!
-    @IBOutlet private weak var _timeLabel: UILabel!
+    @IBOutlet private weak var routeIdLabel: UILabel!
+    @IBOutlet private weak var timeLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -60,9 +60,9 @@ class BusComingCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
 
-        _routeIdLabel.text = ""
-        _timeLabel.text = ""
-        _timeLabel.textColor = .black
+        routeIdLabel.text = ""
+        timeLabel.text = ""
+        timeLabel.textColor = .black
     }
 
     private func setTimeText(forMinutes minutes: Double) -> String {
@@ -71,10 +71,10 @@ class BusComingCell: UITableViewCell {
         var text = "\(mins) minutos"
 
         if mins <= 5 {
-            _timeLabel.textColor = _busInStopColor
+            timeLabel.textColor = busInStopColor
         }
         else if mins < 10 {
-            _timeLabel.textColor = _nearBusColor
+            timeLabel.textColor = nearBusColor
         }
 
         if mins == 0 {

@@ -37,9 +37,9 @@ class RoutesViewController : UIViewController {
         }
     }
 
-    private let _activityIndicator = ActivityIndicator()
+    private let activityIndicator = ActivityIndicator()
 
-    private var _disposeBag = DisposeBag()
+    private var disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,18 +51,18 @@ class RoutesViewController : UIViewController {
 
     private func setupRx() {
         KatangaBusApiClient().allRoutes()
-            .trackActivity(_activityIndicator)
+            .trackActivity(activityIndicator)
             .scan([], accumulator: { $0 + [$1] })
             .asDriver(onErrorJustReturn: [])
             .drive(tableView.rx.items(cellType: RoutesCell.self)) { row, route, routeCell in
                 routeCell.routeId = route.id
                 routeCell.routeName = route.name
             }
-            .addDisposableTo(_disposeBag)
+            .addDisposableTo(disposeBag)
 
-        _activityIndicator
+        activityIndicator
             .drive(spinner.rx.isAnimating)
-            .addDisposableTo(_disposeBag)
+            .addDisposableTo(disposeBag)
     }
 
 }

@@ -32,17 +32,17 @@ class InitialViewController: UIViewController {
             searchLocationButton.backgroundColor = .katangaYellow
             searchLocationButton.layer.cornerRadius = 30
 
-            _spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
-            _spinner!.color = .black
-            _spinner!.center = CGPoint(x: 30, y: 30)
+            spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+            spinner!.color = .black
+            spinner!.center = CGPoint(x: 30, y: 30)
 
-            searchLocationButton.addSubview(_spinner!)
+            searchLocationButton.addSubview(spinner!)
         }
     }
 
-    private var _disposeBag = DisposeBag()
+    private var disposeBag = DisposeBag()
 
-    private var _spinner: UIActivityIndicatorView?
+    private var spinner: UIActivityIndicatorView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,14 +55,14 @@ class InitialViewController: UIViewController {
             .startWith(500)
             .map {"\(Int($0))"}
             .bindTo(metersLabel.rx.text)
-            .addDisposableTo(_disposeBag)
+            .addDisposableTo(disposeBag)
 
         searchLocationButton.rx.tap
             .bindNext { [weak self] in
-                self?._spinner?.startAnimating()
+                self?.spinner?.startAnimating()
                 self?.performSegue(withIdentifier: "shownearstops", sender: nil)
             }
-            .addDisposableTo(_disposeBag)
+            .addDisposableTo(disposeBag)
     }
 
 }
