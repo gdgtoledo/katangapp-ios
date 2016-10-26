@@ -46,11 +46,11 @@ class NearBusStopCell: UITableViewCell {
 
     public var bustStopTimes: [BusStopTime] {
         set {
-            dataSource.value.append(contentsOf: newValue)
+            busStopsTimeDataSource.value.append(contentsOf: newValue)
         }
 
         get {
-            return dataSource.value
+            return busStopsTimeDataSource.value
         }
     }
 
@@ -76,7 +76,7 @@ class NearBusStopCell: UITableViewCell {
     }
 
     private var disposeBag = DisposeBag()
-    private var dataSource = Variable<[BusStopTime]>([])
+    private var busStopsTimeDataSource = Variable<[BusStopTime]>([])
 
     private struct Constants {
         static let cornerRadius: CGFloat = 10
@@ -98,20 +98,20 @@ class NearBusStopCell: UITableViewCell {
 
         disposeBag = DisposeBag()
 
-        dataSource.value = []
+        busStopsTimeDataSource.value = []
 
         setupRx()
     }
 
     private func setupRx() {
-        dataSource
+        busStopsTimeDataSource
             .asObservable()
             .bindTo(tableView.rx.items(cellType: BusComingCell.self)) { row, element, cell in
                 cell.routeId = element.id
                 cell.time = element.minutes
             }.addDisposableTo(disposeBag)
 
-        dataSource
+        busStopsTimeDataSource
             .asObservable()
             .map { CGFloat($0.count) }
             .filter { $0 > 0 }
