@@ -57,7 +57,7 @@ class NearBusStopsViewController: UIViewController {
         nearBusStops = KatangaBusApiClient()
                 .nearbyBusStops(latitude: 39.861293, longitude: -4.026146, meters: 1000)
                 .trackActivity(activityIndicator)
-                .scan([], accumulator: { $0 + [$1] })
+                .toArray()
                 .asDriver(onErrorJustReturn: [])
 
         setupRx()

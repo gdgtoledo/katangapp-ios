@@ -52,7 +52,7 @@ class RoutesViewController : UIViewController {
     private func setupRx() {
         KatangaBusApiClient().allRoutes()
             .trackActivity(activityIndicator)
-            .scan([], accumulator: { $0 + [$1] })
+            .toArray()
             .asDriver(onErrorJustReturn: [])
             .drive(tableView.rx.items(cellType: RoutesCell.self)) { row, route, routeCell in
                 routeCell.routeId = route.id
