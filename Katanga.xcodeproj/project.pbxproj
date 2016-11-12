@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B20078C1DCF9FBE006A5029 /* RouteDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B20078B1DCF9FBE006A5029 /* RouteDetailViewModel.swift */; };
 		0B20078F1DCFBAFC006A5029 /* BusStopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B20078D1DCFBAFC006A5029 /* BusStopCell.swift */; };
 		0B2007901DCFBAFC006A5029 /* BusStopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B20078E1DCFBAFC006A5029 /* BusStopCell.xib */; };
 		0BF4C7D61DD05F1A00343EB8 /* DataListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF4C7D51DD05F1A00343EB8 /* DataListTableView.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B20078B1DCF9FBE006A5029 /* RouteDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteDetailViewModel.swift; sourceTree = "<group>"; };
 		0B20078D1DCFBAFC006A5029 /* BusStopCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopCell.swift; sourceTree = "<group>"; };
 		0B20078E1DCFBAFC006A5029 /* BusStopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusStopCell.xib; sourceTree = "<group>"; };
 		0BF4C7D51DD05F1A00343EB8 /* DataListTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataListTableView.swift; path = ../DataListTableView.swift; sourceTree = "<group>"; };
@@ -136,6 +138,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B20078A1DCF9FB3006A5029 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0B20078B1DCF9FBE006A5029 /* RouteDetailViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		571EBB111DBCBD2B00DC71C5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +180,7 @@
 		57266AE41DAA2D01002C7C12 /* Katanga */ = {
 			isa = PBXGroup;
 			children = (
+				0B20078A1DCF9FB3006A5029 /* ViewModels */,
 				578961481DBC167A00C10285 /* Cells */,
 				5789613B1DBBEEA800C10285 /* Network */,
 				578961361DBBEE4F00C10285 /* Models */,
@@ -547,6 +558,7 @@
 				5789613A1DBBEE4F00C10285 /* Route.swift in Sources */,
 				571EBB1D1DBCD96100DC71C5 /* ReusableView.swift in Sources */,
 				578961421DBBF8B900C10285 /* RoutesViewController.swift in Sources */,
+				0B20078C1DCF9FBE006A5029 /* RouteDetailViewModel.swift in Sources */,
 				5789614B1DBC168A00C10285 /* RoutesCell.swift in Sources */,
 				0B20078F1DCFBAFC006A5029 /* BusStopCell.swift in Sources */,
 				571EBB1F1DBCD9AF00DC71C5 /* UITableView+Katanga.swift in Sources */,
