@@ -23,6 +23,7 @@
 		571EBB1B1DBCD90C00DC71C5 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571EBB1A1DBCD90C00DC71C5 /* NibLoadable.swift */; };
 		571EBB1D1DBCD96100DC71C5 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571EBB1C1DBCD96100DC71C5 /* ReusableView.swift */; };
 		571EBB1F1DBCD9AF00DC71C5 /* UITableView+Katanga.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571EBB1E1DBCD9AF00DC71C5 /* UITableView+Katanga.swift */; };
+		572141BE1DD77E8B00FC5B15 /* NearBusStopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572141BD1DD77E8B00FC5B15 /* NearBusStopViewModel.swift */; };
 		57266AE61DAA2D01002C7C12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266AE51DAA2D01002C7C12 /* AppDelegate.swift */; };
 		57266AE81DAA2D01002C7C12 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266AE71DAA2D01002C7C12 /* InitialViewController.swift */; };
 		57266AEB1DAA2D01002C7C12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57266AE91DAA2D01002C7C12 /* Main.storyboard */; };
@@ -82,6 +83,7 @@
 		571EBB1A1DBCD90C00DC71C5 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		571EBB1C1DBCD96100DC71C5 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		571EBB1E1DBCD9AF00DC71C5 /* UITableView+Katanga.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Katanga.swift"; sourceTree = "<group>"; };
+		572141BD1DD77E8B00FC5B15 /* NearBusStopViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearBusStopViewModel.swift; sourceTree = "<group>"; };
 		57266AE21DAA2D01002C7C12 /* Katanga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Katanga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57266AE51DAA2D01002C7C12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57266AE71DAA2D01002C7C12 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				0B20078B1DCF9FBE006A5029 /* RouteDetailViewModel.swift */,
+				572141BD1DD77E8B00FC5B15 /* NearBusStopViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 				5789614E1DBC1DCB00C10285 /* NearBusStop.swift in Sources */,
 				578961391DBBEE4F00C10285 /* BusStop.swift in Sources */,
 				5789613D1DBBEEAE00C10285 /* BusApi.swift in Sources */,
+				572141BE1DD77E8B00FC5B15 /* NearBusStopViewModel.swift in Sources */,
 				571EBB1B1DBCD90C00DC71C5 /* NibLoadable.swift in Sources */,
 				571EBB0D1DBCB7B800DC71C5 /* NearBusStopCell.swift in Sources */,
 				57266AE81DAA2D01002C7C12 /* InitialViewController.swift in Sources */,
