@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BF4C7D61DD05F1A00343EB8 /* DataListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF4C7D51DD05F1A00343EB8 /* DataListTableView.swift */; };
 		1676B5D5B8CDEBC0E0AEF898 /* Pods_Katanga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1FE72E15002ADC31951915 /* Pods_Katanga.framework */; };
 		571EBB0A1DBCB3E800DC71C5 /* NearBusStopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571EBB091DBCB3E800DC71C5 /* NearBusStopsViewController.swift */; };
 		571EBB0D1DBCB7B800DC71C5 /* NearBusStopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571EBB0B1DBCB7B800DC71C5 /* NearBusStopCell.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BF4C7D51DD05F1A00343EB8 /* DataListTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataListTableView.swift; path = ../DataListTableView.swift; sourceTree = "<group>"; };
 		1B520E40BEB35B8DCED8C035 /* Pods-KatangaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KatangaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KatangaTests/Pods-KatangaTests.release.xcconfig"; sourceTree = "<group>"; };
 		37AF01D659EF3EA94DF5D3B0 /* Pods-Katanga.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Katanga.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Katanga/Pods-Katanga.debug.xcconfig"; sourceTree = "<group>"; };
 		5217E5A9F020BCD3FB6D5BA8 /* Pods-KatangaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KatangaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KatangaTests/Pods-KatangaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 		57266B161DAA3845002C7C12 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0BF4C7D51DD05F1A00343EB8 /* DataListTableView.swift */,
 				578961461DBC012B00C10285 /* ActivityIndicator.swift */,
 				57503F7C1DAAAB9000B39E24 /* UIColor+Katanga.swift */,
 				571EBB1A1DBCD90C00DC71C5 /* NibLoadable.swift */,
@@ -533,6 +536,7 @@
 				578961401DBBEF0000C10285 /* KatangaBusApiClient.swift in Sources */,
 				571EBB181DBCC86F00DC71C5 /* BusComingCell.swift in Sources */,
 				571EBB0A1DBCB3E800DC71C5 /* NearBusStopsViewController.swift in Sources */,
+				0BF4C7D61DD05F1A00343EB8 /* DataListTableView.swift in Sources */,
 				5789613A1DBBEE4F00C10285 /* Route.swift in Sources */,
 				571EBB1D1DBCD96100DC71C5 /* ReusableView.swift in Sources */,
 				578961421DBBF8B900C10285 /* RoutesViewController.swift in Sources */,
