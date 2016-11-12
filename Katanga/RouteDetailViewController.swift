@@ -49,9 +49,24 @@ class RouteDetailViewController : UIViewController, DataListTableView {
         viewModel?.routeId()
             .drive(rx.title)
             .addDisposableTo(disposeBag)
+        
+        tableView.rx.modelSelected(BusStop.self)
+            .subscribe(onNext: { [weak self] in
+                self?.performSegue(withIdentifier: "times", sender: $0)
+            })
+            .addDisposableTo(disposeBag)
     }
     
     func fillCell(row: Int, element: Model, cell: CellType) {
         cell.busStopName = element.address
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let busStop = sender as? BusStop else { return }
+        
+        let viewModel = NearBusStopIdViewModel(busStopId: busStop.id)
+        let vc = segue.destination as? NearBusStopsViewController
+        
+        vc?.viewModel = viewModel
     }
 }
