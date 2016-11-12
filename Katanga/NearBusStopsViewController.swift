@@ -56,6 +56,8 @@ class NearBusStopsViewController: UIViewController, DataListTableView {
     private func setupRx() {
         guard let viewModel = viewModel else { return }
         
+        title = viewModel.title
+        
         refreshControl = UIRefreshControl()
         refreshControl!.tintColor = .katangaYellow
 
@@ -70,7 +72,6 @@ class NearBusStopsViewController: UIViewController, DataListTableView {
             .addDisposableTo(disposeBag)
 
         tableView.addSubview(refreshControl!)
-
 
         viewModel.activityIndicator.asObservable()
             .take(2)
