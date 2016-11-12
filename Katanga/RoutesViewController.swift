@@ -22,7 +22,10 @@ import RxCocoa
 import RxSwift
 import UIKit
 
-class RoutesViewController : UIViewController {
+class RoutesViewController : UIViewController, DataListTableView {
+    
+    typealias Model = Route
+    typealias CellType = RoutesCell
 
     @IBOutlet weak var spinner: UIActivityIndicatorView! {
         didSet {
@@ -30,12 +33,7 @@ class RoutesViewController : UIViewController {
         }
     }
 
-    @IBOutlet weak var tableView: UITableView! {
-        didSet {
-            tableView.register(RoutesCell.self)
-            tableView.tableFooterView = UIView()
-        }
-    }
+    @IBOutlet weak var tableView: UITableView!
 
     private let activityIndicator = ActivityIndicator()
 
@@ -44,25 +42,40 @@ class RoutesViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.customizeTableView(withColor: .black)
+        initialize(tableView: tableView)
 
         setupRx()
     }
 
     private func setupRx() {
-        KatangaBusApiClient().allRoutes()
+        let driver = KatangaBusApiClient().allRoutes()
             .trackActivity(activityIndicator)
             .toArray()
             .asDriver(onErrorJustReturn: [])
-            .drive(tableView.rx.items(cellType: RoutesCell.self)) { row, route, routeCell in
-                routeCell.routeId = route.id
-                routeCell.routeName = route.name
-            }
+        
+        bindViewModel(tableView: tableView, driver: driver)
             .addDisposableTo(disposeBag)
 
         activityIndicator
             .drive(spinner.rx.isAnimating)
             .addDisposableTo(disposeBag)
+
+		tableView.rx.modelSelected(Route.self).subscribe(onNext: { [weak self] in
+			let viewModel = RouteDetailViewModel(route: $0)
+            self?.performSegue(withIdentifier: "detail", sender: viewModel)
+		})
+		.addDisposableTo(disposeBag)
+    }
+    
+    func fillCell(row: Int, element: Route, cell: RoutesCell) {
+        cell.routeId = element.id
+        cell.routeName = element.name
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! RouteDetailViewController
+        
+        vc.viewModel = sender as? RouteDetailViewModel
     }
 
 }
