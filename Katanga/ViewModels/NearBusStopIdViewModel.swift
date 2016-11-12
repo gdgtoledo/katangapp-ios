@@ -22,19 +22,19 @@ import RxSwift
 import RxCocoa
 
 struct NearBusStopIdViewModel : NearBusStopViewModel {
-    
+
     private(set) var title: String
     private(set) var activityIndicator: ActivityIndicator
-    
+
     let busStopId: String
-    
+
     init(busStopId: String) {
         self.busStopId = busStopId
         
         self.title = busStopId
         activityIndicator = ActivityIndicator()
     }
-    
+
     func getNearBusStops() -> Driver<[NearBusStop]> {
         return KatangaBusApiClient()
             .routeTimes(busStopId: busStopId)
@@ -42,4 +42,5 @@ struct NearBusStopIdViewModel : NearBusStopViewModel {
             .toArray()
             .asDriver(onErrorJustReturn: [])
     }
+
 }

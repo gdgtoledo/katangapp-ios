@@ -24,49 +24,51 @@ import RxSwift
 
 
 class RouteDetailViewController : UIViewController, DataListTableView {
-    
-    @IBOutlet private var tableView: UITableView! {
+
+    typealias Model = BusStop
+    typealias CellType = BusStopCell
+
+    public var viewModel: RouteDetailViewModel?
+
+    @IBOutlet private weak var tableView: UITableView! {
         didSet {
             tableView.rowHeight = UITableViewAutomaticDimension
             tableView.estimatedRowHeight = 200
         }
     }
-    
-    typealias Model = BusStop
-    typealias CellType = BusStopCell
-    
-    var viewModel: RouteDetailViewModel?
-    var disposeBag = DisposeBag()
-    
+
+    private var disposeBag = DisposeBag()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         initialize(tableView: tableView)
-        
+
         bindViewModel(tableView: tableView, driver: viewModel!.getBusStops())
             .addDisposableTo(disposeBag)
-        
+
         viewModel?.routeId()
             .drive(rx.title)
             .addDisposableTo(disposeBag)
-        
+
         tableView.rx.modelSelected(BusStop.self)
             .subscribe(onNext: { [weak self] in
                 self?.performSegue(withIdentifier: "times", sender: $0)
             })
             .addDisposableTo(disposeBag)
     }
-    
+
     func fillCell(row: Int, element: Model, cell: CellType) {
         cell.busStopName = element.address
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let busStop = sender as? BusStop else { return }
-        
+
         let viewModel = NearBusStopIdViewModel(busStopId: busStop.id)
         let vc = segue.destination as? NearBusStopsViewController
-        
+
         vc?.viewModel = viewModel
     }
+
 }

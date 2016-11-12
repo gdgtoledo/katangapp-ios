@@ -24,13 +24,13 @@ import RxCocoa
 
 
 struct RouteDetailViewModel {
-    
+
 	let route: Route
 
 	func getBusStops() -> Driver<[BusStop]> {
 		return Observable.of(route.busStops).asDriver(onErrorJustReturn: [])
 	}
-    
+
     func routeId() -> Driver<String> {
         return Driver.of(route.id)
     }

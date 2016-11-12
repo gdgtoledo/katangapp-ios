@@ -30,6 +30,7 @@ struct KatangaBusApiClient : BusApi {
     var disposeBag = DisposeBag()
 
     func allRoutes() -> Observable<Route> {
+
         let url = URL(string: "\(baseURL)/api/routes")!
         let request = URLRequest(url: url)
 
@@ -51,12 +52,13 @@ struct KatangaBusApiClient : BusApi {
             .map { try $0.value(for: "paradas")}
             .flatMap { Observable.from($0) }
     }
-    
+
     func routeTimes(busStopId: String) -> Observable<NearBusStop> {
+
         let url = URL(string: "\(baseURL)/favorite/\(busStopId)")!
-        
+
         let request = URLRequest(url: url)
-        
+
         return URLSession.shared.rx.data(request: request)
             .debug()
             .map { try JSONParser.JSONObjectWithData($0) }

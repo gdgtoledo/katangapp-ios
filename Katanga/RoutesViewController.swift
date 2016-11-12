@@ -23,17 +23,17 @@ import RxSwift
 import UIKit
 
 class RoutesViewController : UIViewController, DataListTableView {
-    
+
     typealias Model = Route
     typealias CellType = RoutesCell
 
-    @IBOutlet weak var spinner: UIActivityIndicatorView! {
+    @IBOutlet private weak var spinner: UIActivityIndicatorView! {
         didSet {
             spinner.hidesWhenStopped = true
         }
     }
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
 
     private let activityIndicator = ActivityIndicator()
 
@@ -66,7 +66,7 @@ class RoutesViewController : UIViewController, DataListTableView {
 		})
 		.addDisposableTo(disposeBag)
     }
-    
+
     func fillCell(row: Int, element: Route, cell: RoutesCell) {
         cell.routeId = element.id
         cell.routeName = element.name

@@ -22,19 +22,19 @@ import RxSwift
 import RxCocoa
 
 struct NearBusStopCoordinatesViewModel : NearBusStopViewModel {
-    
+
     private(set) var title: String
     private(set) var activityIndicator: ActivityIndicator
-    
+
     let latitude: Double
     let longitude: Double
     let meters: Int
-    
+
     init(latitude: Double, longitude: Double, meters: Int) {
         self.latitude = latitude
         self.longitude = longitude
         self.meters = meters
-        
+
         self.title = "Paradas cercanas"
         activityIndicator = ActivityIndicator()
     }
@@ -46,4 +46,5 @@ struct NearBusStopCoordinatesViewModel : NearBusStopViewModel {
             .toArray()
             .asDriver(onErrorJustReturn: [])
     }
+
 }

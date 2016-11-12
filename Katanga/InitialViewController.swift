@@ -64,7 +64,7 @@ class InitialViewController: UIViewController {
             }
             .addDisposableTo(disposeBag)
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let viewModel = NearBusStopCoordinatesViewModel(latitude: 39.861293, longitude: -4.026146, meters: 1000)
         let vc = segue.destination as? NearBusStopsViewController

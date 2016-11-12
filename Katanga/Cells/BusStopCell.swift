@@ -38,4 +38,5 @@ class BusStopCell: UITableViewCell {
 
 		selectionStyle = .none
     }
+
 }

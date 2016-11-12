@@ -21,11 +21,11 @@
 import RxCocoa
 
 protocol NearBusStopViewModel {
-    
+
     var title: String {get}
-    
+
     var activityIndicator: ActivityIndicator {get}
-    
+
     func getNearBusStops() -> Driver<[NearBusStop]>
-    
+
 }

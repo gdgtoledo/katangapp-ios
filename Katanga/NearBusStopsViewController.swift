@@ -47,17 +47,17 @@ class NearBusStopsViewController: UIViewController, DataListTableView {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         initialize(tableView: tableView)
-        
+
         setupRx()
     }
 
     private func setupRx() {
         guard let viewModel = viewModel else { return }
-        
+
         title = viewModel.title
-        
+
         refreshControl = UIRefreshControl()
         refreshControl!.tintColor = .katangaYellow
 
@@ -67,7 +67,7 @@ class NearBusStopsViewController: UIViewController, DataListTableView {
                 viewModel.getNearBusStops()
             }
             .asDriver(onErrorJustReturn: [])
-            
+
         bindViewModel(tableView: tableView, driver: driver)
             .addDisposableTo(disposeBag)
 
@@ -77,19 +77,20 @@ class NearBusStopsViewController: UIViewController, DataListTableView {
             .take(2)
             .bindTo(spinner.rx.isAnimating)
             .addDisposableTo(disposeBag)
-        
+
         viewModel.activityIndicator
             .drive(refreshControl!.rx.refreshing)
             .addDisposableTo(disposeBag)
         
     }
-    
+
     func fillCell(row: Int, element: NearBusStop, cell: NearBusStopCell) {
         cell.busStopName = element.busStop.address
-        
+
         let distanceFormatted = String(format: "%.2f", element.distance)
-        
+
         cell.distance = "(\(distanceFormatted) metros)"
         cell.bustStopTimes = element.times
     }
+
 }
