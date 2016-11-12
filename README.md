@@ -1,21 +1,22 @@
 # Katanga iOS app
 
 ## Setting up the development environment
-First install Ruby gems for Cocoa Pods:
+First install Ruby gems bundler:
 
 ```shell
-	gem install cocoapods --version 1.1.1
+	gem install bundler
 ```
 
-Then go to project folder, and install Pods:
+Then go to project folder, and run:
 
 ```shell
-	pod install
+	bundle install
+	bundle exec pod install
 ```
 If this doesn't work execute:
 
 ```shell
-	pod repo update
-	pod install
+	bundle exec pod repo update
+	bundle exec pod install
 ```
 Last, open *.xcworkspace* on XCode IDE to complete the setup of the project.
