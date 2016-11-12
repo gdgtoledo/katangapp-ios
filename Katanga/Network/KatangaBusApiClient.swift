@@ -51,5 +51,17 @@ struct KatangaBusApiClient : BusApi {
             .map { try $0.value(for: "paradas")}
             .flatMap { Observable.from($0) }
     }
+    
+    func routeTimes(busStopId: String) -> Observable<NearBusStop> {
+        let url = URL(string: "\(baseURL)/favorite/\(busStopId)")!
+        
+        let request = URLRequest(url: url)
+        
+        return URLSession.shared.rx.data(request: request)
+            .debug()
+            .map { try JSONParser.JSONObjectWithData($0) }
+            .map { try $0.value(for: "paradas")}
+            .flatMap { Observable.from($0) }
+    }
 
 }
