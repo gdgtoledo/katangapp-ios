@@ -92,9 +92,9 @@
 		57266AE51DAA2D01002C7C12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57266AE71DAA2D01002C7C12 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InitialViewController.swift; path = ../InitialViewController.swift; sourceTree = "<group>"; };
 		57266AEA1DAA2D01002C7C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		57266AEC1DAA2D01002C7C12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		57266AEC1DAA2D01002C7C12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		57266AEF1DAA2D01002C7C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		57266AF11DAA2D01002C7C12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57266AF11DAA2D01002C7C12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		57266AF61DAA2D01002C7C12 /* KatangaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KatangaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57266AFA1DAA2D01002C7C12 /* KatangaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KatangaTests.swift; sourceTree = "<group>"; };
 		57266AFC1DAA2D01002C7C12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -211,9 +211,6 @@
 				57266B161DAA3845002C7C12 /* Extensions */,
 				57266AE51DAA2D01002C7C12 /* AppDelegate.swift */,
 				57266AE91DAA2D01002C7C12 /* Main.storyboard */,
-				57266AEC1DAA2D01002C7C12 /* Assets.xcassets */,
-				57266AEE1DAA2D01002C7C12 /* LaunchScreen.storyboard */,
-				57266AF11DAA2D01002C7C12 /* Info.plist */,
 			);
 			path = Katanga;
 			sourceTree = "<group>";
@@ -252,6 +249,9 @@
 		57266B1B1DAA6FD1002C7C12 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				57266AEE1DAA2D01002C7C12 /* LaunchScreen.storyboard */,
+				57266AF11DAA2D01002C7C12 /* Info.plist */,
+				57266AEC1DAA2D01002C7C12 /* Assets.xcassets */,
 				571EBB111DBCBD2B00DC71C5 /* Images */,
 				57266B1C1DAA6FD1002C7C12 /* fonts */,
 			);
@@ -637,6 +637,7 @@
 				57266AEF1DAA2D01002C7C12 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
