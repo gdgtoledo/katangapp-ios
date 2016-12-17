@@ -48,6 +48,9 @@ class RoutesViewController : UIViewController, DataListTableView {
 
         initialize(tableView: tableView)
 
+		tableView.separatorStyle = .singleLineEtched
+		tableView.separatorColor = .white
+
         setupRx()
     }
 

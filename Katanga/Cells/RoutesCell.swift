@@ -42,12 +42,7 @@ class RoutesCell: UITableViewCell {
         }
     }
 
-    @IBOutlet private weak var containerView: UIView! {
-        didSet {
-            containerView.layer.cornerRadius = 3
-            containerView.layer.masksToBounds = true
-        }
-    }
+    @IBOutlet private weak var containerView: UIView! 
 
     @IBOutlet private weak var routeIdLabel: UILabel!
     @IBOutlet private weak var routeNameLabel: UILabel!
@@ -55,8 +50,24 @@ class RoutesCell: UITableViewCell {
 		didSet {
 			circleView.layer.cornerRadius = circleView.frame.width/2
 			circleView.backgroundColor = .katangaYellow
-			circleView.layer.borderWidth = 1
+			circleView.layer.borderWidth = 2
 			circleView.layer.borderColor = UIColor.black.cgColor
+			circleView.layer.contentsScale = UIScreen.main.scale
+
+
+			// Outer border
+			let layer = CALayer()
+			let layerFrame = CGRect(x: self.circleView.bounds.origin.x - 2,
+			                        y: self.circleView.bounds.origin.y - 2,
+			                        width: self.circleView.frame.width + 4,
+			                        height: self.circleView.frame.height + 4)
+			layer.frame = layerFrame
+
+			layer.borderWidth = 2
+			layer.borderColor = UIColor.white.cgColor
+			layer.cornerRadius = layer.frame.width/2
+			
+			circleView.layer.addSublayer(layer)
 		}
 	}
 
