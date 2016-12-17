@@ -15,6 +15,7 @@
 		0B502FD41E0564860000A2CD /* NearBusStopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B502FCF1E0564860000A2CD /* NearBusStopsViewController.swift */; };
 		0B502FD51E0564860000A2CD /* RouteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B502FD01E0564860000A2CD /* RouteDetailViewController.swift */; };
 		0B502FD61E0564860000A2CD /* RoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B502FD11E0564860000A2CD /* RoutesViewController.swift */; };
+		0BE0AEC91E05B66200150346 /* RouteStopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0AEC81E05B66200150346 /* RouteStopsViewController.swift */; };
 		1676B5D5B8CDEBC0E0AEF898 /* Pods_Katanga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1FE72E15002ADC31951915 /* Pods_Katanga.framework */; };
 		571EBB0D1DBCB7B800DC71C5 /* NearBusStopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571EBB0B1DBCB7B800DC71C5 /* NearBusStopCell.swift */; };
 		571EBB0E1DBCB7B800DC71C5 /* NearBusStopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 571EBB0C1DBCB7B800DC71C5 /* NearBusStopCell.xib */; };
@@ -75,6 +76,7 @@
 		0B502FCF1E0564860000A2CD /* NearBusStopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearBusStopsViewController.swift; sourceTree = "<group>"; };
 		0B502FD01E0564860000A2CD /* RouteDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteDetailViewController.swift; sourceTree = "<group>"; };
 		0B502FD11E0564860000A2CD /* RoutesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesViewController.swift; sourceTree = "<group>"; };
+		0BE0AEC81E05B66200150346 /* RouteStopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteStopsViewController.swift; sourceTree = "<group>"; };
 		0BF4C7D51DD05F1A00343EB8 /* DataListTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataListTableView.swift; path = ../DataListTableView.swift; sourceTree = "<group>"; };
 		1B520E40BEB35B8DCED8C035 /* Pods-KatangaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KatangaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KatangaTests/Pods-KatangaTests.release.xcconfig"; sourceTree = "<group>"; };
 		37AF01D659EF3EA94DF5D3B0 /* Pods-Katanga.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Katanga.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Katanga/Pods-Katanga.debug.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				0B502FCF1E0564860000A2CD /* NearBusStopsViewController.swift */,
 				0B502FD01E0564860000A2CD /* RouteDetailViewController.swift */,
 				0B502FD11E0564860000A2CD /* RoutesViewController.swift */,
+				0BE0AEC81E05B66200150346 /* RouteStopsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5789614E1DBC1DCB00C10285 /* NearBusStop.swift in Sources */,
+				0BE0AEC91E05B66200150346 /* RouteStopsViewController.swift in Sources */,
 				578961391DBBEE4F00C10285 /* BusStop.swift in Sources */,
 				5789613D1DBBEEAE00C10285 /* BusApi.swift in Sources */,
 				572141BE1DD77E8B00FC5B15 /* NearBusStopViewModel.swift in Sources */,
