@@ -42,7 +42,7 @@ class RoutesCell: UITableViewCell {
         }
     }
 
-    @IBOutlet private weak var containerView: UIView! 
+    @IBOutlet private weak var containerView: UIView!
 
     @IBOutlet private weak var routeIdLabel: UILabel!
     @IBOutlet private weak var routeNameLabel: UILabel!
@@ -53,7 +53,6 @@ class RoutesCell: UITableViewCell {
 			circleView.layer.borderWidth = 2
 			circleView.layer.borderColor = UIColor.black.cgColor
 			circleView.layer.contentsScale = UIScreen.main.scale
-
 
 			// Outer border
 			let layer = CALayer()

@@ -28,7 +28,6 @@ class RouteDetailViewController : UIViewController, DataListTableView {
     typealias Model = BusStop
     typealias CellType = BusStopCell
 
-
     public var viewModel: RouteDetailViewModel?
 
     @IBOutlet private weak var tableView: UITableView! {

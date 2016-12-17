@@ -31,11 +31,11 @@ class MapViewController: UIViewController {
 
 	private var disposeBag = DisposeBag()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+	override func viewDidLoad() {
+		super.viewDidLoad()
 
 		addAnnotations()
-    }
+	}
 
 	private func addAnnotations() {
 		viewModel?.getBusStops()
