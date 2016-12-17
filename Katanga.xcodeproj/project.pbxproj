@@ -16,6 +16,8 @@
 		0B502FD51E0564860000A2CD /* RouteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B502FD01E0564860000A2CD /* RouteDetailViewController.swift */; };
 		0B502FD61E0564860000A2CD /* RoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B502FD11E0564860000A2CD /* RoutesViewController.swift */; };
 		0BE0AEC91E05B66200150346 /* RouteStopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0AEC81E05B66200150346 /* RouteStopsViewController.swift */; };
+		0BE0AECB1E05BBB400150346 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE0AECA1E05BBB400150346 /* MapKit.framework */; };
+		0BE0AECD1E05BE2600150346 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0AECC1E05BE2600150346 /* MapViewController.swift */; };
 		1676B5D5B8CDEBC0E0AEF898 /* Pods_Katanga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1FE72E15002ADC31951915 /* Pods_Katanga.framework */; };
 		571EBB0D1DBCB7B800DC71C5 /* NearBusStopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571EBB0B1DBCB7B800DC71C5 /* NearBusStopCell.swift */; };
 		571EBB0E1DBCB7B800DC71C5 /* NearBusStopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 571EBB0C1DBCB7B800DC71C5 /* NearBusStopCell.xib */; };
@@ -77,6 +79,8 @@
 		0B502FD01E0564860000A2CD /* RouteDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteDetailViewController.swift; sourceTree = "<group>"; };
 		0B502FD11E0564860000A2CD /* RoutesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesViewController.swift; sourceTree = "<group>"; };
 		0BE0AEC81E05B66200150346 /* RouteStopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteStopsViewController.swift; sourceTree = "<group>"; };
+		0BE0AECA1E05BBB400150346 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		0BE0AECC1E05BE2600150346 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0BF4C7D51DD05F1A00343EB8 /* DataListTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataListTableView.swift; path = ../DataListTableView.swift; sourceTree = "<group>"; };
 		1B520E40BEB35B8DCED8C035 /* Pods-KatangaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KatangaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KatangaTests/Pods-KatangaTests.release.xcconfig"; sourceTree = "<group>"; };
 		37AF01D659EF3EA94DF5D3B0 /* Pods-Katanga.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Katanga.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Katanga/Pods-Katanga.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BE0AECB1E05BBB400150346 /* MapKit.framework in Frameworks */,
 				1676B5D5B8CDEBC0E0AEF898 /* Pods_Katanga.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +174,7 @@
 				0B502FD01E0564860000A2CD /* RouteDetailViewController.swift */,
 				0B502FD11E0564860000A2CD /* RoutesViewController.swift */,
 				0BE0AEC81E05B66200150346 /* RouteStopsViewController.swift */,
+				0BE0AECC1E05BE2600150346 /* MapViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -310,6 +316,7 @@
 		B3B6F3BA6419274AB4636013 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0BE0AECA1E05BBB400150346 /* MapKit.framework */,
 				AC1FE72E15002ADC31951915 /* Pods_Katanga.framework */,
 				A995697FA2C2DAC5D41F9311 /* Pods_KatangaTests.framework */,
 			);
@@ -588,6 +595,7 @@
 				571EBB1D1DBCD96100DC71C5 /* ReusableView.swift in Sources */,
 				0B20078C1DCF9FBE006A5029 /* RouteDetailViewModel.swift in Sources */,
 				5789614B1DBC168A00C10285 /* RoutesCell.swift in Sources */,
+				0BE0AECD1E05BE2600150346 /* MapViewController.swift in Sources */,
 				0B20078F1DCFBAFC006A5029 /* BusStopCell.swift in Sources */,
 				0B502FD51E0564860000A2CD /* RouteDetailViewController.swift in Sources */,
 				571EBB1F1DBCD9AF00DC71C5 /* UITableView+Katanga.swift in Sources */,
