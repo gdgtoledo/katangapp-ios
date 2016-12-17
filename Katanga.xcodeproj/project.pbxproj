@@ -293,9 +293,9 @@
 			isa = PBXGroup;
 			children = (
 				578961491DBC168A00C10285 /* RoutesCell.swift */,
+				5789614A1DBC168A00C10285 /* RoutesCell.xib */,
 				571EBB0B1DBCB7B800DC71C5 /* NearBusStopCell.swift */,
 				571EBB0C1DBCB7B800DC71C5 /* NearBusStopCell.xib */,
-				5789614A1DBC168A00C10285 /* RoutesCell.xib */,
 				571EBB161DBCC86F00DC71C5 /* BusComingCell.swift */,
 				571EBB171DBCC86F00DC71C5 /* BusComingCell.xib */,
 				0B20078D1DCFBAFC006A5029 /* BusStopCell.swift */,

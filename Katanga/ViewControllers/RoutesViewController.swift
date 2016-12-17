@@ -33,7 +33,11 @@ class RoutesViewController : UIViewController, DataListTableView {
         }
     }
 
-    @IBOutlet private weak var tableView: UITableView!
+	@IBOutlet private weak var tableView: UITableView! {
+		didSet {
+			tableView.rowHeight = 60
+		}
+	}
 
     private let activityIndicator = ActivityIndicator()
 

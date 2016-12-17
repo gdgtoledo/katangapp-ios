@@ -51,12 +51,25 @@ class RoutesCell: UITableViewCell {
 
     @IBOutlet private weak var routeIdLabel: UILabel!
     @IBOutlet private weak var routeNameLabel: UILabel!
+	@IBOutlet weak var circleView: UIView! {
+		didSet {
+			circleView.layer.cornerRadius = circleView.frame.width/2
+			circleView.backgroundColor = .katangaYellow
+			circleView.layer.borderWidth = 1
+			circleView.layer.borderColor = UIColor.black.cgColor
+		}
+	}
 
     override func awakeFromNib() {
         super.awakeFromNib()
 
         selectionStyle = .none
     }
+
+	override func layoutSubviews() {
+		super.layoutSubviews()
+
+	}
 
     override func prepareForReuse() {
         super.prepareForReuse()
