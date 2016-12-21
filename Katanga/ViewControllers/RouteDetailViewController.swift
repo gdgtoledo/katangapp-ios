@@ -18,10 +18,9 @@
 @author Víctor Galán
 */
 
-import UIKit
 import RxCocoa
 import RxSwift
-
+import UIKit
 
 class RouteDetailViewController : UIViewController, DataListTableView {
 

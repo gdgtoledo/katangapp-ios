@@ -18,10 +18,10 @@
 @author Víctor Galán
 */
 
-import UIKit
 import MapKit
-import RxSwift
 import RxCocoa
+import RxSwift
+import UIKit
 
 class MapViewController: UIViewController {
 

@@ -18,8 +18,8 @@
  @author Víctor Galán
  */
 
-import RxSwift
 import RxCocoa
+import RxSwift
 
 struct NearBusStopCoordinatesViewModel : NearBusStopViewModel {
 
