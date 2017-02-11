@@ -47,14 +47,20 @@ class BusComingCell: UITableViewCell {
             return 0
         }
     }
+    
+    public var routeItemClick: ((String) -> ())?
 
     @IBOutlet private weak var routeIdLabel: UILabel!
     @IBOutlet private weak var timeLabel: UILabel!
+    @IBOutlet weak var routeIdView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
 
         selectionStyle = .none
+        
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(routeIdLabelClicked))
+        routeIdView.addGestureRecognizer(gestureRecognizer)
     }
 
     override func prepareForReuse() {
@@ -63,6 +69,10 @@ class BusComingCell: UITableViewCell {
         routeIdLabel.text = ""
         timeLabel.text = ""
         timeLabel.textColor = .black
+    }
+    
+    @objc private func routeIdLabelClicked() {
+        routeItemClick?(routeId)
     }
 
     private func setTimeText(forMinutes minutes: Double) -> String {

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GOh-kE-j4n">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GOh-kE-j4n">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -95,7 +95,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="22t-2E-m3Y" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Paradas cercanas" image="location_icon" id="0fe-eG-Zoa"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fQP-11-gvz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="fQP-11-gvz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.96470588239999999" green="0.92549019610000005" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -154,7 +154,7 @@
         <!--Route Detail View Controller-->
         <scene sceneID="Eeg-ja-YG3">
             <objects>
-                <viewController id="ATU-jp-vi5" customClass="RouteDetailViewController" customModule="Katanga" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="lineVC" id="ATU-jp-vi5" customClass="RouteDetailViewController" customModule="Katanga" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jgb-37-2y8"/>
                         <viewControllerLayoutGuide type="bottom" id="8KI-0v-3D8"/>
@@ -164,7 +164,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nK-KI-BQn">
-                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="mYn-W8-YPX"/>
                                 </constraints>
@@ -238,11 +238,13 @@
                     <connections>
                         <outlet property="spinner" destination="NEZ-xC-UdX" id="dUq-92-KEX"/>
                         <outlet property="tableView" destination="jfe-7T-Qih" id="jET-Ff-yfi"/>
+                        <segue destination="ATU-jp-vi5" kind="show" identifier="routedetail" id="lhd-S0-d0t"/>
+                        <segue destination="Lhd-9j-n4w" kind="show" identifier="busStopDetail" id="0ct-rA-ULz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZrU-AG-nOw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3374" y="876"/>
+            <point key="canvasLocation" x="3882" y="876"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="f6K-g5-VUq">
@@ -271,7 +273,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QdF-Bp-w77" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Líneas" image="lines_icon" id="BXm-2X-NcP"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jxg-y6-hrD">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Jxg-y6-hrD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -346,7 +348,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hoc-Qp-ZD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3132" y="2364"/>
+            <point key="canvasLocation" x="3097" y="2364"/>
+        </scene>
+        <!--Bus Stop Detail View Controller-->
+        <scene sceneID="7JF-AL-kAV">
+            <objects>
+                <viewController id="Lhd-9j-n4w" customClass="BusStopDetailViewController" customModule="Katanga" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iqn-2b-6CH"/>
+                        <viewControllerLayoutGuide type="bottom" id="E5s-Gz-DU7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lMt-fv-UZt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sJ8-eX-SSl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sJ8-eX-SSl" firstAttribute="leading" secondItem="lMt-fv-UZt" secondAttribute="leading" id="3C6-mL-7Pu"/>
+                            <constraint firstAttribute="trailing" secondItem="sJ8-eX-SSl" secondAttribute="trailing" id="47J-oV-3We"/>
+                            <constraint firstItem="E5s-Gz-DU7" firstAttribute="top" secondItem="sJ8-eX-SSl" secondAttribute="bottom" id="I0B-bp-9ap"/>
+                            <constraint firstItem="sJ8-eX-SSl" firstAttribute="top" secondItem="lMt-fv-UZt" secondAttribute="top" id="gsE-x3-dRU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="sJ8-eX-SSl" id="kdw-uV-iQJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FdC-tj-jaU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4296.8000000000002" y="1844.5277361319343"/>
         </scene>
     </scenes>
     <resources>
@@ -355,5 +389,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="FFB-Y0-gcz"/>
+        <segue reference="lhd-S0-d0t"/>
     </inferredMetricsTieBreakers>
 </document>

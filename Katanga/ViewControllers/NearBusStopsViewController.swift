@@ -52,6 +52,16 @@ class NearBusStopsViewController: UIViewController, DataListTableView {
 
         setupRx()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = "Paradas cercanas"
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.title = ""
+    }
 
     private func setupRx() {
         guard let viewModel = viewModel else { return }
@@ -79,7 +89,7 @@ class NearBusStopsViewController: UIViewController, DataListTableView {
             .addDisposableTo(disposeBag)
 
         viewModel.activityIndicator
-            .drive(refreshControl!.rx.refreshing)
+            .drive(refreshControl!.rx.isRefreshing)
             .addDisposableTo(disposeBag)
         
     }
@@ -91,6 +101,32 @@ class NearBusStopsViewController: UIViewController, DataListTableView {
 
         cell.distance = "(\(distanceFormatted) metros)"
         cell.bustStopTimes = element.times
+        cell.routeItemClick = { [weak self] routeId in
+            self?.performSegue(withIdentifier: "routedetail", sender: routeId)
+        }
+        cell.busStopClick = { [weak self] in
+            self?.performSegue(withIdentifier: "busStopDetail", sender: element.busStop)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "routedetail" {
+            guard let routeId = sender as? String else {
+                return
+            }
+            let vc = segue.destination as? RouteDetailViewController
+            let vm = RouteDetailViewModelFromNearBuses(routeIdentifier: routeId)
+            
+            vc?.viewModel = vm
+        }
+        else if segue.identifier == "busStopDetail" {
+            guard let busStop = sender as? BusStop else {
+                return
+            }
+            
+            let vc = segue.destination as? BusStopDetailViewController
+            vc?.stop = busStop
+        }
     }
 
 }
