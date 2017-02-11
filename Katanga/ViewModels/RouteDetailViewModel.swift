@@ -22,7 +22,13 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-struct RouteDetailViewModel {
+protocol RouteDetailViewModelProtocol {
+    
+    func getBusStops() -> Driver<[BusStop]>
+    func routeId() -> Driver<String>
+}
+
+struct RouteDetailViewModel : RouteDetailViewModelProtocol {
 
 	let route: Route
 
@@ -34,4 +40,19 @@ struct RouteDetailViewModel {
         return Driver.of(route.id)
     }
 
+}
+
+struct RouteDetailViewModelFromNearBuses : RouteDetailViewModelProtocol {
+    
+    let routeIdentifier: String
+    
+    func getBusStops() -> Driver<[BusStop]> {
+        return KatangaBusApiClient().route(with: routeIdentifier)
+                    .map { $0.busStops }.asDriver(onErrorJustReturn: [])
+    }
+    
+    func routeId() -> Driver<String> {
+        return Driver.of(routeIdentifier)
+    }
+    
 }

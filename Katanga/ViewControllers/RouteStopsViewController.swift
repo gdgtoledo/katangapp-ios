@@ -27,7 +27,7 @@ class RouteStopsViewController: UIViewController, DataListTableView {
 	typealias Model = BusStop
 	typealias CellType = BusStopCell
 
-	public var viewModel: RouteDetailViewModel?
+	public var viewModel: RouteDetailViewModelProtocol?
 
 	@IBOutlet private var tableView: UITableView! {
 		didSet {

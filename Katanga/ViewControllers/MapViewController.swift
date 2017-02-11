@@ -25,7 +25,7 @@ import UIKit
 
 class MapViewController: UIViewController {
 
-	public var viewModel: RouteDetailViewModel?
+	public var viewModel: RouteDetailViewModelProtocol?
 
 	@IBOutlet private weak var mapView: MKMapView!
 
