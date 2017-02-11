@@ -19,6 +19,7 @@
 		0BE0AECB1E05BBB400150346 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE0AECA1E05BBB400150346 /* MapKit.framework */; };
 		0BE0AECD1E05BE2600150346 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0AECC1E05BE2600150346 /* MapViewController.swift */; };
 		1676B5D5B8CDEBC0E0AEF898 /* Pods_Katanga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1FE72E15002ADC31951915 /* Pods_Katanga.framework */; };
+		3D284017668D89E86AC89678 /* Pods_KatangaApp_KatangaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5963D97D1DDFA5E72DA2B29C /* Pods_KatangaApp_KatangaTests.framework */; };
 		571EBB0D1DBCB7B800DC71C5 /* NearBusStopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571EBB0B1DBCB7B800DC71C5 /* NearBusStopCell.swift */; };
 		571EBB0E1DBCB7B800DC71C5 /* NearBusStopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 571EBB0C1DBCB7B800DC71C5 /* NearBusStopCell.xib */; };
 		571EBB131DBCBD3600DC71C5 /* logo_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 571EBB121DBCBD3600DC71C5 /* logo_small.png */; };
@@ -49,7 +50,10 @@
 		5789614B1DBC168A00C10285 /* RoutesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578961491DBC168A00C10285 /* RoutesCell.swift */; };
 		5789614C1DBC168A00C10285 /* RoutesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5789614A1DBC168A00C10285 /* RoutesCell.xib */; };
 		5789614E1DBC1DCB00C10285 /* NearBusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789614D1DBC1DCB00C10285 /* NearBusStop.swift */; };
+		57DF15F11E4FADCB00FABDDB /* BusStopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DF15F01E4FADCB00FABDDB /* BusStopDetailViewController.swift */; };
 		7389446DE7BEE16F80D0E5F7 /* Pods_KatangaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A995697FA2C2DAC5D41F9311 /* Pods_KatangaTests.framework */; };
+		9A6F370BB56823B2320B5304 /* Pods_KatangaApp_Katanga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF48784F7A4237C2BDD39F29 /* Pods_KatangaApp_Katanga.framework */; };
+		D55D4793B9763B48E0B66AA8 /* Pods_Katanga_KatangaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C320E5F629D980BABDE34D45 /* Pods_Katanga_KatangaTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +85,8 @@
 		0BE0AEC81E05B66200150346 /* RouteStopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteStopsViewController.swift; sourceTree = "<group>"; };
 		0BE0AECA1E05BBB400150346 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0BE0AECC1E05BE2600150346 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		0BF4C7D51DD05F1A00343EB8 /* DataListTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataListTableView.swift; path = ../DataListTableView.swift; sourceTree = "<group>"; };
+		0C075C3AE55AE39FB57C0152 /* Pods-Katanga-KatangaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Katanga-KatangaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Katanga-KatangaTests/Pods-Katanga-KatangaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		18A195388323EA4345A6B0C8 /* Pods-KatangaApp-Katanga.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KatangaApp-Katanga.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KatangaApp-Katanga/Pods-KatangaApp-Katanga.debug.xcconfig"; sourceTree = "<group>"; };
 		1B520E40BEB35B8DCED8C035 /* Pods-KatangaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KatangaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KatangaTests/Pods-KatangaTests.release.xcconfig"; sourceTree = "<group>"; };
 		37AF01D659EF3EA94DF5D3B0 /* Pods-Katanga.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Katanga.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Katanga/Pods-Katanga.debug.xcconfig"; sourceTree = "<group>"; };
 		5217E5A9F020BCD3FB6D5BA8 /* Pods-KatangaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KatangaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KatangaTests/Pods-KatangaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,8 +126,16 @@
 		578961491DBC168A00C10285 /* RoutesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesCell.swift; sourceTree = "<group>"; };
 		5789614A1DBC168A00C10285 /* RoutesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoutesCell.xib; sourceTree = "<group>"; };
 		5789614D1DBC1DCB00C10285 /* NearBusStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearBusStop.swift; sourceTree = "<group>"; };
+		57DF15F01E4FADCB00FABDDB /* BusStopDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopDetailViewController.swift; sourceTree = "<group>"; };
+		5963D97D1DDFA5E72DA2B29C /* Pods_KatangaApp_KatangaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KatangaApp_KatangaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FC5F3D3F589E2B3F6A5D0D4 /* Pods-KatangaApp-KatangaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KatangaApp-KatangaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KatangaApp-KatangaTests/Pods-KatangaApp-KatangaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9FD87F8ACCB87CE94FBB0F4A /* Pods-KatangaApp-Katanga.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KatangaApp-Katanga.release.xcconfig"; path = "Pods/Target Support Files/Pods-KatangaApp-Katanga/Pods-KatangaApp-Katanga.release.xcconfig"; sourceTree = "<group>"; };
 		A995697FA2C2DAC5D41F9311 /* Pods_KatangaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KatangaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1FE72E15002ADC31951915 /* Pods_Katanga.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Katanga.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C320E5F629D980BABDE34D45 /* Pods_Katanga_KatangaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Katanga_KatangaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C379678D4F5312FABD4311FB /* Pods-KatangaApp-KatangaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KatangaApp-KatangaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KatangaApp-KatangaTests/Pods-KatangaApp-KatangaTests.release.xcconfig"; sourceTree = "<group>"; };
+		DD09E9EC27E17DB54203C00B /* Pods-Katanga-KatangaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Katanga-KatangaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Katanga-KatangaTests/Pods-Katanga-KatangaTests.release.xcconfig"; sourceTree = "<group>"; };
+		DF48784F7A4237C2BDD39F29 /* Pods_KatangaApp_Katanga.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KatangaApp_Katanga.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF23F5942F1D41FCE071FC77 /* Pods-Katanga.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Katanga.release.xcconfig"; path = "Pods/Target Support Files/Pods-Katanga/Pods-Katanga.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +146,7 @@
 			files = (
 				0BE0AECB1E05BBB400150346 /* MapKit.framework in Frameworks */,
 				1676B5D5B8CDEBC0E0AEF898 /* Pods_Katanga.framework in Frameworks */,
+				9A6F370BB56823B2320B5304 /* Pods_KatangaApp_Katanga.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +155,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7389446DE7BEE16F80D0E5F7 /* Pods_KatangaTests.framework in Frameworks */,
+				3D284017668D89E86AC89678 /* Pods_KatangaApp_KatangaTests.framework in Frameworks */,
+				D55D4793B9763B48E0B66AA8 /* Pods_Katanga_KatangaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +191,7 @@
 				0B502FD11E0564860000A2CD /* RoutesViewController.swift */,
 				0BE0AEC81E05B66200150346 /* RouteStopsViewController.swift */,
 				0BE0AECC1E05BE2600150346 /* MapViewController.swift */,
+				57DF15F01E4FADCB00FABDDB /* BusStopDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -247,7 +264,6 @@
 		57266B161DAA3845002C7C12 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				0BF4C7D51DD05F1A00343EB8 /* DataListTableView.swift */,
 				578961461DBC012B00C10285 /* ActivityIndicator.swift */,
 				57503F7C1DAAAB9000B39E24 /* UIColor+Katanga.swift */,
 				571EBB1A1DBCD90C00DC71C5 /* NibLoadable.swift */,
@@ -319,6 +335,9 @@
 				0BE0AECA1E05BBB400150346 /* MapKit.framework */,
 				AC1FE72E15002ADC31951915 /* Pods_Katanga.framework */,
 				A995697FA2C2DAC5D41F9311 /* Pods_KatangaTests.framework */,
+				DF48784F7A4237C2BDD39F29 /* Pods_KatangaApp_Katanga.framework */,
+				5963D97D1DDFA5E72DA2B29C /* Pods_KatangaApp_KatangaTests.framework */,
+				C320E5F629D980BABDE34D45 /* Pods_Katanga_KatangaTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -330,6 +349,12 @@
 				EF23F5942F1D41FCE071FC77 /* Pods-Katanga.release.xcconfig */,
 				5217E5A9F020BCD3FB6D5BA8 /* Pods-KatangaTests.debug.xcconfig */,
 				1B520E40BEB35B8DCED8C035 /* Pods-KatangaTests.release.xcconfig */,
+				18A195388323EA4345A6B0C8 /* Pods-KatangaApp-Katanga.debug.xcconfig */,
+				9FD87F8ACCB87CE94FBB0F4A /* Pods-KatangaApp-Katanga.release.xcconfig */,
+				5FC5F3D3F589E2B3F6A5D0D4 /* Pods-KatangaApp-KatangaTests.debug.xcconfig */,
+				C379678D4F5312FABD4311FB /* Pods-KatangaApp-KatangaTests.release.xcconfig */,
+				0C075C3AE55AE39FB57C0152 /* Pods-Katanga-KatangaTests.debug.xcconfig */,
+				DD09E9EC27E17DB54203C00B /* Pods-Katanga-KatangaTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -403,7 +428,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Software Craftsmanship Toledo";
 				TargetAttributes = {
 					57266AE11DAA2D01002C7C12 = {
@@ -491,7 +516,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KatangaTests/Pods-KatangaTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Katanga-KatangaTests/Pods-Katanga-KatangaTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3DF0CBDEE0D7DB545D8F3DA2 /* [CP] Check Pods Manifest.lock */ = {
@@ -551,7 +576,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KatangaTests/Pods-KatangaTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Katanga-KatangaTests/Pods-Katanga-KatangaTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F260A5ED11879598A072F5A6 /* [CP] Check Pods Manifest.lock */ = {
@@ -600,6 +625,7 @@
 				0B502FD51E0564860000A2CD /* RouteDetailViewController.swift in Sources */,
 				571EBB1F1DBCD9AF00DC71C5 /* UITableView+Katanga.swift in Sources */,
 				578961471DBC012B00C10285 /* ActivityIndicator.swift in Sources */,
+				57DF15F11E4FADCB00FABDDB /* BusStopDetailViewController.swift in Sources */,
 				572141C31DD78BD700FC5B15 /* NearBusStopIdViewModel.swift in Sources */,
 				57503F7D1DAAAB9000B39E24 /* UIColor+Katanga.swift in Sources */,
 			);
@@ -675,6 +701,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -724,6 +751,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -752,6 +780,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 37AF01D659EF3EA94DF5D3B0 /* Pods-Katanga.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Katanga/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -765,6 +794,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EF23F5942F1D41FCE071FC77 /* Pods-Katanga.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Katanga/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -776,7 +806,7 @@
 		};
 		57266B0E1DAA2D01002C7C12 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5217E5A9F020BCD3FB6D5BA8 /* Pods-KatangaTests.debug.xcconfig */;
+			baseConfigurationReference = 0C075C3AE55AE39FB57C0152 /* Pods-Katanga-KatangaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -791,7 +821,7 @@
 		};
 		57266B0F1DAA2D01002C7C12 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B520E40BEB35B8DCED8C035 /* Pods-KatangaTests.release.xcconfig */;
+			baseConfigurationReference = DD09E9EC27E17DB54203C00B /* Pods-Katanga-KatangaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
