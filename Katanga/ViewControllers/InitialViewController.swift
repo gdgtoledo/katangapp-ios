@@ -21,6 +21,7 @@
 import RxCocoa
 import RxSwift
 import UIKit
+import CoreLocation
 
 class InitialViewController: UIViewController {
 
@@ -44,11 +45,17 @@ class InitialViewController: UIViewController {
 
     private var spinner: UIActivityIndicatorView?
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+	private var locationService = GeolocationService.instance
 
-        setUpRx()
-    }
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		setUpRx()
+	}
+
+	override func viewWillDisappear(_ animated: Bool) {
+		super.viewWillDisappear(animated)
+		disposeBag = DisposeBag()
+	}
 
     private func setUpRx() {
         metersSlider.rx.value
@@ -58,18 +65,57 @@ class InitialViewController: UIViewController {
             .addDisposableTo(disposeBag)
 
         searchLocationButton.rx.tap
-            .bindNext { [weak self] in
-                self?.spinner?.startAnimating()
-                self?.performSegue(withIdentifier: "shownearstops", sender: nil)
-            }
-            .addDisposableTo(disposeBag)
+			.asObservable()
+			.do(onNext: { [weak self] _ in
+				self?.spinner?.startAnimating()
+			})
+			.flatMap { [unowned self] _ -> Driver<Bool> in
+				self.locationService.authorized
+			}
+			.flatMap { [unowned self] authorized -> Driver<CLLocationCoordinate2D> in
+				if authorized {
+					return self.locationService.location
+				}
+				else {
+					throw GeoLocationServiceError.unauthorized
+				}
+			}
+			.take(1)
+			.debug("location")
+			.subscribe(onNext: { [unowned self] location in
+				self.spinner?.stopAnimating()
+				self.performSegue(withIdentifier: "shownearstops", sender: location)
+			}, onError: { [unowned self] error in
+				self.spinner?.stopAnimating()
+				self.showUnauthorizedAlert()
+			})
+			.disposed(by: disposeBag)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let viewModel = NearBusStopCoordinatesViewModel(latitude: 39.861293, longitude: -4.026146, meters: 1000)
+		let location = sender as! CLLocationCoordinate2D
+//		let viewModel = NearBusStopCoordinatesViewModel(latitude: location.latitude, longitude: location.longitude, meters: Int(metersSlider.value))
+		let viewModel = NearBusStopCoordinatesViewModel(latitude: 39.861293, longitude: -4.026146, meters: 1000)
         let vc = segue.destination as? NearBusStopsViewController
         
         vc?.viewModel = viewModel
     }
+
+	private func showUnauthorizedAlert() {
+		let alert = UIAlertController(title: "Error",
+		message: "La localización está desactivada, esta aplicación necesita la ubicación para funcionar correctamente", preferredStyle: .alert)
+
+		let cancel = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+		let openPreferences = UIAlertAction(title: "Activar ubicación", style: .default) {[weak self] _ in
+			self?.disposeBag = DisposeBag()
+			self?.setUpRx()
+			UIApplication.shared.openURL(URL(string: UIApplicationOpenSettingsURLString)!)
+		}
+
+		alert.addAction(cancel)
+		alert.addAction(openPreferences)
+
+		self.present(alert, animated: true, completion: nil)
+	}
 
 }
