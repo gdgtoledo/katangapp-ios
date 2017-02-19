@@ -15,10 +15,12 @@
 		0B502FD41E0564860000A2CD /* NearBusStopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B502FCF1E0564860000A2CD /* NearBusStopsViewController.swift */; };
 		0B502FD51E0564860000A2CD /* RouteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B502FD01E0564860000A2CD /* RouteDetailViewController.swift */; };
 		0B502FD61E0564860000A2CD /* RoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B502FD11E0564860000A2CD /* RoutesViewController.swift */; };
+		0B57B66B1E599D4D009B62C1 /* GeoLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B57B66A1E599D4D009B62C1 /* GeoLocationService.swift */; };
+		0B57B66D1E599DD8009B62C1 /* CLLocation+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B57B66C1E599DD8009B62C1 /* CLLocation+Rx.swift */; };
+		0B57B66F1E599E1A009B62C1 /* RxCLLocationManagerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B57B66E1E599E1A009B62C1 /* RxCLLocationManagerDelegateProxy.swift */; };
 		0BE0AEC91E05B66200150346 /* RouteStopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0AEC81E05B66200150346 /* RouteStopsViewController.swift */; };
 		0BE0AECB1E05BBB400150346 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE0AECA1E05BBB400150346 /* MapKit.framework */; };
 		0BE0AECD1E05BE2600150346 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0AECC1E05BE2600150346 /* MapViewController.swift */; };
-		1676B5D5B8CDEBC0E0AEF898 /* Pods_Katanga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1FE72E15002ADC31951915 /* Pods_Katanga.framework */; };
 		3D284017668D89E86AC89678 /* Pods_KatangaApp_KatangaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5963D97D1DDFA5E72DA2B29C /* Pods_KatangaApp_KatangaTests.framework */; };
 		571EBB0D1DBCB7B800DC71C5 /* NearBusStopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571EBB0B1DBCB7B800DC71C5 /* NearBusStopCell.swift */; };
 		571EBB0E1DBCB7B800DC71C5 /* NearBusStopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 571EBB0C1DBCB7B800DC71C5 /* NearBusStopCell.xib */; };
@@ -52,7 +54,7 @@
 		5789614E1DBC1DCB00C10285 /* NearBusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789614D1DBC1DCB00C10285 /* NearBusStop.swift */; };
 		57DF15F11E4FADCB00FABDDB /* BusStopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DF15F01E4FADCB00FABDDB /* BusStopDetailViewController.swift */; };
 		7389446DE7BEE16F80D0E5F7 /* Pods_KatangaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A995697FA2C2DAC5D41F9311 /* Pods_KatangaTests.framework */; };
-		9A6F370BB56823B2320B5304 /* Pods_KatangaApp_Katanga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF48784F7A4237C2BDD39F29 /* Pods_KatangaApp_Katanga.framework */; };
+		76CB7A1C3F0F0AF35BEC1727 /* Pods_Katanga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1FE72E15002ADC31951915 /* Pods_Katanga.framework */; };
 		D55D4793B9763B48E0B66AA8 /* Pods_Katanga_KatangaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C320E5F629D980BABDE34D45 /* Pods_Katanga_KatangaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +84,9 @@
 		0B502FCF1E0564860000A2CD /* NearBusStopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearBusStopsViewController.swift; sourceTree = "<group>"; };
 		0B502FD01E0564860000A2CD /* RouteDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteDetailViewController.swift; sourceTree = "<group>"; };
 		0B502FD11E0564860000A2CD /* RoutesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesViewController.swift; sourceTree = "<group>"; };
+		0B57B66A1E599D4D009B62C1 /* GeoLocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoLocationService.swift; sourceTree = "<group>"; };
+		0B57B66C1E599DD8009B62C1 /* CLLocation+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocation+Rx.swift"; sourceTree = "<group>"; };
+		0B57B66E1E599E1A009B62C1 /* RxCLLocationManagerDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxCLLocationManagerDelegateProxy.swift; sourceTree = "<group>"; };
 		0BE0AEC81E05B66200150346 /* RouteStopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteStopsViewController.swift; sourceTree = "<group>"; };
 		0BE0AECA1E05BBB400150346 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0BE0AECC1E05BE2600150346 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -145,8 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BE0AECB1E05BBB400150346 /* MapKit.framework in Frameworks */,
-				1676B5D5B8CDEBC0E0AEF898 /* Pods_Katanga.framework in Frameworks */,
-				9A6F370BB56823B2320B5304 /* Pods_KatangaApp_Katanga.framework in Frameworks */,
+				76CB7A1C3F0F0AF35BEC1727 /* Pods_Katanga.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +243,7 @@
 				57266B161DAA3845002C7C12 /* Extensions */,
 				57266AE51DAA2D01002C7C12 /* AppDelegate.swift */,
 				57266AE91DAA2D01002C7C12 /* Main.storyboard */,
+				0B57B66A1E599D4D009B62C1 /* GeoLocationService.swift */,
 			);
 			path = Katanga;
 			sourceTree = "<group>";
@@ -269,6 +274,8 @@
 				571EBB1A1DBCD90C00DC71C5 /* NibLoadable.swift */,
 				571EBB1C1DBCD96100DC71C5 /* ReusableView.swift */,
 				571EBB1E1DBCD9AF00DC71C5 /* UITableView+Katanga.swift */,
+				0B57B66C1E599DD8009B62C1 /* CLLocation+Rx.swift */,
+				0B57B66E1E599E1A009B62C1 /* RxCLLocationManagerDelegateProxy.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -602,6 +609,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5789614E1DBC1DCB00C10285 /* NearBusStop.swift in Sources */,
+				0B57B66D1E599DD8009B62C1 /* CLLocation+Rx.swift in Sources */,
 				0BE0AEC91E05B66200150346 /* RouteStopsViewController.swift in Sources */,
 				578961391DBBEE4F00C10285 /* BusStop.swift in Sources */,
 				5789613D1DBBEEAE00C10285 /* BusApi.swift in Sources */,
@@ -613,6 +621,8 @@
 				571EBB0D1DBCB7B800DC71C5 /* NearBusStopCell.swift in Sources */,
 				57266AE61DAA2D01002C7C12 /* AppDelegate.swift in Sources */,
 				578961401DBBEF0000C10285 /* KatangaBusApiClient.swift in Sources */,
+				0B57B66F1E599E1A009B62C1 /* RxCLLocationManagerDelegateProxy.swift in Sources */,
+				0B57B66B1E599D4D009B62C1 /* GeoLocationService.swift in Sources */,
 				571EBB181DBCC86F00DC71C5 /* BusComingCell.swift in Sources */,
 				0B502FD41E0564860000A2CD /* NearBusStopsViewController.swift in Sources */,
 				5789613A1DBBEE4F00C10285 /* Route.swift in Sources */,
