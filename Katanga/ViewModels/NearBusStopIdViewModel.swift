@@ -27,16 +27,18 @@ struct NearBusStopIdViewModel : NearBusStopViewModel {
     private(set) var activityIndicator: ActivityIndicator
 
     let busStopId: String
+	let apiClient: BusApi
 
-    init(busStopId: String) {
+	init(busStopId: String, apiClient: BusApi = KatangaBusApiClient()) {
         self.busStopId = busStopId
+		self.apiClient = apiClient
         
         self.title = busStopId
         activityIndicator = ActivityIndicator()
     }
 
     func getNearBusStops() -> Driver<[NearBusStop]> {
-        return KatangaBusApiClient()
+        return apiClient
             .routeTimes(busStopId: busStopId)
             .trackActivity(activityIndicator)
             .toArray()

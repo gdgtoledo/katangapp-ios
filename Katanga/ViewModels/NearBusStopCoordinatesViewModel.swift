@@ -29,18 +29,20 @@ struct NearBusStopCoordinatesViewModel : NearBusStopViewModel {
     let latitude: Double
     let longitude: Double
     let meters: Int
+	let apiClient: BusApi
 
-    init(latitude: Double, longitude: Double, meters: Int) {
+	init(latitude: Double, longitude: Double, meters: Int, apiClient: BusApi = KatangaBusApiClient()) {
         self.latitude = latitude
         self.longitude = longitude
         self.meters = meters
+		self.apiClient = apiClient
 
         self.title = "Paradas cercanas"
         activityIndicator = ActivityIndicator()
     }
 
     func getNearBusStops() -> Driver<[NearBusStop]> {
-       return KatangaBusApiClient()
+       return apiClient
             .nearbyBusStops(latitude: latitude, longitude: longitude, meters: meters)
             .trackActivity(activityIndicator)
             .toArray()

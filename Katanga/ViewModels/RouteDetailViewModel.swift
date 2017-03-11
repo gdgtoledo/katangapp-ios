@@ -43,11 +43,17 @@ struct RouteDetailViewModel : RouteDetailViewModelProtocol {
 }
 
 struct RouteDetailViewModelFromNearBuses : RouteDetailViewModelProtocol {
-    
+	
+	let apiClient: BusApi
     let routeIdentifier: String
+	
+	init(apiClient: BusApi = KatangaBusApiClient(), routeIdentifier: String) {
+		self.apiClient = apiClient
+		self.routeIdentifier = routeIdentifier
+	}
     
     func getBusStops() -> Driver<[BusStop]> {
-        return KatangaBusApiClient().route(with: routeIdentifier)
+        return apiClient.route(with: routeIdentifier)
                     .map { $0.busStops }.asDriver(onErrorJustReturn: [])
     }
     
