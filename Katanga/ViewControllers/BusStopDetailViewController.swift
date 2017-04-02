@@ -10,8 +10,12 @@ import UIKit
 import MapKit
 
 class BusStopDetailViewController: UIViewController {
-    
-    var stop: BusStop?
+	
+	let favouriteImage = UIImage(named: "favourited")
+	let unfavouriteImage = UIImage(named: "unfavourited")
+	
+	var viewModel: BusStopDetailViewModel?
+	var isFavourite = false
     
     var starButton: UIBarButtonItem?
     
@@ -19,22 +23,33 @@ class BusStopDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        starButton = UIBarButtonItem(image: UIImage(named: "unfavourited"), style: .plain, target: self, action: #selector(BusStopDetailViewController.favouriteStop))
+		guard let viewModel = viewModel else { return }
+		
+		isFavourite = viewModel.isFavourite()
+		
+		let image = isFavourite ? favouriteImage : unfavouriteImage
+        starButton = UIBarButtonItem(image: image, style: .plain, target: self,
+			action: #selector(BusStopDetailViewController.favouriteStop))
         self.navigationItem.rightBarButtonItem = starButton
         
         loadAnnotation()
     }
     
     func favouriteStop() {
-        starButton?.image = UIImage(named: "favourited")
+		if isFavourite {
+			starButton?.image = unfavouriteImage
+			viewModel?.unfavourite()
+		}
+		else {
+			starButton?.image = favouriteImage
+			viewModel?.favourite()
+		}
+		
+		isFavourite = !isFavourite
     }
     
     private func loadAnnotation() {
-        guard let stop = stop else {
-            return
-        }
-        
+		guard let stop = viewModel?.busStop else { return }
         title = stop.address
         
         let coordinates

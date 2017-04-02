@@ -125,7 +125,7 @@ class NearBusStopsViewController: UIViewController, DataListTableView {
             }
             
             let vc = segue.destination as? BusStopDetailViewController
-            vc?.stop = busStop
+			vc?.viewModel = BusStopDetailViewModel(busStop: busStop)
         }
     }
 
