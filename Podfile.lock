@@ -1,5 +1,12 @@
 PODS:
   - Marshal (1.2.4)
+  - NSObject+Rx (2.0.0):
+    - RxSwift
+  - Realm (2.4.4):
+    - Realm/Headers (= 2.4.4)
+  - Realm/Headers (2.4.4)
+  - RealmSwift (2.4.4):
+    - Realm (= 2.4.4)
   - RxBlocking (3.2.0):
     - RxSwift (~> 3.1)
   - RxCocoa (3.2.0):
@@ -10,6 +17,8 @@ PODS:
 
 DEPENDENCIES:
   - Marshal (~> 1.0)
+  - NSObject+Rx (~> 2.0)
+  - RealmSwift
   - RxBlocking (~> 3.0)
   - RxCocoa (~> 3.0)
   - RxSwift (~> 3.0)
@@ -17,11 +26,14 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Marshal: 8e04e6624e506921db7143b0bfd83caee03f32d6
+  NSObject+Rx: 2a9cd801d9c847e6d2486cbad8d7701b67834e70
+  Realm: 5a280a1f5a9a3c267bebf4f41ee47911137703d7
+  RealmSwift: 0c02b9f2d4be4301c497ed10e53a0580584eb1dd
   RxBlocking: ec8ed471ba77b4fb98a2d60f1f8419b0b46eaa23
   RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   RxTest: 85fdd6f753e8e62635a58d37bbdd3ce7d5abbef3
 
-PODFILE CHECKSUM: e085d9bc2ac90d98089af83c754cf7ca3b5f18b0
+PODFILE CHECKSUM: 5dc6998c462088325edbc14a407c8f0d30b7f1e1
 
 COCOAPODS: 1.1.1
