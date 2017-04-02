@@ -44,13 +44,13 @@ class RouteStopsViewController: UIViewController, DataListTableView {
 		initialize(tableView: tableView)
 		
 		bindViewModel(tableView: tableView, driver: viewModel!.getBusStops())
-			.addDisposableTo(disposeBag)
+			.disposed(by: rx_disposeBag)
 
 		tableView.rx.modelSelected(BusStop.self)
 			.subscribe(onNext: { [weak self] in
 				self?.performSegue(withIdentifier: "times", sender: $0)
 			})
-			.addDisposableTo(disposeBag)
+			.disposed(by: rx_disposeBag)
     }
 
 	func fillCell(row: Int, element: Model, cell: CellType) {

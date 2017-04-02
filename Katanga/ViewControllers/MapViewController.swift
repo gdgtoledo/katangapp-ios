@@ -29,8 +29,6 @@ class MapViewController: UIViewController {
 
 	@IBOutlet private weak var mapView: MKMapView!
 
-	private var disposeBag = DisposeBag()
-
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
@@ -56,7 +54,7 @@ class MapViewController: UIViewController {
 					self?.mapView.addAnnotations($0)
 					self?.mapView.showAnnotations(self!.mapView.annotations, animated: true)
 				})
-				.addDisposableTo(disposeBag)
+				.disposed(by: rx_disposeBag)
 	}
 
 }

@@ -41,8 +41,6 @@ class RoutesViewController : UIViewController, DataListTableView {
 
     private let activityIndicator = ActivityIndicator()
 
-    private var disposeBag = DisposeBag()
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -61,17 +59,17 @@ class RoutesViewController : UIViewController, DataListTableView {
             .asDriver(onErrorJustReturn: [])
         
         bindViewModel(tableView: tableView, driver: driver)
-            .addDisposableTo(disposeBag)
+            .disposed(by: rx_disposeBag)
 
         activityIndicator
             .drive(spinner.rx.isAnimating)
-            .addDisposableTo(disposeBag)
+            .disposed(by: rx_disposeBag)
 
 		tableView.rx.modelSelected(Route.self).subscribe(onNext: { [weak self] in
 			let viewModel = RouteDetailViewModel(route: $0)
             self?.performSegue(withIdentifier: "detail", sender: viewModel)
 		})
-		.addDisposableTo(disposeBag)
+		.disposed(by: rx_disposeBag)
     }
 
     func fillCell(row: Int, element: Route, cell: RoutesCell) {

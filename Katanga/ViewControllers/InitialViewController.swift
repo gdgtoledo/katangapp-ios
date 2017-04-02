@@ -22,6 +22,7 @@ import RxCocoa
 import RxSwift
 import UIKit
 import CoreLocation
+import NSObject_Rx
 
 class InitialViewController: UIViewController {
 
@@ -41,8 +42,6 @@ class InitialViewController: UIViewController {
         }
     }
 
-    private var disposeBag = DisposeBag()
-
     private var spinner: UIActivityIndicatorView?
 
 	private var locationService = GeolocationService.instance
@@ -54,7 +53,7 @@ class InitialViewController: UIViewController {
 
 	override func viewWillDisappear(_ animated: Bool) {
 		super.viewWillDisappear(animated)
-		disposeBag = DisposeBag()
+		rx_disposeBag = DisposeBag()
 	}
 
     private func setUpRx() {
@@ -62,7 +61,7 @@ class InitialViewController: UIViewController {
             .startWith(500)
             .map {"\(Int($0))"}
             .bindTo(metersLabel.rx.text)
-            .addDisposableTo(disposeBag)
+            .addDisposableTo(rx_disposeBag)
 
         searchLocationButton.rx.tap
 			.asObservable()
@@ -89,7 +88,7 @@ class InitialViewController: UIViewController {
 				self.spinner?.stopAnimating()
 				self.showUnauthorizedAlert()
 			})
-			.disposed(by: disposeBag)
+			.disposed(by: rx_disposeBag)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -107,7 +106,7 @@ class InitialViewController: UIViewController {
 
 		let cancel = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
 		let openPreferences = UIAlertAction(title: "Activar ubicación", style: .default) {[weak self] _ in
-			self?.disposeBag = DisposeBag()
+			self?.rx_disposeBag = DisposeBag()
 			self?.setUpRx()
 			UIApplication.shared.openURL(URL(string: UIApplicationOpenSettingsURLString)!)
 		}

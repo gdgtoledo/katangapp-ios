@@ -29,7 +29,6 @@ class NearBusStopsViewController: UIViewController, DataListTableView {
     
     var viewModel: NearBusStopViewModel?
 
-    private var disposeBag = DisposeBag()
     private var refreshControl: UIRefreshControl?
 
     @IBOutlet weak var spinner: UIActivityIndicatorView! {
@@ -79,18 +78,18 @@ class NearBusStopsViewController: UIViewController, DataListTableView {
             .asDriver(onErrorJustReturn: [])
 
         bindViewModel(tableView: tableView, driver: driver)
-            .addDisposableTo(disposeBag)
+            .disposed(by: rx_disposeBag)
 
         tableView.addSubview(refreshControl!)
 
         viewModel.activityIndicator.asObservable()
             .take(2)
             .bindTo(spinner.rx.isAnimating)
-            .addDisposableTo(disposeBag)
+            .disposed(by: rx_disposeBag)
 
         viewModel.activityIndicator
             .drive(refreshControl!.rx.isRefreshing)
-            .addDisposableTo(disposeBag)
+            .disposed(by: rx_disposeBag)
         
     }
 

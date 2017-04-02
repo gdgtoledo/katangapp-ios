@@ -42,8 +42,6 @@ class RouteDetailViewController : UIViewController, DataListTableView {
 		}
 	}
 
-    private var disposeBag = DisposeBag()
-
 	private lazy var mapViewController: UIViewController = {
 
 		let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -71,7 +69,7 @@ class RouteDetailViewController : UIViewController, DataListTableView {
 
         viewModel?.routeId()
             .drive(rx.title)
-            .addDisposableTo(disposeBag)
+            .disposed(by: rx_disposeBag)
     }
 
     func fillCell(row: Int, element: Model, cell: CellType) {
