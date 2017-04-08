@@ -49,6 +49,8 @@ class NearBusStopsViewController: UIViewController, DataListTableView {
 
         initialize(tableView: tableView)
 
+		self.hidesBottomBarWhenPushed = true
+
         setupRx()
     }
     

@@ -21,7 +21,7 @@
 import Foundation
 import RxCocoa
 
-struct FavouriteBusStopsViewModel {
+struct FavoriteBusStopsViewModel {
 	
 	let busStopRepository: BusStopRepository
 	
@@ -29,11 +29,11 @@ struct FavouriteBusStopsViewModel {
 		self.busStopRepository = busStopRepository
 	}
 	
-	func removeFavourite(busStop: BusStop) {
+	func removeFavorite(busStop: BusStop) {
 		busStopRepository.remove(busStop)
 	}
 	
-	func getFavourites() -> [BusStop]{
+	func getFavorites() -> [BusStop]{
 		return busStopRepository.getAll()
 	}
 }

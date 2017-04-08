@@ -1,5 +1,5 @@
 //
-//  FavouriteBusStopCell.swift
+//  FavoriteBusStopCell.swift
 //  Katanga
 //
 //  Created by Víctor Galán on 2/4/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FavouriteBusStopCell: UITableViewCell {
+class FavoriteBusStopCell: UITableViewCell {
 	
 	var busStopId: String? {
 		set {

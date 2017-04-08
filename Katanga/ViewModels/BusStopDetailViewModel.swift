@@ -30,15 +30,15 @@ struct BusStopDetailViewModel {
 		self.busStopRepository = busStopRepository
 	}
 	
-	func favourite() {
+	func favorite() {
 		busStopRepository.save(busStop)
 	}
 	
-	func unfavourite() {
+	func unfavorite() {
 		busStopRepository.remove(busStop)
 	}
 	
-	func isFavourite() -> Bool {
+	func isFavorite() -> Bool {
 		return busStopRepository.exists(busStop)
 	}
 }

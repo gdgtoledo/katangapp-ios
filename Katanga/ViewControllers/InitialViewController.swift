@@ -49,6 +49,7 @@ class InitialViewController: UIViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		setUpRx()
+
 	}
 
 	override func viewWillDisappear(_ animated: Bool) {
@@ -96,7 +97,7 @@ class InitialViewController: UIViewController {
 //		let viewModel = NearBusStopCoordinatesViewModel(latitude: location.latitude, longitude: location.longitude, meters: Int(metersSlider.value))
 		let viewModel = NearBusStopCoordinatesViewModel(latitude: 39.861293, longitude: -4.026146, meters: 1000)
         let vc = segue.destination as? NearBusStopsViewController
-        
+		vc?.hidesBottomBarWhenPushed = true
         vc?.viewModel = viewModel
     }
 

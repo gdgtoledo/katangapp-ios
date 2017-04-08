@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GOh-kE-j4n">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GOh-kE-j4n">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -95,7 +95,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="22t-2E-m3Y" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Paradas cercanas" image="location_icon" id="0fe-eG-Zoa"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fQP-11-gvz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="fQP-11-gvz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.96470588239999999" green="0.92549019610000005" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -271,7 +271,7 @@
         <!--Paradas favoritas-->
         <scene sceneID="Zne-ni-EGc">
             <objects>
-                <viewController id="2Ag-VG-lAp" customClass="FavouriteBusStopsViewController" customModule="Katanga" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2Ag-VG-lAp" customClass="FavoriteBusStopsViewController" customModule="Katanga" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nS9-kW-V3W"/>
                         <viewControllerLayoutGuide type="bottom" id="ji9-fg-L0b"/>
@@ -309,7 +309,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QdF-Bp-w77" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Líneas" image="lines_icon" id="BXm-2X-NcP"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jxg-y6-hrD">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Jxg-y6-hrD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -398,7 +398,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sJ8-eX-SSl">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sJ8-eX-SSl">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
                         </subviews>
@@ -422,9 +422,9 @@
         <scene sceneID="S8e-jR-YbJ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ReN-HA-B06" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Paradas favoritas" image="favourited" id="RYB-bS-Fei"/>
+                    <tabBarItem key="tabBarItem" title="Paradas favoritas" image="favorited" id="RYB-bS-Fei"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vc8-bR-X7p">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="vc8-bR-X7p">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -439,7 +439,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="favourited" width="24" height="24"/>
+        <image name="favorited" width="24" height="24"/>
         <image name="lines_icon" width="24" height="24"/>
         <image name="location_icon" width="24" height="24"/>
     </resources>

@@ -23,7 +23,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class FavouriteBusStopsViewController : UIViewController, DataListTableView, UITableViewDataSource, UITableViewDelegate {
+class FavoriteBusStopsViewController : UIViewController, DataListTableView, UITableViewDataSource, UITableViewDelegate {
 	
 	@IBOutlet weak var tableView: UITableView! {
 		didSet {
@@ -38,20 +38,20 @@ class FavouriteBusStopsViewController : UIViewController, DataListTableView, UIT
 		}
 	}
 	
-	let viewModel = FavouriteBusStopsViewModel()
+	let viewModel = FavoriteBusStopsViewModel()
 	
 	var busStops = [BusStop]()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		tableView.register(FavouriteBusStopCell.self)
+		tableView.register(FavoriteBusStopCell.self)
 		
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		busStops = viewModel.getFavourites()
+		busStops = viewModel.getFavorites()
 		tableView.reloadData()
 	}
 
@@ -60,14 +60,14 @@ class FavouriteBusStopsViewController : UIViewController, DataListTableView, UIT
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: FavouriteBusStopCell.reuseIdentifier, for: indexPath) as! FavouriteBusStopCell
+		let cell = tableView.dequeueReusableCell(withIdentifier: FavoriteBusStopCell.reuseIdentifier, for: indexPath) as! FavoriteBusStopCell
 		
 		fillCell(row: indexPath.row, element: busStops[indexPath.row], cell: cell)
 		
 		return cell
 	}
 
-	func fillCell(row: Int, element: BusStop, cell: FavouriteBusStopCell) {
+	func fillCell(row: Int, element: BusStop, cell: FavoriteBusStopCell) {
 		cell.busStopId = element.id
 		cell.busStopAddress = element.address
 	}
@@ -79,7 +79,7 @@ class FavouriteBusStopsViewController : UIViewController, DataListTableView, UIT
 	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
 		let busStop = busStops[indexPath.row]
 		
-		viewModel.removeFavourite(busStop: busStop)
+		viewModel.removeFavorite(busStop: busStop)
 		
 		tableView.beginUpdates()
 		tableView.deleteRows(at: [indexPath], with: .automatic)
