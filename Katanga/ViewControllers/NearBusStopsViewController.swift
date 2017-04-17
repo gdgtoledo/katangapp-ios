@@ -56,7 +56,7 @@ class NearBusStopsViewController: UIViewController, DataListTableView {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.title = "Paradas cercanas"
+        self.title = NSLocalizedString("near-stops", comment: "")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -100,7 +100,7 @@ class NearBusStopsViewController: UIViewController, DataListTableView {
 
         let distanceFormatted = String(format: "%.2f", element.distance)
 
-        cell.distance = "(\(distanceFormatted) metros)"
+        cell.distance = "(\(distanceFormatted) \(NSLocalizedString("meters", comment: "")))"
         cell.bustStopTimes = element.times
         cell.routeItemClick = { [weak self] routeId in
             self?.performSegue(withIdentifier: "routedetail", sender: routeId)

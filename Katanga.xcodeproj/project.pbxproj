@@ -21,6 +21,7 @@
 		0BE0AEC91E05B66200150346 /* RouteStopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0AEC81E05B66200150346 /* RouteStopsViewController.swift */; };
 		0BE0AECB1E05BBB400150346 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE0AECA1E05BBB400150346 /* MapKit.framework */; };
 		0BE0AECD1E05BE2600150346 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0AECC1E05BE2600150346 /* MapViewController.swift */; };
+		0BF553D11E98CC92007443F5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0BF553D31E98CC92007443F5 /* Localizable.strings */; };
 		3D284017668D89E86AC89678 /* Pods_KatangaApp_KatangaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5963D97D1DDFA5E72DA2B29C /* Pods_KatangaApp_KatangaTests.framework */; };
 		571EBB0D1DBCB7B800DC71C5 /* NearBusStopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571EBB0B1DBCB7B800DC71C5 /* NearBusStopCell.swift */; };
 		571EBB0E1DBCB7B800DC71C5 /* NearBusStopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 571EBB0C1DBCB7B800DC71C5 /* NearBusStopCell.xib */; };
@@ -98,6 +99,9 @@
 		0BE0AEC81E05B66200150346 /* RouteStopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteStopsViewController.swift; sourceTree = "<group>"; };
 		0BE0AECA1E05BBB400150346 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0BE0AECC1E05BE2600150346 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0BF553D21E98CC92007443F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0BF553D41E98CC96007443F5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0BF553D61E98CCA9007443F5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		0C075C3AE55AE39FB57C0152 /* Pods-Katanga-KatangaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Katanga-KatangaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Katanga-KatangaTests/Pods-Katanga-KatangaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		18A195388323EA4345A6B0C8 /* Pods-KatangaApp-Katanga.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KatangaApp-Katanga.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KatangaApp-Katanga/Pods-KatangaApp-Katanga.debug.xcconfig"; sourceTree = "<group>"; };
 		1B520E40BEB35B8DCED8C035 /* Pods-KatangaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KatangaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KatangaTests/Pods-KatangaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -314,6 +318,7 @@
 				57266AEC1DAA2D01002C7C12 /* Assets.xcassets */,
 				571EBB111DBCBD2B00DC71C5 /* Images */,
 				57266B1C1DAA6FD1002C7C12 /* fonts */,
+				0BF553D31E98CC92007443F5 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -525,6 +530,7 @@
 				5789614C1DBC168A00C10285 /* RoutesCell.xib in Resources */,
 				571EBB0E1DBCB7B800DC71C5 /* NearBusStopCell.xib in Resources */,
 				57266AF01DAA2D01002C7C12 /* LaunchScreen.storyboard in Resources */,
+				0BF553D11E98CC92007443F5 /* Localizable.strings in Resources */,
 				57266B221DAA6FD1002C7C12 /* Quicksand-Regular.ttf in Resources */,
 				0B2007901DCFBAFC006A5029 /* BusStopCell.xib in Resources */,
 				571EBB191DBCC86F00DC71C5 /* BusComingCell.xib in Resources */,
@@ -723,10 +729,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0BF553D31E98CC92007443F5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0BF553D21E98CC92007443F5 /* Base */,
+				0BF553D41E98CC96007443F5 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		57266AE91DAA2D01002C7C12 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				57266AEA1DAA2D01002C7C12 /* Base */,
+				0BF553D61E98CCA9007443F5 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
