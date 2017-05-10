@@ -103,10 +103,10 @@ class InitialViewController: UIViewController {
 
 	private func showUnauthorizedAlert() {
 		let alert = UIAlertController(title: "Error",
-		message: "La localización está desactivada, esta aplicación necesita la ubicación para funcionar correctamente", preferredStyle: .alert)
+		message: NSLocalizedString("location-error-message", comment: ""), preferredStyle: .alert)
 
-		let cancel = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
-		let openPreferences = UIAlertAction(title: "Activar ubicación", style: .default) {[weak self] _ in
+		let cancel = UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: nil)
+		let openPreferences = UIAlertAction(title: NSLocalizedString("enable-location", comment: ""), style: .default) {[weak self] _ in
 			self?.rx_disposeBag = DisposeBag()
 			self?.setUpRx()
 			UIApplication.shared.openURL(URL(string: UIApplicationOpenSettingsURLString)!)

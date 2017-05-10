@@ -37,7 +37,7 @@ struct NearBusStopCoordinatesViewModel : NearBusStopViewModel {
         self.meters = meters
 		self.apiClient = apiClient
 
-        self.title = "Paradas cercanas"
+        self.title = NSLocalizedString("near-stops", comment: "")
         activityIndicator = ActivityIndicator()
     }
 

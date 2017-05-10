@@ -1,0 +1,33 @@
+
+/* Class = "UITabBarItem"; title = "Paradas cercanas"; ObjectID = "0fe-eG-Zoa"; */
+"0fe-eG-Zoa.title" = "Near bus stops";
+
+/* Class = "UINavigationItem"; title = "Paradas favoritas"; ObjectID = "4Ba-ii-dT8"; */
+"4Ba-ii-dT8.title" = "Favorite bus stops";
+
+/* Class = "UITabBarItem"; title = "Líneas"; ObjectID = "BXm-2X-NcP"; */
+"BXm-2X-NcP.title" = "Lines";
+
+/* Class = "UIViewController"; title = "Paradas cercanas"; ObjectID = "D7s-wF-0XA"; */
+"D7s-wF-0XA.title" = "Near bus stops";
+
+/* Class = "UINavigationItem"; title = "Líneas"; ObjectID = "Egk-YU-aV2"; */
+"Egk-YU-aV2.title" = "Lines";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "GMq-s0-wdH"; */
+"GMq-s0-wdH.title" = "Item";
+
+/* Class = "UILabel"; text = "katanga"; ObjectID = "QJu-dp-50Z"; */
+"QJu-dp-50Z.text" = "katanga";
+
+/* Class = "UITabBarItem"; title = "Paradas favoritas"; ObjectID = "RYB-bS-Fei"; */
+"RYB-bS-Fei.title" = "Favourites";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "tGE-Fy-9Jy"; */
+"tGE-Fy-9Jy.text" = "Label";
+
+/* Class = "UISegmentedControl"; uhI-i4-uaj.segmentTitles[0] = "Mapa"; ObjectID = "uhI-i4-uaj"; */
+"uhI-i4-uaj.segmentTitles[0]" = "Map";
+
+/* Class = "UISegmentedControl"; uhI-i4-uaj.segmentTitles[1] = "Ruta"; ObjectID = "uhI-i4-uaj"; */
+"uhI-i4-uaj.segmentTitles[1]" = "Route";
