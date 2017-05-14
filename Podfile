@@ -8,6 +8,7 @@ abstract_target 'Katanga-app' do
     pod 'Marshal',	  '~> 1.0'
     pod 'NSObject+Rx', '~> 2.0'
 	pod 'RealmSwift'
+    pod 'SwiftLint'
 
     target 'Katanga'
 

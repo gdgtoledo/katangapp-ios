@@ -14,6 +14,7 @@ PODS:
   - RxSwift (3.2.0)
   - RxTest (3.2.0):
     - RxSwift (~> 3.0)
+  - SwiftLint (0.18.1)
 
 DEPENDENCIES:
   - Marshal (~> 1.0)
@@ -23,6 +24,7 @@ DEPENDENCIES:
   - RxCocoa (~> 3.0)
   - RxSwift (~> 3.0)
   - RxTest (~> 3.0)
+  - SwiftLint
 
 SPEC CHECKSUMS:
   Marshal: 8e04e6624e506921db7143b0bfd83caee03f32d6
@@ -33,7 +35,8 @@ SPEC CHECKSUMS:
   RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   RxTest: 85fdd6f753e8e62635a58d37bbdd3ce7d5abbef3
+  SwiftLint: b467d08f5b25dc3b3cfed243d8e1b74b91714c67
 
-PODFILE CHECKSUM: 5dc6998c462088325edbc14a407c8f0d30b7f1e1
+PODFILE CHECKSUM: e57fb647fe38f2218bd2b1db9527adfb80db3f08
 
 COCOAPODS: 1.1.1

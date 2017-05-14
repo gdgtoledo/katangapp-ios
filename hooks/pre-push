@@ -1,3 +1,4 @@
 #!/bin/sh
 echo "Linting..."
-swiftlint lint --quiet --strict
+echo `pwd`
+Pods/SwiftLint/swiftlint lint --quiet --strict
