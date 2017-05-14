@@ -21,7 +21,7 @@
 import Foundation
 import Marshal
 
-struct Route : Unmarshaling {
+struct Route: Unmarshaling {
 
     let busStops: [BusStop]
     let id: String

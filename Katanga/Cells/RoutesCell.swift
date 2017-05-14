@@ -65,7 +65,7 @@ class RoutesCell: UITableViewCell {
 			layer.borderWidth = 2
 			layer.borderColor = UIColor.white.cgColor
 			layer.cornerRadius = layer.frame.width/2
-			
+
 			circleView.layer.addSublayer(layer)
 		}
 	}

@@ -18,13 +18,12 @@
 @author Víctor Galán
 */
 
-
 import UIKit
 import RxSwift
 import RxCocoa
 
-class FavoriteBusStopsViewController : UIViewController, DataListTableView, UITableViewDataSource, UITableViewDelegate {
-	
+class FavoriteBusStopsViewController: UIViewController, DataListTableView, UITableViewDataSource, UITableViewDelegate {
+
 	@IBOutlet weak var tableView: UITableView! {
 		didSet {
 			tableView.rowHeight = 80
@@ -32,23 +31,23 @@ class FavoriteBusStopsViewController : UIViewController, DataListTableView, UITa
 			tableView.separatorColor = .black
 			tableView.separatorInset = .zero
 			tableView.tableFooterView = UIView()
-			
+
 			tableView.dataSource = self
 			tableView.delegate = self
 		}
 	}
-	
+
 	let viewModel = FavoriteBusStopsViewModel()
-	
+
 	var busStops = [BusStop]()
-	
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
 		tableView.register(FavoriteBusStopCell.self)
-		
+
 	}
-	
+
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		busStops = viewModel.getFavorites()
@@ -58,12 +57,14 @@ class FavoriteBusStopsViewController : UIViewController, DataListTableView, UITa
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return busStops.count
 	}
-	
+
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: FavoriteBusStopCell.reuseIdentifier, for: indexPath) as! FavoriteBusStopCell
-		
+		let cell = tableView.dequeueReusableCell(
+			withIdentifier: FavoriteBusStopCell.reuseIdentifier, for: indexPath)
+			as! FavoriteBusStopCell
+
 		fillCell(row: indexPath.row, element: busStops[indexPath.row], cell: cell)
-		
+
 		return cell
 	}
 
@@ -71,16 +72,18 @@ class FavoriteBusStopsViewController : UIViewController, DataListTableView, UITa
 		cell.busStopId = element.id
 		cell.busStopAddress = element.address
 	}
-	
+
 	func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
 		return true
 	}
-	
-	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+
+	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle,
+			forRowAt indexPath: IndexPath) {
+
 		let busStop = busStops[indexPath.row]
-		
+
 		viewModel.removeFavorite(busStop: busStop)
-		
+
 		tableView.beginUpdates()
 		tableView.deleteRows(at: [indexPath], with: .automatic)
 		busStops.remove(at: indexPath.row)
@@ -91,13 +94,13 @@ class FavoriteBusStopsViewController : UIViewController, DataListTableView, UITa
 		let busStop = busStops[indexPath.row]
 		performSegue(withIdentifier: "times", sender: busStop)
 	}
-	
+
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		guard let busStop = sender as? BusStop else { return }
-		
+
 		let viewModel = NearBusStopIdViewModel(busStopId: busStop.id)
 		let vc = segue.destination as? NearBusStopsViewController
-		
+
 		vc?.viewModel = viewModel
 	}
 }

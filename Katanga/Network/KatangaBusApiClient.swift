@@ -23,7 +23,7 @@ import Marshal
 import RxCocoa
 import RxSwift
 
-struct KatangaBusApiClient : BusApi {
+struct KatangaBusApiClient: BusApi {
 
     let baseURL = "https://secret-depths-4660.herokuapp.com"
 
@@ -39,12 +39,12 @@ struct KatangaBusApiClient : BusApi {
             .flatMap { Observable.from($0) }
             .map { try $0.value(for: "") as Route }
     }
-    
+
     func route(with id: String) -> Observable<Route> {
-        
+
         let url = URL(string: "\(baseURL)/api/routes/\(id)")!
         let request = URLRequest(url: url)
-        
+
         return URLSession.shared.rx.data(request: request)
             .map { try JSONParser.JSONObjectWithData($0) }
             .map { try $0.value(for: "") as Route }
