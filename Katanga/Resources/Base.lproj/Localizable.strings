@@ -18,12 +18,9 @@
  @author Víctor Galán
  */
 
-
-"near-stops" = "Paradas cercanas";
-
-// Location permission alert
-"error" = "Error";
-"location-error-message" = "La localización está desactivada, esta aplicación necesita la ubicación para funcionar correctamente";
 "cancel" = "Cancelar";
 "enable-location" = "Activar localización";
+"error" = "Error";
+"location-error-message" = "La localización está desactivada, esta aplicación necesita la ubicación para funcionar correctamente";
 "meters" = "metros";
+"near-stops" = "Paradas cercanas";
