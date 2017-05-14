@@ -32,7 +32,7 @@ struct BusStop {
 }
 
 extension BusStop : Unmarshaling {
-	
+
 	init(object: MarshaledObject) throws {
 		address = try object.value(for: "address")
 		id = try object.value(for: "id")

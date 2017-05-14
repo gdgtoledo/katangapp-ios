@@ -8,6 +8,7 @@ abstract_target 'Katanga-app' do
     pod 'Marshal',	  '~> 1.0'
     pod 'NSObject+Rx', '~> 2.0'
 	pod 'RealmSwift'
+    pod 'SwiftLint'
 
     target 'Katanga'
 
@@ -15,5 +16,10 @@ abstract_target 'Katanga-app' do
 	    pod 'RxBlocking', '~> 3.0'
 	    pod 'RxTest',    '~> 3.0'
 	end
+
+    post_install do |installer|
+        %x( cp hooks/pre-push .git/hooks/)
+        %x( chmod +x .git/hooks/pre-push )
+    end
 end
 

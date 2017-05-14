@@ -42,7 +42,7 @@ class RouteStopsViewController: UIViewController, DataListTableView {
         super.viewDidLoad()
 
 		initialize(tableView: tableView)
-		
+
 		bindViewModel(tableView: tableView, driver: viewModel!.getBusStops())
 			.disposed(by: rx_disposeBag)
 

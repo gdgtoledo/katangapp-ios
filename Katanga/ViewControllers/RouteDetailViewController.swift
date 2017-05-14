@@ -22,7 +22,7 @@ import RxCocoa
 import RxSwift
 import UIKit
 
-class RouteDetailViewController : UIViewController, DataListTableView {
+class RouteDetailViewController: UIViewController, DataListTableView {
 
     typealias Model = BusStop
     typealias CellType = BusStopCell

@@ -22,7 +22,7 @@ import RxCocoa
 import RxSwift
 import UIKit
 
-class RoutesViewController : UIViewController, DataListTableView {
+class RoutesViewController: UIViewController, DataListTableView {
 
     typealias Model = Route
     typealias CellType = RoutesCell
@@ -57,7 +57,7 @@ class RoutesViewController : UIViewController, DataListTableView {
             .trackActivity(activityIndicator)
             .toArray()
             .asDriver(onErrorJustReturn: [])
-        
+
         bindViewModel(tableView: tableView, driver: driver)
             .disposed(by: rx_disposeBag)
 
@@ -79,7 +79,7 @@ class RoutesViewController : UIViewController, DataListTableView {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! RouteDetailViewController
-        
+
         vc.viewModel = sender as? RouteDetailViewModel
     }
 

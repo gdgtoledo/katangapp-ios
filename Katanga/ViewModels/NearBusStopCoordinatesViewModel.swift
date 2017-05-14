@@ -21,7 +21,7 @@
 import RxCocoa
 import RxSwift
 
-struct NearBusStopCoordinatesViewModel : NearBusStopViewModel {
+struct NearBusStopCoordinatesViewModel: NearBusStopViewModel {
 
     private(set) var title: String
     private(set) var activityIndicator: ActivityIndicator

@@ -53,12 +53,12 @@ class NearBusStopCell: UITableViewCell {
             return busStopsTimeDataSource.value
         }
     }
-    
-    public var routeItemClick: ((String) -> ())?
-    public var busStopClick: (() -> ())?
+
+    public var routeItemClick: ((String) -> Void)?
+    public var busStopClick: (() -> Void)?
 
     @IBOutlet private weak var busStopNameLabel: UILabel!
-    
+
     @IBOutlet weak var busStopIcon: UIImageView!
 
     @IBOutlet private weak var containerView: UIView! {
@@ -94,11 +94,11 @@ class NearBusStopCell: UITableViewCell {
         selectionStyle = .none
 
         tableView.customizeTableView(withColor: .clear)
-        
+
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(busStopIconClick))
         busStopIcon.addGestureRecognizer(gestureRecognizer)
         busStopIcon.isUserInteractionEnabled = true
-        
+
         setupRx()
     }
 
@@ -115,7 +115,7 @@ class NearBusStopCell: UITableViewCell {
     private func setupRx() {
         busStopsTimeDataSource
             .asObservable()
-            .bindTo(tableView.rx.items(cellType: BusComingCell.self)) { [weak self] row, element, cell in
+            .bindTo(tableView.rx.items(cellType: BusComingCell.self)) { [weak self] _, element, cell in
                 cell.routeId = element.id
                 cell.time = element.minutes
                 cell.routeItemClick = self?.routeItemClick
@@ -129,7 +129,7 @@ class NearBusStopCell: UITableViewCell {
             .bindTo(heightConstraint.rx.constant)
             .addDisposableTo(disposeBag)
     }
-    
+
     @objc private func busStopIconClick() {
         busStopClick?()
     }

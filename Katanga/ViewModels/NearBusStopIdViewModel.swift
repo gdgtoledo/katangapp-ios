@@ -21,7 +21,7 @@
 import RxCocoa
 import RxSwift
 
-struct NearBusStopIdViewModel : NearBusStopViewModel {
+struct NearBusStopIdViewModel: NearBusStopViewModel {
 
     private(set) var title: String
     private(set) var activityIndicator: ActivityIndicator
@@ -32,7 +32,7 @@ struct NearBusStopIdViewModel : NearBusStopViewModel {
 	init(busStopId: String, apiClient: BusApi = KatangaBusApiClient()) {
         self.busStopId = busStopId
 		self.apiClient = apiClient
-        
+
         self.title = busStopId
         activityIndicator = ActivityIndicator()
     }

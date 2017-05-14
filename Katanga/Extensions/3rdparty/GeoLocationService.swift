@@ -10,10 +10,9 @@ import CoreLocation
 import RxSwift
 import RxCocoa
 
-public enum GeoLocationServiceError : Error {
+public enum GeoLocationServiceError: Error {
 	case unauthorized
 }
-
 
 class GeolocationService {
 
@@ -53,7 +52,6 @@ class GeolocationService {
 				return $0.last.map(Driver.just) ?? Driver.empty()
 			}
 			.map { $0.coordinate }
-
 
 		locationManager.requestWhenInUseAuthorization()
 		locationManager.startUpdatingLocation()

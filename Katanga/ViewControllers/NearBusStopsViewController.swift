@@ -23,10 +23,10 @@ import RxSwift
 import UIKit
 
 class NearBusStopsViewController: UIViewController, DataListTableView {
-    
+
     typealias Model = NearBusStop
     typealias CellType = NearBusStopCell
-    
+
     var viewModel: NearBusStopViewModel?
 
     private var refreshControl: UIRefreshControl?
@@ -53,12 +53,12 @@ class NearBusStopsViewController: UIViewController, DataListTableView {
 
         setupRx()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.title = NSLocalizedString("near-stops", comment: "")
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.title = ""
@@ -92,7 +92,7 @@ class NearBusStopsViewController: UIViewController, DataListTableView {
         viewModel.activityIndicator
             .drive(refreshControl!.rx.isRefreshing)
             .disposed(by: rx_disposeBag)
-        
+
     }
 
     func fillCell(row: Int, element: NearBusStop, cell: NearBusStopCell) {
@@ -109,7 +109,7 @@ class NearBusStopsViewController: UIViewController, DataListTableView {
             self?.performSegue(withIdentifier: "busStopDetail", sender: element.busStop)
         }
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "routedetail" {
             guard let routeId = sender as? String else {
@@ -117,14 +117,14 @@ class NearBusStopsViewController: UIViewController, DataListTableView {
             }
             let vc = segue.destination as? RouteDetailViewController
             let vm = RouteDetailViewModelFromNearBuses(routeIdentifier: routeId)
-            
+
             vc?.viewModel = vm
         }
         else if segue.identifier == "busStopDetail" {
             guard let busStop = sender as? BusStop else {
                 return
             }
-            
+
             let vc = segue.destination as? BusStopDetailViewController
 			vc?.viewModel = BusStopDetailViewModel(busStop: busStop)
         }

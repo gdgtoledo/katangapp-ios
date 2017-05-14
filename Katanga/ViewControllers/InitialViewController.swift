@@ -85,7 +85,7 @@ class InitialViewController: UIViewController {
 			.subscribe(onNext: { [unowned self] location in
 				self.spinner?.stopAnimating()
 				self.performSegue(withIdentifier: "shownearstops", sender: location)
-			}, onError: { [unowned self] error in
+			}, onError: { [unowned self] _ in
 				self.spinner?.stopAnimating()
 				self.showUnauthorizedAlert()
 			})
@@ -94,8 +94,10 @@ class InitialViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		let location = sender as! CLLocationCoordinate2D
-//		let viewModel = NearBusStopCoordinatesViewModel(latitude: location.latitude, longitude: location.longitude, meters: Int(metersSlider.value))
-		let viewModel = NearBusStopCoordinatesViewModel(latitude: 39.861293, longitude: -4.026146, meters: 1000)
+//		let viewModel = NearBusStopCoordinatesViewModel(latitude: location.latitude, 
+// 		longitude: location.longitude, meters: Int(metersSlider.value))
+		let viewModel = NearBusStopCoordinatesViewModel(latitude: 39.861293,
+			longitude: -4.026146, meters: 1000)
         let vc = segue.destination as? NearBusStopsViewController
 		vc?.hidesBottomBarWhenPushed = true
         vc?.viewModel = viewModel
@@ -105,8 +107,12 @@ class InitialViewController: UIViewController {
 		let alert = UIAlertController(title: "Error",
 		message: NSLocalizedString("location-error-message", comment: ""), preferredStyle: .alert)
 
-		let cancel = UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: nil)
-		let openPreferences = UIAlertAction(title: NSLocalizedString("enable-location", comment: ""), style: .default) {[weak self] _ in
+		let cancel = UIAlertAction(title: NSLocalizedString("cancel", comment: ""),
+			style: .cancel, handler: nil)
+		let openPreferences = UIAlertAction(
+				title: NSLocalizedString("enable-location", comment: ""),
+				style: .default) { [weak self] _ in
+
 			self?.rx_disposeBag = DisposeBag()
 			self?.setUpRx()
 			UIApplication.shared.openURL(URL(string: UIApplicationOpenSettingsURLString)!)

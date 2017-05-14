@@ -9,7 +9,7 @@
 import UIKit
 
 class FavoriteBusStopCell: UITableViewCell {
-	
+
 	var busStopId: String? {
 		set {
 			busStopIdLabel.text = newValue
@@ -18,7 +18,7 @@ class FavoriteBusStopCell: UITableViewCell {
 			return busStopIdLabel.text ?? ""
 		}
 	}
-	
+
 	var busStopAddress: String? {
 		set {
 			busStopAddressLabel.text = newValue

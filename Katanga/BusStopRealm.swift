@@ -21,14 +21,14 @@
 import Foundation
 import RealmSwift
 
-class BusStopRealm : Object {
-	
+class BusStopRealm: Object {
+
 	dynamic var address: String = ""
 	dynamic var id: String = ""
 	dynamic var latitude: Double = 0
 	dynamic var longitude: Double = 0
 	dynamic var routeId: String? = ""
-	
+
 	convenience init(address: String, id: String, latitude: Double, longitude: Double, routeId: String?) {
 		self.init()
 		self.address = address
@@ -37,7 +37,7 @@ class BusStopRealm : Object {
 		self.longitude = longitude
 		self.routeId = routeId
 	}
-	
+
 	override static func primaryKey() -> String? {
 		return "id"
 	}

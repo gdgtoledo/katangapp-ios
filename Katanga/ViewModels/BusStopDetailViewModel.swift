@@ -21,23 +21,23 @@
 import Foundation
 
 struct BusStopDetailViewModel {
-	
+
 	let busStop: BusStop
 	let busStopRepository: BusStopRepository
-	
+
 	init(busStop: BusStop, busStopRepository: BusStopRepository = BusStopRepository()) {
 		self.busStop = busStop
 		self.busStopRepository = busStopRepository
 	}
-	
+
 	func favorite() {
 		busStopRepository.save(busStop)
 	}
-	
+
 	func unfavorite() {
 		busStopRepository.remove(busStop)
 	}
-	
+
 	func isFavorite() -> Bool {
 		return busStopRepository.exists(busStop)
 	}
