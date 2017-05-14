@@ -12,9 +12,7 @@ import CoreLocation
 	import RxCocoa
 #endif
 
-class RxCLLocationManagerDelegateProxy : DelegateProxy
-	, CLLocationManagerDelegate
-, DelegateProxyType {
+class RxCLLocationManagerDelegateProxy: DelegateProxy, CLLocationManagerDelegate, DelegateProxyType {
 
 	class func currentDelegateFor(_ object: AnyObject) -> AnyObject? {
 		let locationManager: CLLocationManager = object as! CLLocationManager
